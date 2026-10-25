@@ -2,7 +2,7 @@
 <html lang="th" class="light">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>MDBUU - คัมภีร์ระเบียบวิธีวิจัยและสถิติทางการแพทย์ (Medical Research Master Guide)</title>
   
   <!-- Configure Tailwind dark mode strategy -->
@@ -121,24 +121,30 @@
     }
 
     /* ==========================================================================
-       2. Layout & Containers
+       2. Layout & Containers (Responsive)
        ========================================================================== */
     .container {
       max-width: 1280px;
       margin-left: auto;
       margin-right: auto;
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
+      padding-left: 0.85rem;
+      padding-right: 0.85rem;
+    }
+    @media (min-width: 640px) {
+      .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
     }
 
     .grid-layout {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.75rem;
+      display: block;
     }
     @media (min-width: 1024px) {
       .grid-layout {
+        display: grid;
         grid-template-columns: 290px 1fr;
+        gap: 1.75rem;
       }
     }
 
@@ -147,7 +153,7 @@
     .w-6 { width: 1.5rem; }
     .h-6 { height: 1.5rem; }
     .block { display: block; }
-    .overflow-x-auto { overflow-x: auto; }
+    .overflow-x-auto { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .transition { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
     .antialiased { -webkit-font-smoothing: antialiased; }
     .mb-8 { margin-bottom: 2rem; }
@@ -179,7 +185,10 @@
     .p-3\.5 { padding: 0.875rem; }
     .p-4 { padding: 1rem; }
     .p-5 { padding: 1.25rem; }
-    .p-6 { padding: 1.5rem; }
+    .p-6 { padding: 1.25rem; }
+    @media (min-width: 640px) {
+      .p-6 { padding: 1.5rem; }
+    }
     .pb-3 { padding-bottom: 0.75rem; }
     .pt-2 { padding-top: 0.5rem; }
     .px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
@@ -187,7 +196,10 @@
     .py-0\.5 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
     .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
     .pl-3 { padding-left: 0.75rem; }
-    .pl-6 { padding-left: 1.5rem; }
+    .pl-6 { padding-left: 1.25rem; }
+    @media (min-width: 640px) {
+      .pl-6 { padding-left: 1.5rem; }
+    }
 
     .space-y-0\.5 > * + * { margin-top: 0.125rem; }
     .space-y-1 > * + * { margin-top: 0.25rem; }
@@ -201,7 +213,10 @@
     .rounded { border-radius: 0.25rem; }
     .rounded-xl { border-radius: 0.75rem; }
     .rounded-2xl { border-radius: 1rem; }
-    .rounded-3xl { border-radius: 1.5rem; }
+    .rounded-3xl { border-radius: 1.25rem; }
+    @media (min-width: 640px) {
+      .rounded-3xl { border-radius: 1.5rem; }
+    }
     .rounded-full { border-radius: 9999px; }
 
     /* Borders & Dividers */
@@ -219,8 +234,9 @@
     .text-xs { font-size: 0.75rem; line-height: 1rem; }
     .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
     .text-base { font-size: 1rem; line-height: 1.5rem; }
-    .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+    .text-2xl { font-size: 1.35rem; line-height: 1.75rem; }
     @media (min-width: 640px) {
+      .text-2xl { font-size: 1.5rem; line-height: 2rem; }
       .sm\:text-sm { font-size: 0.875rem; line-height: 1.25rem; }
       .sm\:text-lg { font-size: 1.125rem; line-height: 1.75rem; }
     }
@@ -317,21 +333,29 @@
     html.dark .dark\:text-sky-400, .dark .dark\:text-sky-400 { color: #38bdf8 !important; }
 
     /* ==========================================================================
-       4. Reusable Core Components
+       4. Reusable Core Components & Mobile-First Header
        ========================================================================== */
     .card {
       background-color: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 1.25rem;
-      padding: 1.5rem;
+      border-radius: 1rem;
+      padding: 1.15rem;
       box-shadow: var(--shadow-sm);
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    @media (min-width: 640px) {
+      .card {
+        border-radius: 1.25rem;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
     }
     .card:hover {
       box-shadow: var(--shadow-md);
     }
 
+    /* Sticky Header */
     .sticky-header {
       position: sticky;
       top: 0;
@@ -341,14 +365,222 @@
       box-shadow: var(--shadow-sm);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
+      padding-top: env(safe-area-inset-top, 0);
     }
     .header-content {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+    }
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      min-width: 0;
+    }
+    .header-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 0.65rem;
+      background: linear-gradient(135deg, #2563eb, #4f46e5, #7c3aed);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      flex-shrink: 0;
+      box-shadow: 0 2px 4px rgba(79, 70, 229, 0.3);
+    }
+    @media (min-width: 640px) {
+      .header-logo {
+        width: 42px;
+        height: 42px;
+        border-radius: 0.75rem;
+      }
+    }
+    .header-badges {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-bottom: 0.1rem;
+    }
+    .header-sub {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .header-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.25;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    @media (min-width: 640px) {
+      .header-title {
+        font-size: 1.05rem;
+      }
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-shrink: 0;
+    }
+
+    /* Prevent iOS Auto-Zoom on Form Inputs */
+    @media (max-width: 640px) {
+      input, select, textarea {
+        font-size: 16px !important;
+      }
+    }
+
+    /* Mobile Horizontal Chip Navigation Bar (Swipeable Carousel) */
+    .mobile-chip-bar {
+      border-top: 1px solid var(--border-color);
+      background-color: var(--bg-card);
+      padding: 0.4rem 0.5rem;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .mobile-chip-bar::-webkit-scrollbar {
+      display: none;
+    }
+    .chip-scroll {
+      display: inline-flex;
+      gap: 0.4rem;
+      padding: 0 0.2rem;
+    }
+    .chip-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.32rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background-color: var(--bg-card-alt);
+      color: var(--text-sub);
+      border: 1px solid var(--border-color);
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: all 0.15s ease;
+      text-decoration: none;
+      line-height: 1.3;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .chip-pill:active {
+      transform: scale(0.95);
+    }
+    .chip-pill.active {
+      background-color: var(--primary-light);
+      color: var(--primary-text);
+      border-color: var(--primary);
+      font-weight: 700;
+    }
+    .chip-danger {
+      background-color: var(--danger-bg);
+      color: var(--danger-text);
+      border-color: var(--danger-border);
+      font-weight: 700;
+    }
+    .chip-success {
+      background-color: var(--success-bg);
+      color: var(--success-text);
+      border-color: var(--success-border);
+      font-weight: 700;
+    }
+    .chip-primary {
+      background-color: var(--primary-light);
+      color: var(--primary-text);
+      border-color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* Mobile Drawer & Modal Backdrop */
+    .drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .drawer-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: min(86vw, 340px);
+      background-color: var(--bg-card);
+      border-right: 1px solid var(--border-color);
+      z-index: 1000;
+      padding: calc(1.25rem + env(safe-area-inset-top, 0)) 1rem calc(1.25rem + env(safe-area-inset-bottom, 0));
+      overflow-y: auto;
+      transform: translateX(-100%);
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
       gap: 0.75rem;
-      padding: 0.75rem 0;
+    }
+    .mobile-drawer.open {
+      transform: translateX(0);
+    }
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .drawer-close-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 9999px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-card-alt);
+      color: var(--text-main);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    /* Responsive Visibility Helpers */
+    .visible-mobile { display: flex !important; }
+    .hidden-mobile { display: none !important; }
+    .sidebar-desktop { display: none !important; }
+
+    @media (min-width: 1024px) {
+      .visible-mobile { display: none !important; }
+      .hidden-mobile { display: inline-flex !important; }
+      .sidebar-desktop {
+        display: block !important;
+        position: sticky;
+        top: 5.5rem;
+        max-height: calc(100vh - 6.5rem);
+        overflow-y: auto;
+        padding-right: 0.25rem;
+      }
     }
 
     /* Badges */
@@ -418,8 +650,8 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
-      padding: 0.45rem 0.85rem;
+      gap: 0.45rem;
+      padding: 0.42rem 0.8rem;
       border-radius: 0.75rem;
       font-size: 0.8rem;
       font-weight: 700;
@@ -430,6 +662,7 @@
       transition: all 0.15s ease;
       text-decoration: none;
       user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
     .btn:hover {
       background-color: var(--bg-card-alt);
@@ -464,14 +697,7 @@
       background-color: #047857;
     }
 
-    /* Sticky Sidebar Navigation */
-    .sidebar {
-      position: sticky;
-      top: 5rem;
-      max-height: calc(100vh - 6rem);
-      overflow-y: auto;
-      padding-right: 0.25rem;
-    }
+    /* Sidebar Navigation List */
     .nav-list {
       display: flex;
       flex-direction: column;
@@ -510,9 +736,11 @@
       width: 100%;
       overflow-x: auto;
       margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
     }
     table.table-academic {
       width: 100%;
+      min-width: 580px;
       border-collapse: collapse;
       font-size: 0.85rem;
       line-height: 1.5;
@@ -535,6 +763,33 @@
     table.table-academic th {
       font-weight: 700;
       color: var(--text-main);
+    }
+
+    /* Hero Banner Responsive */
+    .hero-banner {
+      border-radius: 1rem;
+      padding: 1.25rem 1rem;
+      background: linear-gradient(135deg, #1e3a8a, #312e81, #581c87);
+      color: #ffffff;
+      box-shadow: var(--shadow-md);
+    }
+    @media (min-width: 640px) {
+      .hero-banner {
+        border-radius: 1.25rem;
+        padding: 2rem;
+      }
+    }
+    .hero-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+      line-height: 1.3;
+    }
+    @media (min-width: 640px) {
+      .hero-title {
+        font-size: 1.65rem;
+      }
     }
 
     /* Safe SVGs: Prevent Icon Explosion */
@@ -565,7 +820,33 @@
 
     /* Smooth Scroll Margin for Sticky Header Offset */
     section, div[id] {
-      scroll-margin-top: 5.5rem;
+      scroll-margin-top: 6.5rem;
+    }
+    @media (min-width: 1024px) {
+      section, div[id] {
+        scroll-margin-top: 5.5rem;
+      }
+    }
+
+    /* Floating Back to Top Button */
+    #back-to-top {
+      position: fixed;
+      bottom: calc(1.25rem + env(safe-area-inset-bottom, 0));
+      right: 1.25rem;
+      border-radius: 9999px;
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      box-shadow: var(--shadow-lg);
+      z-index: 40;
+    }
+    @media (min-width: 640px) {
+      #back-to-top {
+        bottom: calc(1.75rem + env(safe-area-inset-bottom, 0));
+        right: 1.75rem;
+        width: 46px;
+        height: 46px;
+      }
     }
 
     /* Print Stylesheet */
@@ -585,52 +866,171 @@
     <div class="container header-content">
       
       <!-- Brand & Title -->
-      <div style="display: flex; align-items: center; gap: 0.75rem;">
-        <div style="width: 42px; height: 42px; border-radius: 0.75rem; background: linear-gradient(135deg, #2563eb, #4f46e5, #7c3aed); display: flex; align-items: center; justify-content: center; color: #ffffff; box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);">
+      <div class="header-brand">
+        <div class="header-logo">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 22px; height: 22px;"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
         </div>
-        <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.15rem;">
+        <div style="min-width: 0;">
+          <div class="header-badges">
             <span class="badge badge-primary">MDBUU</span>
-            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">คณะแพทยศาสตร์ มหาวิทยาลัยบูรพา</span>
-            <span class="badge badge-success">Master Edition</span>
+            <span class="header-sub">คณะแพทยศาสตร์ ม.บูรพา</span>
+            <span class="badge badge-success hidden-mobile">Master Edition</span>
           </div>
-          <h1 style="font-size: 1.05rem; font-weight: 700; color: var(--text-main); margin: 0; line-height: 1.2;">
-            คัมภีร์ระเบียบวิธีวิจัยและสถิติทางการแพทย์ (Medical Research Master Guide)
+          <h1 class="header-title">
+            <span class="title-desktop">คัมภีร์ระเบียบวิธีวิจัยและสถิติทางการแพทย์ (Medical Research Master Guide)</span>
+            <span class="title-mobile">Medical Research Master Guide</span>
           </h1>
         </div>
       </div>
 
       <!-- Action Buttons -->
-      <div style="display: flex; align-items: center; gap: 0.5rem;">
-        <!-- Theme Toggle Button -->
-        <button id="theme-toggle" onclick="toggleTheme()" class="btn">
-          <span id="theme-icon">🌙</span> <span id="theme-text">โหมดมืด</span>
-        </button>
-
-        <!-- Print PDF Button -->
-        <button onclick="window.print()" class="btn">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px;"><path d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
-          พิมพ์ / บันทึก PDF
-        </button>
-
-        <!-- Quick Jump Buttons -->
-        <button onclick="scrollToSection('exam-masterclass')" class="btn btn-danger">
+      <div class="header-actions">
+        <!-- Quick Jump Buttons (Desktop Only) -->
+        <button onclick="scrollToSection('exam-masterclass')" class="btn btn-danger hidden-mobile">
           🔥 เจาะลึกข้อสอบจริง
         </button>
-        <button onclick="scrollToSection('quick-formulas')" class="btn btn-success">
+        <button onclick="scrollToSection('quick-formulas')" class="btn btn-success hidden-mobile">
           ⚡ แผ่นพับสูตร
+        </button>
+
+        <!-- Print PDF Button (Desktop Only) -->
+        <button onclick="window.print()" class="btn hidden-mobile" title="พิมพ์หรือบันทึก PDF">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 15px; height: 15px;"><path d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+          <span>พิมพ์ / PDF</span>
+        </button>
+
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" onclick="toggleTheme()" class="btn" title="สลับโหมดมืด/สว่าง">
+          <span id="theme-icon">🌙</span> <span id="theme-text" class="hidden-mobile">โหมดมืด</span>
+        </button>
+
+        <!-- Mobile Menu Trigger Button (Mobile Only) -->
+        <button onclick="toggleMobileDrawer(true)" class="btn btn-primary visible-mobile" aria-label="เปิดเมนูสารบัญ">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 18px; height: 18px;"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <span>สารบัญ (11)</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Horizontal Scrollable Chip Bar (Swipeable Carousel) -->
+    <div class="mobile-chip-bar visible-mobile no-print">
+      <div class="chip-scroll">
+
+        <button onclick="scrollToSection('exam-masterclass')" class="chip-pill chip-danger">
+          🔥 ข้อสอบจริง
+        </button>
+        <button onclick="scrollToSection('quick-formulas')" class="chip-pill chip-success">
+          ⚡ สรุปสูตร
+        </button>
+        <button onclick="scrollToSection('stat-picker')" class="chip-pill chip-primary">
+          🧭 เลือกสถิติ
+        </button>
+        <button onclick="scrollToSection('module-1')" class="chip-pill">
+          📚 หมวด 1
+        </button>
+        <button onclick="scrollToSection('module-2')" class="chip-pill">
+          🔬 หมวด 2
+        </button>
+        <button onclick="scrollToSection('module-3')" class="chip-pill">
+          🩺 หมวด 3
+        </button>
+        <button onclick="scrollToSection('module-4')" class="chip-pill">
+          📈 หมวด 4
+        </button>
+        <button onclick="scrollToSection('module-5')" class="chip-pill">
+          🧪 หมวด 5
+        </button>
+        <button onclick="scrollToSection('module-6')" class="chip-pill">
+          📊 หมวด 6
+        </button>
+        <button onclick="scrollToSection('module-7')" class="chip-pill">
+          📝 หมวด 7
+        </button>
+        <button onclick="scrollToSection('module-8')" class="chip-pill">
+          📑 หมวด 8
+        </button>
+        <button onclick="scrollToSection('module-9')" class="chip-pill">
+          ⚖️ หมวด 9
+        </button>
+        <button onclick="scrollToSection('quiz-section')" class="chip-pill chip-primary">
+          🎯 Mock Exam
         </button>
       </div>
     </div>
   </header>
 
+  <!-- Mobile Off-Canvas Drawer Navigation Backdrop & Drawer -->
+  <div id="mobile-drawer-backdrop" onclick="toggleMobileDrawer(false)" class="drawer-backdrop no-print"></div>
+  <aside id="mobile-drawer" class="mobile-drawer no-print" aria-label="เมนูสารบัญมือถือ">
+    <div class="drawer-header">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span style="font-size: 1.25rem;">📑</span>
+        <div>
+          <strong style="font-size: 0.95rem; color: var(--text-main); display: block; line-height: 1.2;">สารบัญคัมภีร์วิจัย</strong>
+          <span style="font-size: 0.72rem; color: var(--text-muted);">คณะแพทยศาสตร์ ม.บูรพา (11 หมวด)</span>
+        </div>
+      </div>
+      <button onclick="toggleMobileDrawer(false)" class="drawer-close-btn" aria-label="ปิดเมนู">✕</button>
+    </div>
+
+    <!-- Search Bar in Drawer -->
+    <div style="position: relative; margin: 0.25rem 0;">
+      <input type="text" id="drawer-search" placeholder="ค้นหา เช่น GCS, ไวรัสฮันตา..." onkeyup="filterDrawerContent()" class="search-box">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 15px; height: 15px; max-width: 15px; color: var(--text-muted); pointer-events: none;">
+        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+    </div>
+
+    <nav class="nav-list" id="drawer-nav" style="gap: 0.4rem;">
+
+      <button onclick="scrollToSection('exam-masterclass')" class="nav-btn" style="background-color: var(--danger-bg); color: var(--danger-text); border: 1px solid var(--danger-border); font-weight: 700;">
+        <span>🔥</span> <span>เจาะลึกข้อสอบจริง (MCQ 45 + อัตนัย)</span>
+      </button>
+      <button onclick="scrollToSection('quick-formulas')" class="nav-btn" style="background-color: var(--success-bg); color: var(--success-text); border: 1px solid var(--success-border); font-weight: 700;">
+        <span>⚡</span> <span>แผ่นพับสรุปสูตรทุกตัวใน 1 หน้า</span>
+      </button>
+      <button onclick="scrollToSection('stat-picker')" class="nav-btn" style="background-color: var(--primary-light); color: var(--primary-text); border: 1px solid var(--primary); font-weight: 700;">
+        <span>🧭</span> <span>ตัวช่วยเลือกสถิติอัตโนมัติ (Tool)</span>
+      </button>
+      <button onclick="scrollToSection('module-1')" class="nav-btn" style="">
+        <span>📚</span> <span>หมวด 1: คำถามวิจัย & PICO</span>
+      </button>
+      <button onclick="scrollToSection('module-2')" class="nav-btn" style="">
+        <span>🔬</span> <span>หมวด 2: รูปแบบวิจัย & Hierarchy</span>
+      </button>
+      <button onclick="scrollToSection('module-3')" class="nav-btn" style="">
+        <span>🩺</span> <span>หมวด 3: Diagnostic Tests (Sn, Sp)</span>
+      </button>
+      <button onclick="scrollToSection('module-4')" class="nav-btn" style="">
+        <span>📈</span> <span>หมวด 4: Vital Stats & DALY</span>
+      </button>
+      <button onclick="scrollToSection('module-5')" class="nav-btn" style="">
+        <span>🧪</span> <span>หมวด 5: เครื่องมือวิจัย, IOC</span>
+      </button>
+      <button onclick="scrollToSection('module-6')" class="nav-btn" style="">
+        <span>📊</span> <span>หมวด 6: สถิติชีวการแพทย์ & SPSS</span>
+      </button>
+      <button onclick="scrollToSection('module-7')" class="nav-btn" style="">
+        <span>📝</span> <span>หมวด 7: การเขียนบทที่ 4 & บทที่ 5</span>
+      </button>
+      <button onclick="scrollToSection('module-8')" class="nav-btn" style="">
+        <span>📑</span> <span>หมวด 8: การเขียนอ้างอิง Vancouver</span>
+      </button>
+      <button onclick="scrollToSection('module-9')" class="nav-btn" style="">
+        <span>⚖️</span> <span>หมวด 9: จริยธรรมการวิจัย, Belmont</span>
+      </button>
+      <button onclick="scrollToSection('quiz-section')" class="nav-btn" style="background-color: var(--primary-light); color: var(--primary-text); border: 1px solid var(--primary); font-weight: 700;">
+        <span>🎯</span> <span>คลังข้อสอบจำลองเสมือนจริง 10 ข้อ</span>
+      </button>
+    </nav>
+  </aside>
+
   <!-- Main Container -->
-  <div class="container" style="padding-top: 1.5rem; padding-bottom: 3rem;">
+  <div class="container" style="padding-top: 1.25rem; padding-bottom: 3rem;">
     <div class="grid-layout">
 
-      <!-- Left Sidebar Navigation (Desktop) -->
-      <aside class="sidebar no-print">
+      <!-- Left Sidebar Navigation (Desktop Only) -->
+      <aside class="sidebar-desktop no-print">
         <div class="card" style="padding: 1rem; margin-bottom: 0;">
           <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-color); margin-bottom: 0.75rem;">
             <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);">สารบัญคัมภีร์</span>
@@ -646,43 +1046,44 @@
           </div>
 
           <nav class="nav-list" id="sidebar-nav">
+
             <button onclick="scrollToSection('exam-masterclass')" class="nav-btn" style="background-color: var(--danger-bg); color: var(--danger-text); border: 1px solid var(--danger-border); font-weight: 700;">
               <span>🔥</span> <span>เจาะลึกข้อสอบจริง (MCQ 45 + อัตนัย)</span>
             </button>
             <button onclick="scrollToSection('quick-formulas')" class="nav-btn" style="background-color: var(--success-bg); color: var(--success-text); border: 1px solid var(--success-border); font-weight: 700;">
               <span>⚡</span> <span>แผ่นพับสรุปสูตรทุกตัวใน 1 หน้า</span>
             </button>
-            <button onclick="scrollToSection('module-1')" class="nav-btn">
-              <span>📚</span> <span>หมวด 1: คำถามวิจัย & PICO</span>
-            </button>
-            <button onclick="scrollToSection('module-2')" class="nav-btn">
-              <span>🔬</span> <span>หมวด 2: รูปแบบวิจัย & Hierarchy</span>
-            </button>
-            <button onclick="scrollToSection('module-3')" class="nav-btn">
-              <span>🩺</span> <span>หมวด 3: Diagnostic Tests (Sn, Sp)</span>
-            </button>
-            <button onclick="scrollToSection('module-4')" class="nav-btn">
-              <span>📈</span> <span>หมวด 4: Vital Stats & DALY</span>
-            </button>
-            <button onclick="scrollToSection('module-5')" class="nav-btn">
-              <span>🧪</span> <span>หมวด 5: เครื่องมือวิจัย, IOC</span>
-            </button>
-            <button onclick="scrollToSection('module-6')" class="nav-btn">
-              <span>📊</span> <span>หมวด 6: สถิติชีวการแพทย์ & SPSS</span>
-            </button>
             <button onclick="scrollToSection('stat-picker')" class="nav-btn" style="background-color: var(--primary-light); color: var(--primary-text); border: 1px solid var(--primary); font-weight: 700;">
               <span>🧭</span> <span>ตัวช่วยเลือกสถิติอัตโนมัติ (Tool)</span>
             </button>
-            <button onclick="scrollToSection('module-7')" class="nav-btn">
+            <button onclick="scrollToSection('module-1')" class="nav-btn" style="">
+              <span>📚</span> <span>หมวด 1: คำถามวิจัย & PICO</span>
+            </button>
+            <button onclick="scrollToSection('module-2')" class="nav-btn" style="">
+              <span>🔬</span> <span>หมวด 2: รูปแบบวิจัย & Hierarchy</span>
+            </button>
+            <button onclick="scrollToSection('module-3')" class="nav-btn" style="">
+              <span>🩺</span> <span>หมวด 3: Diagnostic Tests (Sn, Sp)</span>
+            </button>
+            <button onclick="scrollToSection('module-4')" class="nav-btn" style="">
+              <span>📈</span> <span>หมวด 4: Vital Stats & DALY</span>
+            </button>
+            <button onclick="scrollToSection('module-5')" class="nav-btn" style="">
+              <span>🧪</span> <span>หมวด 5: เครื่องมือวิจัย, IOC</span>
+            </button>
+            <button onclick="scrollToSection('module-6')" class="nav-btn" style="">
+              <span>📊</span> <span>หมวด 6: สถิติชีวการแพทย์ & SPSS</span>
+            </button>
+            <button onclick="scrollToSection('module-7')" class="nav-btn" style="">
               <span>📝</span> <span>หมวด 7: การเขียนบทที่ 4 & บทที่ 5</span>
             </button>
-            <button onclick="scrollToSection('module-8')" class="nav-btn">
+            <button onclick="scrollToSection('module-8')" class="nav-btn" style="">
               <span>📑</span> <span>หมวด 8: การเขียนอ้างอิง Vancouver</span>
             </button>
-            <button onclick="scrollToSection('module-9')" class="nav-btn">
+            <button onclick="scrollToSection('module-9')" class="nav-btn" style="">
               <span>⚖️</span> <span>หมวด 9: จริยธรรมการวิจัย, Belmont</span>
             </button>
-            <button onclick="scrollToSection('quiz-section')" class="nav-btn" style="background-color: var(--primary-light); color: var(--primary-text); font-weight: 700;">
+            <button onclick="scrollToSection('quiz-section')" class="nav-btn" style="background-color: var(--primary-light); color: var(--primary-text); border: 1px solid var(--primary); font-weight: 700;">
               <span>🎯</span> <span>คลังข้อสอบจำลองเสมือนจริง 10 ข้อ</span>
             </button>
           </nav>
@@ -693,14 +1094,14 @@
       <main style="display: flex; flex-direction: column; gap: 1.5rem;">
 
         <!-- Hero Banner -->
-        <div style="border-radius: 1.25rem; padding: 2rem; background: linear-gradient(135deg, #1e3a8a, #312e81, #581c87); color: #ffffff; box-shadow: var(--shadow-md);">
+        <div class="hero-banner">
           <div style="display: flex; flex-direction: column; gap: 0.75rem;">
             <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; border-radius: 9999px; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); font-size: 0.75rem; font-weight: 600; width: fit-content;">
               <span>🩺 คณะแพทยศาสตร์ มหาวิทยาลัยบูรพา</span>
               <span>•</span>
               <span>Medical Research Masterclass</span>
             </div>
-            <h2 style="font-size: 1.65rem; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.25;">
+            <h2 class="hero-title">
               คัมภีร์ระเบียบวิธีวิจัยและสถิติทางการแพทย์ฉบับสมบูรณ์
             </h2>
             <p style="font-size: 0.9rem; color: #e0e7ff; margin: 0; line-height: 1.6; max-width: 800px;">
@@ -711,6 +1112,8 @@
                 <span>🔥</span> เริ่มอ่านเฉลยข้อสอบจริง
               </button>
             </div>
+          </div>
+        </div>
           </div>
         </div>
 
@@ -3538,9 +3941,42 @@
     // Execute theme initialization immediately
     initTheme();
 
-    // Safe Smooth Scroll Navigation with header offset
+    // Mobile Drawer Toggle
+    function toggleMobileDrawer(forceState) {
+      const drawer = document.getElementById('mobile-drawer');
+      const backdrop = document.getElementById('mobile-drawer-backdrop');
+      if (!drawer || !backdrop) return;
+      const isOpen = drawer.classList.contains('open');
+      const shouldOpen = (forceState !== undefined) ? forceState : !isOpen;
+      if (shouldOpen) {
+        drawer.classList.add('open');
+        backdrop.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      } else {
+        drawer.classList.remove('open');
+        backdrop.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Drawer Search Filter
+    function filterDrawerContent() {
+      const q = document.getElementById('drawer-search').value.toLowerCase().trim();
+      const items = document.querySelectorAll('#drawer-nav .nav-btn');
+      items.forEach(el => {
+        const text = el.innerText.toLowerCase();
+        if (q === '' || text.includes(q)) {
+          el.style.display = 'flex';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+    }
+
+    // Safe Smooth Scroll Navigation with header offset & mobile drawer closing
     function scrollToSection(id) {
       if (!id) return;
+      toggleMobileDrawer(false); // Close mobile drawer if open
       const el = document.getElementById(id);
       if (el) {
         try {
@@ -3548,7 +3984,7 @@
         } catch (e) {
           const rect = el.getBoundingClientRect();
           window.scrollTo({
-            top: window.pageYOffset + rect.top - 80,
+            top: window.pageYOffset + rect.top - 95,
             behavior: 'smooth'
           });
         }
@@ -3567,7 +4003,7 @@
         });
       });
 
-      // Realtime Active Nav Tracking
+      // Realtime Active Nav Tracking (both desktop sidebar and mobile chips)
       window.addEventListener('scroll', () => {
         const sections = document.querySelectorAll('section[id], div[id].card');
         let currentId = '';
@@ -3578,12 +4014,25 @@
           }
         });
         if (currentId) {
+          // Update desktop sidebar buttons & drawer buttons
           document.querySelectorAll('.nav-btn').forEach(btn => {
             const onclickAttr = btn.getAttribute('onclick') || '';
             if (onclickAttr.includes(`'${currentId}'`)) {
               btn.classList.add('active');
             } else {
               btn.classList.remove('active');
+            }
+          });
+          // Update mobile chip pills
+          document.querySelectorAll('.chip-pill').forEach(pill => {
+            const onclickAttr = pill.getAttribute('onclick') || '';
+            if (onclickAttr.includes(`'${currentId}'`)) {
+              pill.classList.add('active');
+              try {
+                pill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+              } catch (e) {}
+            } else {
+              pill.classList.remove('active');
             }
           });
         }
