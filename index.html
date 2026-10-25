@@ -953,7 +953,7 @@
           ⚖️ หมวด 9
         </button>
         <button onclick="scrollToSection('quiz-section')" class="chip-pill chip-primary">
-          🎯 Mock Exam
+          🎯 แบบฝึกหัด (20)
         </button>
       </div>
     </div>
@@ -1020,7 +1020,7 @@
         <span>⚖️</span> <span>หมวด 9: จริยธรรมการวิจัย, Belmont</span>
       </button>
       <button onclick="scrollToSection('quiz-section')" class="nav-btn" style="background-color: var(--primary-light); color: var(--primary-text); border: 1px solid var(--primary); font-weight: 700;">
-        <span>🎯</span> <span>คลังข้อสอบจำลองเสมือนจริง 10 ข้อ</span>
+        <span>🎯</span> <span>แบบฝึกหัดจำลอง & ประเมินจุดอ่อน 20 ข้อ</span>
       </button>
     </nav>
   </aside>
@@ -1084,7 +1084,7 @@
               <span>⚖️</span> <span>หมวด 9: จริยธรรมการวิจัย, Belmont</span>
             </button>
             <button onclick="scrollToSection('quiz-section')" class="nav-btn" style="background-color: var(--primary-light); color: var(--primary-text); border: 1px solid var(--primary); font-weight: 700;">
-              <span>🎯</span> <span>คลังข้อสอบจำลองเสมือนจริง 10 ข้อ</span>
+              <span>🎯</span> <span>แบบฝึกหัดจำลอง & ประเมินจุดอ่อน 20 ข้อ</span>
             </button>
           </nav>
         </div>
@@ -3718,161 +3718,817 @@
           </div>
         </section>
 
-        <!-- Section: Interactive Mock Exam Simulator -->
-        <section id="quiz-section" class="search-item card">
-          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-color); margin-bottom: 1rem;">
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span style="font-size: 1.5rem;">🎯</span>
+
+        <!-- ====================================================================
+             SECTION: COMPREHENSIVE MEDICAL RESEARCH DIAGNOSTIC PRACTICE EXAM
+             ==================================================================== -->
+        <section id="quiz-section" class="search-item card" style="border: 2px solid var(--primary); padding: 1.25rem;">
+          
+          <!-- Exam Header & Meta -->
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; padding-bottom: 1rem; border-bottom: 2px solid var(--border-color); margin-bottom: 1.25rem;">
+            <div style="display: flex; align-items: center; gap: 0.65rem;">
+              <span style="font-size: 1.85rem;">🎯</span>
               <div>
-                <h3 style="font-size: 1.15rem; font-weight: 700; margin: 0;">คลังข้อสอบจำลองเสมือนจริง 10 ข้อ (Interactive Mock Exam Simulator)</h3>
-                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">คลิกเลือกคำตอบเพื่อตรวจคะแนนและอ่านเหตุผลเฉลยแบบทันที</p>
+                <h3 style="font-size: 1.2rem; font-weight: 700; margin: 0; color: var(--text-main); display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                  <span>แบบฝึกหัดจำลองเสมือนจริงเพื่อประเมินจุดอ่อน (Medical Research Diagnostic Exam)</span>
+                  <span class="badge badge-primary">20 ข้อครอบคลุมทุกหมวด</span>
+                </h3>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0.15rem 0 0 0;">
+                  ฝึกทำข้อสอบสถานการณ์จริง ตอบปุ๊บรู้ผลทันที พร้อมวิเคราะห์จุดอ่อนรายบุคคลและแนะนำหัวข้อที่ต้องทบทวนด่วน
+                </p>
               </div>
             </div>
-            <span class="badge badge-primary">ฝึกทำข้อสอบจริง</span>
+            
+            <!-- Retake / Reset Button -->
+            <button onclick="resetMockExam()" class="btn btn-danger" style="font-weight: 700;">
+              <span>🔄</span> <span>เริ่มทำใหม่ (Reset)</span>
+            </button>
           </div>
 
-          <div style="display: flex; flex-direction: column; gap: 1rem;">
-            <!-- Q1 -->
-            <div style="padding: 1rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color);">
-              <strong style="display: block; font-size: 0.9rem; margin-bottom: 0.75rem;">
-                1. ผู้วิจัยต้องการเปรียบเทียบคะแนนความรู้เรื่องโรคเบาหวานของกลุ่มตัวอย่างเดิม 'ก่อนและหลัง' เข้าร่วมโปรแกรมสุขศึกษา ข้อมูลมีการแจกแจงแบบปกติ ควรเลือกใช้สถิติทดสอบใด?
-              </strong>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.5rem;">
-                <button onclick="checkAnswer(1, 'A')" class="btn" style="text-align: left; justify-content: flex-start;">A. Independent Samples t-test</button>
-                <button onclick="checkAnswer(1, 'B')" class="btn" style="text-align: left; justify-content: flex-start;">B. Paired Samples t-test</button>
-                <button onclick="checkAnswer(1, 'C')" class="btn" style="text-align: left; justify-content: flex-start;">C. One-Way ANOVA</button>
-                <button onclick="checkAnswer(1, 'D')" class="btn" style="text-align: left; justify-content: flex-start;">D. Chi-Square Test</button>
+          <!-- Realtime Diagnostic Score Dashboard -->
+          <div style="border-radius: 1rem; background: var(--bg-card-alt); border: 1.5px solid var(--border-color); padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div style="width: 52px; height: 52px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 700; box-shadow: var(--shadow-sm);">
+                  <span id="score-number" style="font-size: 1.25rem; line-height: 1;">0</span>
+                  <span style="font-size: 0.6rem; opacity: 0.9;">/ 20</span>
+                </div>
+                <div>
+                  <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); font-weight: 700;">ผลการประเมินปัจจุบัน</div>
+                  <div id="score-status" style="font-size: 1.05rem; font-weight: 700; color: var(--text-main);">ยังไม่ได้เริ่มทำแบบทดสอบ</div>
+                </div>
               </div>
-              <div id="feedback-1" style="display: none; margin-top: 0.75rem;" class="callout"></div>
+
+              <!-- Interactive Filter Pills -->
+              <div style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+                <button onclick="filterExamQuestions('all')" id="filter-all" class="chip-pill chip-primary active">ทั้งหมด (20 ข้อ)</button>
+                <button onclick="filterExamQuestions('wrong')" id="filter-wrong" class="chip-pill chip-danger">เฉพาะข้อที่ผิด (⚠️ จุดอ่อน)</button>
+                <button onclick="filterExamQuestions('m1-3')" id="filter-m1-3" class="chip-pill">หมวด 1-3 (PICO, Design, Sn/Sp)</button>
+                <button onclick="filterExamQuestions('m4-6')" id="filter-m4-6" class="chip-pill">หมวด 4-6 (สถิติชีพ, IOC, สถิติ)</button>
+                <button onclick="filterExamQuestions('m7-9')" id="filter-m7-9" class="chip-pill">หมวด 7-9 (Regression, อ้างอิง, จริยธรรม)</button>
+              </div>
             </div>
 
-            <!-- Q2 -->
-            <div style="padding: 1rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color);">
-              <strong style="display: block; font-size: 0.9rem; margin-bottom: 0.75rem;">
-                2. การศึกษาติดตามระดับ Serum biomarker เทียบกับการเสียชีวิตใน 1 ปี แต่มีผู้ป่วยบางส่วนสูญหายระหว่างการทดลอง (Loss to follow-up) ควรเลือกใช้วิธีทางสถิติใด?
-              </strong>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.5rem;">
-                <button onclick="checkAnswer(2, 'A')" class="btn" style="text-align: left; justify-content: flex-start;">A. Binary Logistic Regression</button>
-                <button onclick="checkAnswer(2, 'B')" class="btn" style="text-align: left; justify-content: flex-start;">B. Cox Proportional Hazards Regression</button>
-                <button onclick="checkAnswer(2, 'C')" class="btn" style="text-align: left; justify-content: flex-start;">C. Linear Regression</button>
-                <button onclick="checkAnswer(2, 'D')" class="btn" style="text-align: left; justify-content: flex-start;">D. Chi-Square Test for Trend</button>
-              </div>
-              <div id="feedback-2" style="display: none; margin-top: 0.75rem;" class="callout"></div>
+            <!-- Progress Bar -->
+            <div style="width: 100%; height: 8px; border-radius: 9999px; background: var(--border-color); overflow: hidden; margin-bottom: 0.75rem;">
+              <div id="exam-progress-bar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #10b981, #0284c7); transition: width 0.3s ease;"></div>
             </div>
 
-            <!-- Q3 -->
-            <div style="padding: 1rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color);">
-              <strong style="display: block; font-size: 0.9rem; margin-bottom: 0.75rem;">
-                3. ในการตรวจคัดกรองโรค (Screening Test) คุณสมบัติข้อใดของเครื่องมือที่มีความสำคัญมากที่สุดตามหลัก SnNOut?
-              </strong>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.5rem;">
-                <button onclick="checkAnswer(3, 'A')" class="btn" style="text-align: left; justify-content: flex-start;">A. Specificity สูง</button>
-                <button onclick="checkAnswer(3, 'B')" class="btn" style="text-align: left; justify-content: flex-start;">B. Sensitivity สูง</button>
-                <button onclick="checkAnswer(3, 'C')" class="btn" style="text-align: left; justify-content: flex-start;">C. Positive Predictive Value สูง</button>
-                <button onclick="checkAnswer(3, 'D')" class="btn" style="text-align: left; justify-content: flex-start;">D. Likelihood Ratio สูง</button>
+            <!-- Realtime Weakness Alert Box -->
+            <div id="weakness-alert-box" style="display: none; padding: 0.75rem 1rem; border-radius: 0.75rem; background: var(--warning-bg); border: 1.5px solid var(--warning-border); color: var(--warning-text); font-size: 0.85rem; line-height: 1.5;">
+              <div style="font-weight: 700; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.25rem;">
+                <span>⚠️</span> <span>รายงานการวิเคราะห์จุดอ่อนที่ต้องเร่งปรับปรุง (Personal Weakness Diagnostic):</span>
               </div>
-              <div id="feedback-3" style="display: none; margin-top: 0.75rem;" class="callout"></div>
+              <ul id="weakness-list" style="margin: 0; padding-left: 1.25rem; font-size: 0.82rem; space-y: 0.25rem;"></ul>
             </div>
+          </div>
 
-            <!-- Q4 -->
-            <div style="padding: 1rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color);">
-              <strong style="display: block; font-size: 0.9rem; margin-bottom: 0.75rem;">
-                4. การปฏิเสธสมมติฐานว่าง (Reject H0) ทั้งๆ ที่ในความเป็นจริงประชากรไม่มีความแตกต่างกัน เรียกว่าความคลาดเคลื่อนประเภทใด?
-              </strong>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.5rem;">
-                <button onclick="checkAnswer(4, 'A')" class="btn" style="text-align: left; justify-content: flex-start;">A. Type I Error (&alpha; error / False Positive)</button>
-                <button onclick="checkAnswer(4, 'B')" class="btn" style="text-align: left; justify-content: flex-start;">B. Type II Error (&beta; error / False Negative)</button>
-                <button onclick="checkAnswer(4, 'C')" class="btn" style="text-align: left; justify-content: flex-start;">C. Berkson's Bias</button>
-                <button onclick="checkAnswer(4, 'D')" class="btn" style="text-align: left; justify-content: flex-start;">D. Confounding Effect</button>
+          <!-- Questions Container -->
+          <div id="exam-questions-container" style="display: flex; flex-direction: column; gap: 1.25rem;">
+    
+            <!-- Question 1 -->
+            <div id="mock-q-1" class="mock-question-card" data-module="1" data-id="1" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">1</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 1: คำถามวิจัย & PICO</span>
+                </div>
+                <span id="q-status-1" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
               </div>
-              <div id="feedback-4" style="display: none; margin-top: 0.75rem;" class="callout"></div>
-            </div>
 
-            <!-- Q5 -->
-            <div style="padding: 1rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color);">
-              <strong style="display: block; font-size: 0.9rem; margin-bottom: 0.75rem;">
-                5. เหตุใดในการรายงานคะแนน Glasgow Coma Scale (GCS) จึงห้ามใช้ค่า Mean &plusmn; SD?
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                แพทย์ประจำบ้านต้องการทำวิจัยเรื่อง 'ประสิทธิผลของยาสมุนไพรชนิดใหม่ในการรักษาโรคมะเร็งตับระยะลุกลาม' แต่พบว่างบประมาณมีจำกัดมาก ไม่มีห้องปฏิบัติการทดสอบระดับเซลล์ และไม่มีอาจารย์ผู้เชี่ยวชาญด้านเคมีสมุนไพรคอยให้คำปรึกษา คำถามวิจัยนี้ขาดคุณสมบัติตามหลัก FINER Criteria ในข้อใดมากที่สุด?
               </strong>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.5rem;">
-                <button onclick="checkAnswer(5, 'A')" class="btn" style="text-align: left; justify-content: flex-start;">A. เพราะคะแนนมีช่วงสเกล 0-100</button>
-                <button onclick="checkAnswer(5, 'B')" class="btn" style="text-align: left; justify-content: flex-start;">B. เพราะ GCS เป็น Ordinal Scale ที่ช่วงห่างแต่ละระดับไม่เท่ากัน ต้องใช้ Median (IQR)</button>
-                <button onclick="checkAnswer(5, 'C')" class="btn" style="text-align: left; justify-content: flex-start;">C. เพราะคะแนน GCS ไม่มีความน่าเชื่อถือ</button>
-                <button onclick="checkAnswer(5, 'D')" class="btn" style="text-align: left; justify-content: flex-start;">D. เพราะใช้ได้เฉพาะ Descriptive Statistics</button>
-              </div>
-              <div id="feedback-5" style="display: none; margin-top: 0.75rem;" class="callout"></div>
-            </div>
 
-            <!-- Q6 -->
-            <div style="padding: 1rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color);">
-              <strong style="display: block; font-size: 0.9rem; margin-bottom: 0.75rem;">
-                6. ในการทดสอบประสิทธิภาพของชุดตรวจ Diagnostic Test ชนิดใหม่ (Index Test) จำเป็นต้องเปรียบเทียบผลกับสิ่งใดเสมอ?
-              </strong>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.5rem;">
-                <button onclick="checkAnswer(6, 'A')" class="btn" style="text-align: left; justify-content: flex-start;">A. Historical Control</button>
-                <button onclick="checkAnswer(6, 'B')" class="btn" style="text-align: left; justify-content: flex-start;">B. Reference Standard / Gold Standard (เช่น RT-PCR หรือผลชิ้นเนื้อ)</button>
-                <button onclick="checkAnswer(6, 'C')" class="btn" style="text-align: left; justify-content: flex-start;">C. ค่าเฉลี่ยของกลุ่มประชากรทั่วไป</button>
-                <button onclick="checkAnswer(6, 'D')" class="btn" style="text-align: left; justify-content: flex-start;">D. การสังเกตอาการทางคลินิกเพียงอย่างเดียว</button>
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-1">
+                <button onclick="submitMockAnswer(1, 'A')" id="btn-1-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;F - Feasible (ความเป็นไปได้ในการดำเนินการจริง)
+                </button>
+                <button onclick="submitMockAnswer(1, 'B')" id="btn-1-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;I - Interesting (ความน่าสนใจต่อวงการแพทย์)
+                </button>
+                <button onclick="submitMockAnswer(1, 'C')" id="btn-1-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;N - Novel (ความแปลกใหม่ทางองค์ความรู้)
+                </button>
+                <button onclick="submitMockAnswer(1, 'D')" id="btn-1-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;E - Ethical (ความถูกต้องตามหลักจริยธรรม)
+                </button>
               </div>
-              <div id="feedback-6" style="display: none; margin-top: 0.75rem;" class="callout"></div>
-            </div>
 
-            <!-- Q7 -->
-            <div style="padding: 1rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color);">
-              <strong style="display: block; font-size: 0.9rem; margin-bottom: 0.75rem;">
-                7. ผู้เชี่ยวชาญ 3 ท่านประเมินความสอดคล้องของข้อคำถามกับวัตถุประสงค์ (IOC) ได้คะแนน +1, +1, 0 ค่า IOC มีค่าเท่าใด และข้อคำถามนี้ผ่านเกณฑ์หรือไม่?
-              </strong>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.5rem;">
-                <button onclick="checkAnswer(7, 'A')" class="btn" style="text-align: left; justify-content: flex-start;">A. IOC = 0.50 (ไม่ผ่านเกณฑ์)</button>
-                <button onclick="checkAnswer(7, 'B')" class="btn" style="text-align: left; justify-content: flex-start;">B. IOC = 0.67 (ผ่านเกณฑ์ เพราะ &ge; 0.50)</button>
-                <button onclick="checkAnswer(7, 'C')" class="btn" style="text-align: left; justify-content: flex-start;">C. IOC = 1.00 (ผ่านเกณฑ์ดีเยี่ยม)</button>
-                <button onclick="checkAnswer(7, 'D')" class="btn" style="text-align: left; justify-content: flex-start;">D. IOC = 0.33 (ต้องตัดทิ้งทันที)</button>
-              </div>
-              <div id="feedback-7" style="display: none; margin-top: 0.75rem;" class="callout"></div>
+              <!-- Instant Feedback Container -->
+              <div id="feedback-1" style="display: none; margin-top: 0.9rem;" class="callout"></div>
             </div>
+        
+            <!-- Question 2 -->
+            <div id="mock-q-2" class="mock-question-card" data-module="1" data-id="2" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">2</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 1: คำถามวิจัย & PICO</span>
+                </div>
+                <span id="q-status-2" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
 
-            <!-- Q8 -->
-            <div style="padding: 1rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color);">
-              <strong style="display: block; font-size: 0.9rem; margin-bottom: 0.75rem;">
-                8. ดัชนีชี้วัดภาระโรค (Burden of Disease) ที่รวมทั้งปีสุขภาวะที่สูญเสียจากการตายก่อนวัยอันควร (YLL) และการมีชีวิตอยู่ด้วยความพิการ (YLD) คือข้อใด?
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                ผู้วิจัยต้องการศึกษาว่า 'ในผู้ป่วยเบาหวานชนิดที่ 2 ที่ควบคุมน้ำตาลไม่ได้ (HbA1c > 8.0%) การใช้ยา SGLT2 inhibitor ร่วมกับการรักษามาตรฐาน จะสามารถลดอัตราการนอนโรงพยาบาลจากภาวะหัวใจล้มเหลว เมื่อเทียบกับการใช้ยา Sulfonylurea ร่วมกับการรักษามาตรฐานได้หรือไม่' ข้อใดคือองค์ประกอบ 'C' (Comparison/Control) ในโครงสร้าง PICO นี้?
               </strong>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.5rem;">
-                <button onclick="checkAnswer(8, 'A')" class="btn" style="text-align: left; justify-content: flex-start;">A. QALY (Quality-Adjusted Life Years)</button>
-                <button onclick="checkAnswer(8, 'B')" class="btn" style="text-align: left; justify-content: flex-start;">B. DALY (Disability-Adjusted Life Years)</button>
-                <button onclick="checkAnswer(8, 'C')" class="btn" style="text-align: left; justify-content: flex-start;">C. Case Fatality Rate</button>
-                <button onclick="checkAnswer(8, 'D')" class="btn" style="text-align: left; justify-content: flex-start;">D. Crude Death Rate</button>
-              </div>
-              <div id="feedback-8" style="display: none; margin-top: 0.75rem;" class="callout"></div>
-            </div>
 
-            <!-- Q9 -->
-            <div style="padding: 1rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color);">
-              <strong style="display: block; font-size: 0.9rem; margin-bottom: 0.75rem;">
-                9. ตามมาตรฐานการเขียนเอกสารอ้างอิงแบบ Vancouver หากบทความวิจัยมีผู้แต่งตั้งแต่ 7 คนขึ้นไป ต้องเขียนรายชื่อผู้แต่งอย่างไร?
-              </strong>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.5rem;">
-                <button onclick="checkAnswer(9, 'A')" class="btn" style="text-align: left; justify-content: flex-start;">A. ใส่ชื่อผู้แต่งทุกคนทั้งหมดโดยไม่ตัดทอน</button>
-                <button onclick="checkAnswer(9, 'B')" class="btn" style="text-align: left; justify-content: flex-start;">B. ระบุชื่อผู้แต่ง 6 คนแรก แล้วตามด้วย et al.</button>
-                <button onclick="checkAnswer(9, 'C')" class="btn" style="text-align: left; justify-content: flex-start;">C. ระบุชื่อเฉพาะผู้แต่งคนแรกคนเดียว แล้วตามด้วย et al.</button>
-                <button onclick="checkAnswer(9, 'D')" class="btn" style="text-align: left; justify-content: flex-start;">D. ระบุชื่อ 3 คนแรก แล้วตามด้วย and colleagues</button>
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-2">
+                <button onclick="submitMockAnswer(2, 'A')" id="btn-2-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;ผู้ป่วยเบาหวานชนิดที่ 2 ที่ควบคุมระดับน้ำตาลไม่ได้ (HbA1c > 8.0%)
+                </button>
+                <button onclick="submitMockAnswer(2, 'B')" id="btn-2-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;การใช้ยา SGLT2 inhibitor ร่วมกับการรักษามาตรฐาน
+                </button>
+                <button onclick="submitMockAnswer(2, 'C')" id="btn-2-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;การใช้ยา Sulfonylurea ร่วมกับการรักษามาตรฐาน
+                </button>
+                <button onclick="submitMockAnswer(2, 'D')" id="btn-2-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;อัตราการนอนโรงพยาบาลจากภาวะหัวใจล้มเหลว
+                </button>
               </div>
-              <div id="feedback-9" style="display: none; margin-top: 0.75rem;" class="callout"></div>
-            </div>
 
-            <!-- Q10 -->
-            <div style="padding: 1rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color);">
-              <strong style="display: block; font-size: 0.9rem; margin-bottom: 0.75rem;">
-                10. การนำกลุ่มเปราะบาง (Vulnerable Populations) เช่น ผู้ป่วยจิตเวช หรือผู้ต้องขัง มาทดลองยาอันตรายโดยไม่มีการคุ้มครองเป็นพิเศษ ขัดต่อหลักจริยธรรม Belmont Report ข้อใดอย่างร้ายแรงที่สุด?
-              </strong>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.5rem;">
-                <button onclick="checkAnswer(10, 'A')" class="btn" style="text-align: left; justify-content: flex-start;">A. ความคุ้มค่าทางเศรษฐศาสตร์ (Cost-effectiveness)</button>
-                <button onclick="checkAnswer(10, 'B')" class="btn" style="text-align: left; justify-content: flex-start;">B. Respect for Persons (การเคารพในบุคคล) และ Justice (ความยุติธรรม)</button>
-                <button onclick="checkAnswer(10, 'C')" class="btn" style="text-align: left; justify-content: flex-start;">C. Clinical Equipoise เท่านั้น</button>
-                <button onclick="checkAnswer(10, 'D')" class="btn" style="text-align: left; justify-content: flex-start;">D. Double-blind Peer Review</button>
-              </div>
-              <div id="feedback-10" style="display: none; margin-top: 0.75rem;" class="callout"></div>
+              <!-- Instant Feedback Container -->
+              <div id="feedback-2" style="display: none; margin-top: 0.9rem;" class="callout"></div>
             </div>
+        
+            <!-- Question 3 -->
+            <div id="mock-q-3" class="mock-question-card" data-module="2" data-id="3" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">3</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 2: รูปแบบวิจัย & Hierarchy</span>
+                </div>
+                <span id="q-status-3" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                ผู้วิจัยต้องการศึกษาปัจจัยเสี่ยงของการเกิดโรคทางพันธุกรรมชนิดหนึ่งที่ 'พบได้ยากมากในประชากร (Rare Disease, อุบัติการณ์ 1 ต่อ 100,000)' และต้องการทราบผลการวิเคราะห์ภายในระยะเวลา 6 เดือน ผู้วิจัยควรเลือกรูปแบบการวิจัย (Study Design) ใดจึงจะเหมาะสม คุ้มค่า และเป็นไปได้มากที่สุด?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-3">
+                <button onclick="submitMockAnswer(3, 'A')" id="btn-3-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;Prospective Cohort Study
+                </button>
+                <button onclick="submitMockAnswer(3, 'B')" id="btn-3-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;Case-Control Study
+                </button>
+                <button onclick="submitMockAnswer(3, 'C')" id="btn-3-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;Randomized Controlled Trial (RCT)
+                </button>
+                <button onclick="submitMockAnswer(3, 'D')" id="btn-3-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;Ecological Study
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-3" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 4 -->
+            <div id="mock-q-4" class="mock-question-card" data-module="2" data-id="4" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">4</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 2: รูปแบบวิจัย & Hierarchy</span>
+                </div>
+                <span id="q-status-4" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                ในการศึกษาความสัมพันธ์ระหว่าง 'การดื่มกาแฟ' กับ 'การเกิดโรคมะเร็งตับอ่อน' พบว่ากลุ่มดื่มกาแฟมีอัตราเกิดมะเร็งตับอ่อนสูงกว่ากลุ่มไม่ดื่มอย่างมีนัยสำคัญ แต่เมื่อผู้วิจัยทำการวิเคราะห์แยกกลุ่มตาม 'ประวัติการสูบบุหรี่' (Stratified analysis) กลับพบว่าการดื่มกาแฟไม่ได้สัมพันธ์กับมะเร็งตับอ่อนเลย ปรากฏการณ์นี้เกิดจากอะไร?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-4">
+                <button onclick="submitMockAnswer(4, 'A')" id="btn-4-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;Berkson's Bias (ความลำเอียงจากการเลือกตัวอย่างในโรงพยาบาล)
+                </button>
+                <button onclick="submitMockAnswer(4, 'B')" id="btn-4-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;Confounding Effect โดยมี 'การสูบบุหรี่' เป็นตัวแปรกวน (Confounder)
+                </button>
+                <button onclick="submitMockAnswer(4, 'C')" id="btn-4-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;Recall Bias (ความลำเอียงจากการจำข้อมูลในอดีต)
+                </button>
+                <button onclick="submitMockAnswer(4, 'D')" id="btn-4-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;Hawthorne Effect (พฤติกรรมเปลี่ยนเพราะรู้ว่าถูกสังเกต)
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-4" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 5 -->
+            <div id="mock-q-5" class="mock-question-card" data-module="3" data-id="5" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">5</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 3: Diagnostic Tests (Sn, Sp)</span>
+                </div>
+                <span id="q-status-5" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                กรมควบคุมโรคต้องการเลือกชุดตรวจเพื่อ 'คัดกรอง (Screening)' โรคติดเชื้อไวรัสอุบัติใหม่ในด่านตรวจคนเข้าเมือง เพื่อป้องกันไม่ให้มีผู้ติดเชื้อหลุดรอดเข้าไปในประเทศแม้แต่คนเดียว เครื่องมือคัดกรองที่ดีที่สุดควรมีคุณสมบัติเด่นในข้อใด?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-5">
+                <button onclick="submitMockAnswer(5, 'A')" id="btn-5-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;มีค่า Specificity สูงมาก (เพื่อใช้กฎ SpPIn)
+                </button>
+                <button onclick="submitMockAnswer(5, 'B')" id="btn-5-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;มีค่า Sensitivity สูงมาก (เพื่อใช้กฎ SnNOut)
+                </button>
+                <button onclick="submitMockAnswer(5, 'C')" id="btn-5-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;มีค่า Positive Predictive Value สูงที่สุด
+                </button>
+                <button onclick="submitMockAnswer(5, 'D')" id="btn-5-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;มีค่า Positive Likelihood Ratio (LR+) สูงเกิน 10
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-5" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 6 -->
+            <div id="mock-q-6" class="mock-question-card" data-module="3" data-id="6" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">6</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 3: Diagnostic Tests (Sn, Sp)</span>
+                </div>
+                <span id="q-status-6" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                นำชุดตรวจ Rapid Antigen Test ไปทดสอบกับกลุ่มตัวอย่าง 1,000 คน (โดยมีผู้ติดเชื้อจริงตามผล RT-PCR 200 คน) พบว่าชุดตรวจให้ผลบวกในคนติดเชื้อจริง 180 คน และให้ผลบวกในคนไม่ติดเชื้อ 80 คน ค่า Sensitivity และ Specificity ของชุดตรวจนี้มีค่าเท่าใดตามลำดับ?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-6">
+                <button onclick="submitMockAnswer(6, 'A')" id="btn-6-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;Sensitivity = 90.0%, Specificity = 90.0%
+                </button>
+                <button onclick="submitMockAnswer(6, 'B')" id="btn-6-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;Sensitivity = 90.0%, Specificity = 10.0%
+                </button>
+                <button onclick="submitMockAnswer(6, 'C')" id="btn-6-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;Sensitivity = 80.0%, Specificity = 90.0%
+                </button>
+                <button onclick="submitMockAnswer(6, 'D')" id="btn-6-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;Sensitivity = 69.2%, Specificity = 97.3%
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-6" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 7 -->
+            <div id="mock-q-7" class="mock-question-card" data-module="3" data-id="7" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">7</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 3: Diagnostic Tests (Sn, Sp)</span>
+                </div>
+                <span id="q-status-7" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                ข้อใดอธิบายความสัมพันธ์ระหว่าง 'ความชุกของโรค (Prevalence)' กับค่าชี้วัดประสิทธิภาพของชุดตรวจวินิจฉัยได้อย่างถูกต้องตามหลักระเบียบวิธีวิจัย?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-7">
+                <button onclick="submitMockAnswer(7, 'A')" id="btn-7-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;เมื่อความชุกของโรคในประชากรสูงขึ้น จะทำให้ Sensitivity และ Specificity สูงขึ้นตามไปด้วย
+                </button>
+                <button onclick="submitMockAnswer(7, 'B')" id="btn-7-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;เมื่อความชุกของโรคในประชากรลดลง จะทำให้ Positive Predictive Value (PPV) ลดลง ในขณะที่ Negative Predictive Value (NPV) สูงขึ้น
+                </button>
+                <button onclick="submitMockAnswer(7, 'C')" id="btn-7-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;ความชุกของโรคไม่มีผลกระทบต่อทั้งค่า PPV และค่า NPV
+                </button>
+                <button onclick="submitMockAnswer(7, 'D')" id="btn-7-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;Likelihood Ratio (LR) จะเปลี่ยนแปลงตามความชุกของโรคเสมอ
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-7" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 8 -->
+            <div id="mock-q-8" class="mock-question-card" data-module="4" data-id="8" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">8</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 4: Vital Stats & DALY</span>
+                </div>
+                <span id="q-status-8" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                ในการประเมินภาระโรค (Burden of Disease) จากโรคหลอดเลือดสมองในจังหวัดหนึ่ง พบว่ามีปีสุขภาวะที่สูญเสียจากการเสียชีวิตก่อนวัยอันควร (YLL) เท่ากับ 12,000 Person-years และปีสุขภาวะที่สูญเสียจากการมีชีวิตอยู่ด้วยความพิการ (YLD) เท่ากับ 8,500 Person-years ค่า DALYs รวมของโรคนี้มีค่าเท่าใด?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-8">
+                <button onclick="submitMockAnswer(8, 'A')" id="btn-8-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;3,500 Person-years
+                </button>
+                <button onclick="submitMockAnswer(8, 'B')" id="btn-8-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;10,250 Person-years
+                </button>
+                <button onclick="submitMockAnswer(8, 'C')" id="btn-8-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;20,500 Person-years
+                </button>
+                <button onclick="submitMockAnswer(8, 'D')" id="btn-8-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;102,000,000 Person-years
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-8" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 9 -->
+            <div id="mock-q-9" class="mock-question-card" data-module="4" data-id="9" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">9</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 4: Vital Stats & DALY</span>
+                </div>
+                <span id="q-status-9" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                ตัวหาร (Denominator) ที่ถูกต้องในการคำนวณ 'อัตราตายของทารก (Infant Mortality Rate - IMR)' ในรอบปีปฏิทิน คือข้อใด?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-9">
+                <button onclick="submitMockAnswer(9, 'A')" id="btn-9-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;จำนวนประชากรทั้งหมด ณ กลางปี (Mid-year population)
+                </button>
+                <button onclick="submitMockAnswer(9, 'B')" id="btn-9-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;จำนวนทารกที่คลอดทั้งหมด (Total births ทั้งมีชีวิตและตายคลอด)
+                </button>
+                <button onclick="submitMockAnswer(9, 'C')" id="btn-9-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;จำนวนเด็กเกิดมีชีพทั้งหมด (Total live births) ในปีนั้น
+                </button>
+                <button onclick="submitMockAnswer(9, 'D')" id="btn-9-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;จำนวนสตรีวัยเจริญพันธุ์ทั้งหมดในปีนั้น
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-9" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 10 -->
+            <div id="mock-q-10" class="mock-question-card" data-module="5" data-id="10" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">10</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 5: เครื่องมือวิจัย, IOC</span>
+                </div>
+                <span id="q-status-10" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                ผู้วิจัยนำข้อคำถามในแบบสอบถามไปให้ผู้เชี่ยวชาญ 5 ท่านประเมินความตรงตามเนื้อหา (Content Validity) ในข้อคำถามที่ 3 ผู้เชี่ยวชาญให้คะแนนดังนี้: +1, +1, +1, 0, -1 ค่า IOC ของข้อคำถามนี้มีค่าเท่าใด และข้อนี้ผ่านเกณฑ์มาตรฐานหรือไม่?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-10">
+                <button onclick="submitMockAnswer(10, 'A')" id="btn-10-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;IOC = 0.40, ไม่ผ่านเกณฑ์ (ต้องนำไปปรับปรุงแก้ไขหรือตัดทิ้ง)
+                </button>
+                <button onclick="submitMockAnswer(10, 'B')" id="btn-10-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;IOC = 0.60, ผ่านเกณฑ์ (สามารถนำไปใช้ได้ทันที)
+                </button>
+                <button onclick="submitMockAnswer(10, 'C')" id="btn-10-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;IOC = 0.20, ไม่ผ่านเกณฑ์ (ต้องตัดทิ้งสถานเดียว)
+                </button>
+                <button onclick="submitMockAnswer(10, 'D')" id="btn-10-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;IOC = 0.50, ผ่านเกณฑ์คาบเส้น
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-10" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 11 -->
+            <div id="mock-q-11" class="mock-question-card" data-module="5" data-id="11" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">11</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 5: เครื่องมือวิจัย, IOC</span>
+                </div>
+                <span id="q-status-11" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                การทดสอบความสอดคล้องภายใน (Internal Consistency) ของแบบสอบถามชนิดมาตรประมาณค่า (Likert Scale) หลายระดับ นิยมใช้ค่าสถิติใด และต้องมีค่าเท่าใดขึ้นไปจึงจะยอมรับได้ว่าเครื่องมือมีความเชื่อมั่น (Reliability) ในเกณฑ์ดี?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-11">
+                <button onclick="submitMockAnswer(11, 'A')" id="btn-11-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;ค่า IOC >= 0.50
+                </button>
+                <button onclick="submitMockAnswer(11, 'B')" id="btn-11-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;ค่า Cronbach's Alpha Coefficient >= 0.70
+                </button>
+                <button onclick="submitMockAnswer(11, 'C')" id="btn-11-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;ค่า Pearson's Correlation Coefficient >= 0.90
+                </button>
+                <button onclick="submitMockAnswer(11, 'D')" id="btn-11-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;ค่า Cohen's Kappa Coefficient >= 0.40
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-11" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 12 -->
+            <div id="mock-q-12" class="mock-question-card" data-module="6" data-id="12" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">12</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 6: สถิติชีวการแพทย์ & SPSS</span>
+                </div>
+                <span id="q-status-12" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                ผู้วิจัยต้องการเปรียบเทียบระดับเอนไซม์ ALT ในซีรั่มระหว่างผู้ป่วยกลุ่มที่ได้รับยา Favipiravir (n=45) กับกลุ่มยาหลอก (n=45) การทดสอบความปกติพบว่าข้อมูล ALT ในทั้งสองกลุ่มมีการกระจายตัวแบบเบ้ขวาอย่างรุนแรง (Skewed data, p < 0.001 จาก Shapiro-Wilk) สถิติทดสอบที่ถูกต้องเหมาะสมที่สุดคือข้อใด?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-12">
+                <button onclick="submitMockAnswer(12, 'A')" id="btn-12-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;Independent Samples t-test
+                </button>
+                <button onclick="submitMockAnswer(12, 'B')" id="btn-12-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;Paired Samples t-test
+                </button>
+                <button onclick="submitMockAnswer(12, 'C')" id="btn-12-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;Mann-Whitney U Test (Wilcoxon Rank-Sum Test)
+                </button>
+                <button onclick="submitMockAnswer(12, 'D')" id="btn-12-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;One-Way ANOVA
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-12" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 13 -->
+            <div id="mock-q-13" class="mock-question-card" data-module="6" data-id="13" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">13</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 6: สถิติชีวการแพทย์ & SPSS</span>
+                </div>
+                <span id="q-status-13" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                พยาบาลวิจัยทำการชั่งน้ำหนักตัวของกลุ่มผู้ป่วยโรคอ้วน 60 คน 'ก่อนเข้าโปรแกรมลดน้ำหนัก' และ 'หลังเข้าโปรแกรม 12 สัปดาห์' (คนกลุ่มเดิมวัดซ้ำ 2 ครั้ง) โดยข้อมูลผลต่างน้ำหนักแจกแจงแบบปกติ ควรสถิติทดสอบใด?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-13">
+                <button onclick="submitMockAnswer(13, 'A')" id="btn-13-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;Independent Samples t-test
+                </button>
+                <button onclick="submitMockAnswer(13, 'B')" id="btn-13-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;Paired Samples t-test
+                </button>
+                <button onclick="submitMockAnswer(13, 'C')" id="btn-13-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;Chi-Square Test
+                </button>
+                <button onclick="submitMockAnswer(13, 'D')" id="btn-13-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;Wilcoxon Signed-Rank Test
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-13" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 14 -->
+            <div id="mock-q-14" class="mock-question-card" data-module="6" data-id="14" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">14</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 6: สถิติชีวการแพทย์ & SPSS</span>
+                </div>
+                <span id="q-status-14" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                ในการทดสอบความสัมพันธ์ระหว่าง 'การติดเชื้อในโรงพยาบาล (มี/ไม่มี)' กับ 'การใส่สายสวนปัสสาวะ (ใส่/ไม่ใส่)' ด้วยตาราง 2x2 พบว่ามี 1 ช่องเซลล์ที่มีค่าความถี่คาดหมาย (Expected Count) เท่ากับ 3.2 (คิดเป็น 25% ของเซลล์ทั้งหมด) ผู้วิจัยควรเลือกรายงานค่าสถิติทดสอบใด?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-14">
+                <button onclick="submitMockAnswer(14, 'A')" id="btn-14-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;Pearson's Chi-Square Test with Continuity Correction
+                </button>
+                <button onclick="submitMockAnswer(14, 'B')" id="btn-14-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;Fisher's Exact Test
+                </button>
+                <button onclick="submitMockAnswer(14, 'C')" id="btn-14-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;McNemar's Test
+                </button>
+                <button onclick="submitMockAnswer(14, 'D')" id="btn-14-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;Mantel-Haenszel Chi-Square Test
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-14" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 15 -->
+            <div id="mock-q-15" class="mock-question-card" data-module="6" data-id="15" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">15</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 6: สถิติชีวการแพทย์ & SPSS</span>
+                </div>
+                <span id="q-status-15" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                หากผู้วิจัยทำการทดลองทางคลินิกแล้วสรุปผลว่า 'ยาลดความดันตัวใหม่มีประสิทธิภาพดีกว่ายาหลอกอย่างมีนัยสำคัญทางสถิติ (p < 0.05)' แต่ในความเป็นจริงประชากร ยาตัวใหม่นี้ไม่ได้มีประสิทธิภาพแตกต่างจากยาหลอกเลย ความผิดพลาดนี้เรียกว่าอะไร?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-15">
+                <button onclick="submitMockAnswer(15, 'A')" id="btn-15-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;Type I Error (alpha error / False Positive)
+                </button>
+                <button onclick="submitMockAnswer(15, 'B')" id="btn-15-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;Type II Error (beta error / False Negative)
+                </button>
+                <button onclick="submitMockAnswer(15, 'C')" id="btn-15-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;Measurement Bias
+                </button>
+                <button onclick="submitMockAnswer(15, 'D')" id="btn-15-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;Loss to follow-up Bias
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-15" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 16 -->
+            <div id="mock-q-16" class="mock-question-card" data-module="7" data-id="16" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">16</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 7: การเขียนบทที่ 4 & บทที่ 5</span>
+                </div>
+                <span id="q-status-16" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                แพทย์ต้องการสร้างสมการพยากรณ์เพื่อศึกษาปัจจัยที่มีผลต่อการ 'รอดชีวิตหรือเสียชีวิตใน 30 วัน (รอดชีวิต = 0, เสียชีวิต = 1)' ของผู้ป่วย Sepsis โดยต้องการควบคุมตัวแปรกวน เช่น อายุ, โรคประจำตัว, และระดับ Lactate ผู้วิจัยควรเลือกใช้เทคนิคการวิเคราะห์การถดถอยประเภทใด?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-16">
+                <button onclick="submitMockAnswer(16, 'A')" id="btn-16-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;Simple Linear Regression
+                </button>
+                <button onclick="submitMockAnswer(16, 'B')" id="btn-16-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;Multiple Linear Regression
+                </button>
+                <button onclick="submitMockAnswer(16, 'C')" id="btn-16-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;Binary Logistic Regression
+                </button>
+                <button onclick="submitMockAnswer(16, 'D')" id="btn-16-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;Polynomial Regression
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-16" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 17 -->
+            <div id="mock-q-17" class="mock-question-card" data-module="7" data-id="17" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">17</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 7: การเขียนบทที่ 4 & บทที่ 5</span>
+                </div>
+                <span id="q-status-17" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                ในการศึกษาติดตามผู้ป่วยมะเร็งเต้านมระยะเวลา 5 ปี เพื่อเปรียบเทียบอัตราการรอดชีวิตระหว่างกลุ่มที่ได้รับยาพุ่งเป้ากับเคมีบำบัดมาตรฐาน ระหว่างการศึกษามีผู้ป่วยบางส่วนย้ายภูมิลำเนาจนขาดการติดต่อ (Loss to follow-up) และบางคนยังมีชีวิตอยู่จนสิ้นสุดการวิจัย (Censored data) สถิติวิเคราะห์ที่เหมาะสมที่สุดคือข้อใด?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-17">
+                <button onclick="submitMockAnswer(17, 'A')" id="btn-17-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;Pearson Correlation และ Simple Linear Regression
+                </button>
+                <button onclick="submitMockAnswer(17, 'B')" id="btn-17-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;Kaplan-Meier Curve ร่วมกับ Cox Proportional Hazards Regression
+                </button>
+                <button onclick="submitMockAnswer(17, 'C')" id="btn-17-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;Two-way ANOVA with Repeated Measures
+                </button>
+                <button onclick="submitMockAnswer(17, 'D')" id="btn-17-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;Chi-Square Test for Trend
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-17" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 18 -->
+            <div id="mock-q-18" class="mock-question-card" data-module="8" data-id="18" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">18</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 8: การเขียนอ้างอิง Vancouver</span>
+                </div>
+                <span id="q-status-18" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                บทความวิจัยทางการแพทย์เรื่องหนึ่งมีผู้นิพนธ์ทั้งหมด 8 คน ได้แก่ สมชาย, สมศรี, สมศักดิ์, สมพร, สมหมาย, สมเกียรติ, สมบูรณ์, และ สมปอง ตามหลักเกณฑ์การเขียนเอกสารอ้างอิงแบบ Vancouver Style ในบรรณานุกรมท้ายเล่ม ต้องเขียนรายชื่อผู้นิพนธ์อย่างไร?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-18">
+                <button onclick="submitMockAnswer(18, 'A')" id="btn-18-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;ระบุชื่อเฉพาะคนแรกคนเดียว แล้วตามด้วย et al.
+                </button>
+                <button onclick="submitMockAnswer(18, 'B')" id="btn-18-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;ระบุชื่อผู้นิพนธ์ 3 คนแรก แล้วตามด้วย et al.
+                </button>
+                <button onclick="submitMockAnswer(18, 'C')" id="btn-18-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;ระบุชื่อผู้นิพนธ์ 6 คนแรก แล้วตามด้วย et al.
+                </button>
+                <button onclick="submitMockAnswer(18, 'D')" id="btn-18-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;ระบุชื่อผู้นิพนธ์ครบทั้ง 8 คนทั้งหมดโดยห้ามตัดทอน
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-18" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 19 -->
+            <div id="mock-q-19" class="mock-question-card" data-module="9" data-id="19" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">19</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 9: จริยธรรมการวิจัย, Belmont</span>
+                </div>
+                <span id="q-status-19" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                คณะกรรมการจริยธรรมการวิจัยในมนุษย์ (IRB) ปฏิเสธโครงการวิจัยที่ผู้วิจัยต้องการเกณฑ์ 'ผู้ต้องขังในเรือนจำ' มาเป็นกลุ่มตัวอย่างทดลองฉีดวัคซีนทดลองที่มีความเสี่ยงสูง โดยแลกกับการได้รับการลดหย่อนโทษ การกระทำของผู้วิจัยนี้ขัดต่อหลักการใดของ Belmont Report มากที่สุด?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-19">
+                <button onclick="submitMockAnswer(19, 'A')" id="btn-19-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;Respect for Persons (การเคารพในบุคคล) เนื่องจากเกิดการบังคับล่อลวงใจที่ไม่เหมาะสม (Undue Influence / Coercion) ต่อกลุ่มเปราะบาง
+                </button>
+                <button onclick="submitMockAnswer(19, 'B')" id="btn-19-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;Cost-Utility (ความคุ้มค่าทางเศรษฐศาสตร์)
+                </button>
+                <button onclick="submitMockAnswer(19, 'C')" id="btn-19-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;Clinical Equipoise (ความสมดุลทางคลินิก)
+                </button>
+                <button onclick="submitMockAnswer(19, 'D')" id="btn-19-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;Data Transparency (ความโปร่งใสของข้อมูล)
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-19" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
+            <!-- Question 20 -->
+            <div id="mock-q-20" class="mock-question-card" data-module="9" data-id="20" style="padding: 1.15rem; border-radius: 1rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: border-color 0.2s ease;">
+              
+              <!-- Meta Header -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="width: 26px; height: 26px; border-radius: 9999px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem;">20</span>
+                  <span class="badge badge-primary" style="font-size: 0.72rem;">หมวด 9: จริยธรรมการวิจัย, Belmont</span>
+                </div>
+                <span id="q-status-20" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">ยังไม่ได้ตอบ</span>
+              </div>
+
+              <!-- Question Stem -->
+              <strong style="display: block; font-size: 0.92rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.9rem;">
+                ก่อนที่ผู้วิจัยจะสามารถเริ่มทำการทดลองแบบสุ่มและมีกลุ่มควบคุม (Randomized Controlled Trial - RCT) เพื่อเปรียบเทียบยาใหม่กับยามาตรฐานเดิมได้อย่างถูกต้องตามหลักจริยธรรม จำเป็นต้องมีสภาวะใดเกิดขึ้นในหมู่วงการแพทย์ก่อนเสมอ?
+              </strong>
+
+              <!-- Choices Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.5rem;" id="choices-group-20">
+                <button onclick="submitMockAnswer(20, 'A')" id="btn-20-A" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>A.</strong>&nbsp;ผู้วิจัยต้องเชื่อมั่น 100% ล่วงหน้าว่ายาใหม่ดีกว่ายามาตรฐานเดิมอย่างแน่นอน
+                </button>
+                <button onclick="submitMockAnswer(20, 'B')" id="btn-20-B" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>B.</strong>&nbsp;สภาวะ Clinical Equipoise (ความไม่แน่ใจอย่างแท้จริงในหมู่วงการแพทย์ผู้เชี่ยวชาญว่าการรักษาใดดีกว่ากัน)
+                </button>
+                <button onclick="submitMockAnswer(20, 'C')" id="btn-20-C" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>C.</strong>&nbsp;บริษัทยาผู้ผลิตต้องเป็นผู้ออกทุนวิจัยทั้งหมด
+                </button>
+                <button onclick="submitMockAnswer(20, 'D')" id="btn-20-D" class="btn choice-btn" style="text-align: left; justify-content: flex-start; padding: 0.6rem 0.85rem; font-size: 0.82rem; line-height: 1.4; border-radius: 0.75rem;">
+                  <strong>D.</strong>&nbsp;ต้องมีการตีพิมพ์ผลการทดลองในวารสารระดับ Q1 ก่อนเริ่มรับสมัครผู้ป่วย
+                </button>
+              </div>
+
+              <!-- Instant Feedback Container -->
+              <div id="feedback-20" style="display: none; margin-top: 0.9rem;" class="callout"></div>
+            </div>
+        
           </div>
         </section>
+    
 
       </main>
     </div>
@@ -4106,94 +4762,226 @@
       }
     }
 
-    // Mock Exam Answer Checking Engine
-    function checkAnswer(qNum, choice) {
-      const fb = document.getElementById(`feedback-${qNum}`);
-      if (!fb) return;
-      fb.style.display = 'block';
 
-      if (qNum === 1) {
-        if (choice === 'B') {
-          fb.className = 'callout callout-success';
-          fb.innerHTML = '<strong>&check; ถูกต้องยอดเยี่ยม!</strong> ข้อมูลก่อน-หลังในคนกลุ่มเดียวกันเป็นข้อมูลผูกพัน (Paired/Dependent) จึงต้องใช้ <strong>Paired Samples t-test</strong>';
-        } else {
-          fb.className = 'callout callout-danger';
-          fb.innerHTML = '<strong>&cross; ยังไม่ถูกต้อง!</strong> นี่คือการวัดซ้ำในคนกลุ่มเดิมก่อน-หลัง ต้องใช้ Paired Samples t-test ครับ';
+    // ==========================================================================
+    // EXAM SIMULATOR & WEAKNESS DIAGNOSTIC ENGINE
+    // ==========================================================================
+    const mockQuestionsData = [{"id": 1, "m_num": 1, "m_name": "หมวด 1: คำถามวิจัย & PICO", "ans": "A", "rationale": "F - Feasible หมายถึงความเป็นไปได้ในการดำเนินการวิจัยให้สำเร็จจริง ทั้งด้านจำนวนกลุ่มตัวอย่าง งบประมาณ เครื่องมือ อุปกรณ์ ระยะเวลา และความเชี่ยวชาญของทีมวิจัย ในกรณีนี้ผู้วิจัยขาดแคลนงบ เครื่องมือ และผู้เชี่ยวชาญ จึงตกเกณฑ์ Feasibility โดยตรง", "emphasis": "⭐ อาจารย์เน้นย้ำ: ก่อนจะคิดว่างานวิจัย Novel หรือมี Ethical หรือไม่ ต้องประเมิน Feasibility (ความเป็นไปได้จริง) เป็นด่านแรกเสมอ!", "remediation": "กลับไปทบทวนหมวดที่ 1: หัวข้อ 1.1 FINER Criteria (Feasible, Interesting, Novel, Ethical, Relevant)"}, {"id": 2, "m_num": 1, "m_name": "หมวด 1: คำถามวิจัย & PICO", "ans": "C", "rationale": "P = ผู้ป่วย T2DM ที่คุมน้ำตาลไม่ได้, I = SGLT2 inhibitor + SOC, C = Sulfonylurea + SOC (กลุ่มเปรียบเทียบมาตรฐานเดิม), O = อัตราการนอนโรงพยาบาลจาก Heart Failure", "emphasis": "⭐ ข้อสอบมักตั้งโจทย์ยาวเพื่อหลอกระหว่าง I (Intervention ตัวใหม่ที่สนใจ) กับ C (Comparator มาตรฐานเดิมที่นำมาเทียบ) แยกให้ออก!", "remediation": "กลับไปทบทวนหมวดที่ 1: หัวข้อ 1.2 PICO Framework สำหรับ Quantitative Research"}, {"id": 3, "m_num": 2, "m_name": "หมวด 2: รูปแบบวิจัย & Hierarchy", "ans": "B", "rationale": "โรคที่พบยากมาก (Rare disease) หากทำ Cohort จะต้องใช้กลุ่มตัวอย่างหลายแสนคนและติดตามนานหลายสิบปีกว่าจะพบเคส ทำให้สิ้นเปลืองและเป็นไปไม่ได้ ดังนั้น Case-Control Study จึงเป็นตัวเลือกทองคำเพราะเริ่มต้นจากคนที่เป็นโรคแล้ว (Cases) มาเทียบกับคนไม่เป็นโรค (Controls)", "emphasis": "⭐ กฎเหล็กของอาจารย์: Rare Disease (โรคหายาก) $\\rightarrow$ Case-Control Study; ส่วน Rare Exposure (ปัจจัยเสี่ยงหายาก เช่น สัมผัสรังสี) $\\rightarrow$ Cohort Study ท่องจำให้แม่น!", "remediation": "กลับไปทบทวนหมวดที่ 2: หัวข้อ 2.1 ผังการเลือก Study Design (Observation vs Experimental)"}, {"id": 4, "m_num": 2, "m_name": "หมวด 2: รูปแบบวิจัย & Hierarchy", "ans": "B", "rationale": "การสูบบุหรี่เป็น Confounder เพราะสัมพันธ์ทั้งกับ Exposure (คนดื่มกาแฟมักสูบบุหรี่) และสัมพันธ์กับ Outcome (บุหรี่ก่อให้เกิดมะเร็งตับอ่อนโดยตรง) เมื่อควบคุมด้วย Stratified Analysis ความสัมพันธ์ลวงเดิมจึงหายไป", "emphasis": "⭐ Confounder ต้องมีคุณสมบัติครบ 3 ข้อ: 1. สัมพันธ์กับ Exposure, 2. เป็นปัจจัยเสี่ยงอิสระต่อ Outcome, 3. ไม่อยู่บน Pathway กลไกก่อโรค!", "remediation": "กลับไปทบทวนหมวดที่ 2: หัวข้อ 2.3 การจัดการ Confounders (Matching, Stratification, Multivariable Analysis)"}, {"id": 5, "m_num": 3, "m_name": "หมวด 3: Diagnostic Tests (Sn, Sp)", "ans": "B", "rationale": "การตรวจคัดกรอง (Screening) หัวใจสำคัญคือต้องลดผลลบลวง (False Negative) ให้ต่ำที่สุดเพื่อไม่ให้คนป่วยหลุดรอด จึงต้องการ Sensitivity สูง ตามหลัก SnNOut (High Sensitivity, Negative test rules OUT disease)", "emphasis": "⭐ อาจารย์ย้ำเสมอ: Screening Test $\\rightarrow$ เน้น Sensitivity สูง (SnNOut); Confirmation Test (ตรวจยืนยัน) $\\rightarrow$ เน้น Specificity สูง (SpPIn)!", "remediation": "กลับไปทบทวนหมวดที่ 3: หัวข้อ 3.1 คุณสมบัติเครื่องมือวินิจฉัย (Sensitivity, Specificity, SnNOut, SpPIn)"}, {"id": 6, "m_num": 3, "m_name": "หมวด 3: Diagnostic Tests (Sn, Sp)", "ans": "A", "rationale": "คนป่วยจริง = 200 (TP = 180, FN = 20) $\\rightarrow$ Sensitivity = 180/200 = 90.0%. คนไม่ป่วย = 800 (FP = 80, TN = 720) $\\rightarrow$ Specificity = 720/800 = 90.0%", "emphasis": "⭐ สร้างตาราง $2\\times 2$ ให้คล่อง: แนวนอนคือผลตรวจ Index Test, แนวตั้งคือผล Gold Standard แล้วจำสูตร $Sn = TP/(TP+FN)$, $Sp = TN/(TN+FP)$", "remediation": "กลับไปทบทวนหมวดที่ 3: ตาราง $2\\times 2$ และแผ่นพับสรุปสูตรคำนวณ Diagnostic Accuracy"}, {"id": 7, "m_num": 3, "m_name": "หมวด 3: Diagnostic Tests (Sn, Sp)", "ans": "B", "rationale": "Sensitivity, Specificity, และ Likelihood Ratios (LR+, LR-) เป็นคุณสมบัติประจำตัวของเครื่องมือ (Prevalence-independent) ส่วน PPV และ NPV จะแปรผันตาม Prevalence โดยตรง: หากโรคพบยาก (Prevalence ต่ำ) ผลบวกที่ตรวจได้จะมี False Positive ปนมาก ทำให้ PPV ต่ำลง และ NPV สูงขึ้น", "emphasis": "⭐ ข้อสอบออกบ่อยมาก: ค่าที่ 'คงที่' ไม่เปลี่ยนตามสถานที่คือ Sensitivity, Specificity, LR! ค่าที่ 'เปลี่ยน' ตามความชุกคือ PPV และ NPV!", "remediation": "กลับไปทบทวนหมวดที่ 3: หัวข้อ 3.2 ผลกระทบของ Prevalence ต่อ PPV/NPV"}, {"id": 8, "m_num": 4, "m_name": "หมวด 4: Vital Stats & DALY", "ans": "C", "rationale": "สูตรคำนวณมาตรฐานสากล: DALY = YLL + YLD (Years of Life Lost + Years Lived with Disability) = 12,000 + 8,500 = 20,500 Person-years", "emphasis": "⭐ จำสมการ DALY = YLL + YLD ให้ขึ้นใจ: 1 DALY คือการสูญเสียปีแห่งการมีสุขภาพสมบูรณ์ไป 1 ปีเต็ม!", "remediation": "กลับไปทบทวนหมวดที่ 4: หัวข้อ 4.2 การคำนวณ DALY, YLL, YLD"}, {"id": 9, "m_num": 4, "m_name": "หมวด 4: Vital Stats & DALY", "ans": "C", "rationale": "Infant Mortality Rate = (จำนวนทารกอายุต่ำกว่า 1 ปีตายในปีนั้น / จำนวนเด็กเกิดมีชีพทั้งหมด Total Live Births ในปีนั้น) x 1,000", "emphasis": "⭐ จุดระวังที่อาจารย์ติงบ่อย: ตัวหารของ IMR และ MMR (Maternal Mortality Ratio) ต้องใช้ Live Births (เกิดมีชีพ) เท่านั้น ห้ามใช้ประชากรกลางปีเด็ดขาด!", "remediation": "กลับไปทบทวนหมวดที่ 4: หัวข้อ 4.1 สถิติชีพและอัตราการตายทางการแพทย์"}, {"id": 10, "m_num": 5, "m_name": "หมวด 5: เครื่องมือวิจัย, IOC", "ans": "A", "rationale": "IOC = sum(R)/N = (+1 + 1 + 1 + 0 - 1)/5 = 2/5 = 0.40. เกณฑ์มาตรฐานของ IOC คือต้องมีค่า >= 0.50 ขึ้นไปจึงจะถือว่าผ่านเกณฑ์ ข้อนี้ได้ 0.40 จึงไม่ผ่านเกณฑ์", "emphasis": "⭐ เกณฑ์ IOC: +1 (แน่ใจว่าตรง), 0 (ไม่แน่ใจ), -1 (แน่ใจว่าไม่ตรง) $\\rightarrow$ ค่าเฉลี่ยต้อง >= 0.50 เสมอ ถ้าต่ำกว่าต้องปรับแก้!", "remediation": "กลับไปทบทวนหมวดที่ 5: หัวข้อ 5.1 การประเมินความตรงตามเนื้อหาและสูตร IOC"}, {"id": 11, "m_num": 5, "m_name": "หมวด 5: เครื่องมือวิจัย, IOC", "ans": "B", "rationale": "แบบสอบถามที่เป็น Rating Scale / Likert Scale วัดความสอดคล้องภายในด้วย Cronbach's Alpha Coefficient โดยเกณฑ์ที่ยอมรับได้ในทางการแพทย์คือ >= 0.70", "emphasis": "⭐ อย่าสับสน: IOC วัด Validity (ความตรงเชิงเนื้อหา) ส่วน Cronbach's Alpha วัด Reliability (ความเที่ยง/ความสอดคล้องภายใน)!", "remediation": "กลับไปทบทวนหมวดที่ 5: หัวข้อ 5.2 การทดสอบ Reliability และ Cronbach's Alpha"}, {"id": 12, "m_num": 6, "m_name": "หมวด 6: สถิติชีวการแพทย์ & SPSS", "ans": "C", "rationale": "การเปรียบเทียบตัวแปรต่อเนื่องระหว่าง 2 กลุ่มตัวอย่างที่เป็นอิสระจากกัน (Independent groups) เมื่อข้อมูลไม่แจกแจงปกติ (Non-normal / Skewed) ต้องใช้สถิติไม่อิงพารามิเตอร์คือ Mann-Whitney U Test", "emphasis": "⭐ กฎสถิติ: 2 กลุ่มอิสระ Normal $\\rightarrow$ Independent t-test; Non-normal $\\rightarrow$ Mann-Whitney U Test! ท่องให้ขึ้นใจ", "remediation": "กลับไปทบทวนหมวดที่ 6: หัวข้อ 6.2 ตารางสรุปการเลือกสถิติชีวการแพทย์ และตัวช่วยเลือกสถิติอัตโนมัติ"}, {"id": 13, "m_num": 6, "m_name": "หมวด 6: สถิติชีวการแพทย์ & SPSS", "ans": "B", "rationale": "การวัดข้อมูลตัวแปรต่อเนื่องในกลุ่มตัวอย่างเดียวกันก่อน-หลัง (Repeated measures / Matched pairs) เป็นข้อมูลผูกพัน เมื่อแจกแจงปกติจึงต้องใช้ Paired Samples t-test", "emphasis": "⭐ คนเดิมวัด 2 เวลา ถ้าแจกแจงปกติใช้ Paired t-test, ถ้าเบ้หรือไม่แจกแจงปกติใช้ Wilcoxon Signed-Rank Test!", "remediation": "กลับไปทบทวนหมวดที่ 6: หัวข้อ 6.2 สถิติสำหรับข้อมูล Paired/Dependent Data"}, {"id": 14, "m_num": 6, "m_name": "หมวด 6: สถิติชีวการแพทย์ & SPSS", "ans": "B", "rationale": "ข้อตกลงเบื้องต้นของ Pearson Chi-Square กำหนดว่าห้ามมีช่องใดมี Expected count < 5 เกิน 20% ของเซลล์ทั้งหมด ในตาราง 2x2 มี 4 ช่อง ถ้ามีแม้แต่ช่องเดียวที่ < 5 คิดเป็น 25% จึงต้องใช้ Fisher's Exact Test เสมอ", "emphasis": "⭐ อาจารย์ติงบ่อยมาก: ในตาราง 2x2 ถ้ามี Expected Cell < 5 แม้แต่ช่องเดียว ให้กาตอบ Fisher's Exact Test ทันที!", "remediation": "กลับไปทบทวนหมวดที่ 6: หัวข้อ 6.3 ข้อตกลงเบื้องต้นของ Chi-Square และ Fisher's Exact Test"}, {"id": 15, "m_num": 6, "m_name": "หมวด 6: สถิติชีวการแพทย์ & SPSS", "ans": "A", "rationale": "Type I Error (alpha error) คือการปฏิเสธสมมติฐานว่าง (Reject H0) ทั้งๆ ที่ H0 เป็นจริง (สรุปว่ามีผล ทั้งที่ความจริงไม่มีผล หรือ False Positive)", "emphasis": "⭐ Type I Error = บอกว่ามีผลทั้งที่ไม่มีผลจริง (alpha); Type II Error = บอกว่าไม่มีผลทั้งที่มีผลจริง (beta); Power = 1 - beta", "remediation": "กลับไปทบทวนหมวดที่ 6: หัวข้อ 6.4 Type I Error, Type II Error และ Power of Test"}, {"id": 16, "m_num": 7, "m_name": "หมวด 7: การเขียนบทที่ 4 & บทที่ 5", "ans": "C", "rationale": "ตัวแปรตาม (Dependent Variable / Outcome) เป็นตัวแปรเชิงกลุ่ม 2 ค่า (Binary: ตาย vs รอด) เมื่อต้องการทำนายพร้อมคุม Confounders หลายตัว ต้องใช้ Binary Logistic Regression (รายงาน Adjusted Odds Ratio: aOR)", "emphasis": "⭐ Outcome เป็นตัวแปรต่อเนื่อง $\\rightarrow$ Linear Regression; Outcome เป็นตัวแปรกลุ่ม 2 ค่า $\\rightarrow$ Binary Logistic Regression!", "remediation": "กลับไปทบทวนหมวดที่ 7: หัวข้อ 7.2 การวิเคราะห์สมการถดถอยพหุคูณ (Linear vs Logistic Regression)"}, {"id": 17, "m_num": 7, "m_name": "หมวด 7: การเขียนบทที่ 4 & บทที่ 5", "ans": "B", "rationale": "ข้อมูลชนิด Time-to-Event ที่มีข้อมูลถูกตัดทอน (Censored data) ต้องใช้การวิเคราะห์การรอดชีพ (Survival Analysis) โดยวาดเส้นโค้งด้วย Kaplan-Meier และวิเคราะห์หา Hazard Ratio พร้อมคุมตัวแปรกวนด้วย Cox Proportional Hazards Regression", "emphasis": "⭐ เมื่อไหร่ก็ตามที่โจทย์มี 'มิติของเวลาจนเกิดเหตุการณ์ (Time-to-Event)' และมีคน 'Loss to follow-up / Censored' $\\rightarrow$ ตอบ Survival Analysis (Cox / Kaplan-Meier) ทันที!", "remediation": "กลับไปทบทวนหมวดที่ 7: หัวข้อ 7.3 การวิเคราะห์ข้อมูลการรอดชีพ (Survival Analysis)"}, {"id": 18, "m_num": 8, "m_name": "หมวด 8: การเขียนอ้างอิง Vancouver", "ans": "C", "rationale": "กฎสากลของ Vancouver Style (NLM/ICMJE): หากมีผู้นิพนธ์ 1 ถึง 6 คน ให้ระบุชื่อครบทุกคน แต่ถ้ามีตั้งแต่ 7 คนขึ้นไป ให้ระบุชื่อ 6 คนแรก แล้วตามด้วย et al.", "emphasis": "⭐ ข้อสอบออกถามบ่อยมาก: จำตัวเลขตัดรอบของ Vancouver ให้แม่น คือ '6 คนแรก + et al.'", "remediation": "กลับไปทบทวนหมวดที่ 8: หัวข้อ 8.1 กฎเกณฑ์การเขียนเอกสารอ้างอิงแบบ Vancouver Style"}, {"id": 19, "m_num": 9, "m_name": "หมวด 9: จริยธรรมการวิจัย, Belmont", "ans": "A", "rationale": "Respect for Persons กำหนดว่าบุคคลต้องมีอิสระในการตัดสินใจ (Autonomy) และกลุ่มเปราะบาง (Vulnerable populations เช่น ผู้ต้องขัง) ต้องได้รับการคุ้มครองเป็นพิเศษ การนำการลดโทษมาล่อถือเป็น Undue Influence ทำให้ขาดความสมัครใจที่แท้จริง", "emphasis": "⭐ Belmont Report มี 3 หลักการ: 1. Respect for Persons (Autonomy, ปกป้องกลุ่มเปราะบาง), 2. Beneficence (ประโยชน์สูงสุด เสี่ยงต่ำสุด), 3. Justice (กระจายภาระและประโยชน์อย่างเป็นธรรม)", "remediation": "กลับไปทบทวนหมวดที่ 9: หัวข้อ 9.1 หลักจริยธรรมการวิจัย Belmont Report และกลุ่มเปราะบาง"}, {"id": 20, "m_num": 9, "m_name": "หมวด 9: จริยธรรมการวิจัย, Belmont", "ans": "B", "rationale": "Clinical Equipoise คือสภาวะที่มีความสงสัยหรือไม่แน่ใจอย่างแท้จริงในวงการแพทย์ผู้เชี่ยวชาญ (Genuine uncertainty) ว่าการรักษาใดดีกว่ากัน หากแพทย์ทราบอยู่แล้วว่ายาหนึ่งดีกว่า การสุ่มให้ผู้ป่วยได้ยาที่ด้อยกว่าจะถือว่าผิดจริยธรรมทันที", "emphasis": "⭐ คำว่า Clinical Equipoise คือหัวใจทางจริยธรรมที่จำเป็นที่สุดก่อนจะเริ่มทำ RCT ทุกการศึกษา!", "remediation": "กลับไปทบทวนหมวดที่ 9: หัวข้อ 9.2 หลักจริยธรรมในการทำ Clinical Trials และ Clinical Equipoise"}];
+    let userAnswers = {}; // format: { qId: { choice: 'A', isCorrect: true } }
+
+    function submitMockAnswer(qId, choice) {
+      const qData = mockQuestionsData.find(q => q.id === qId);
+      if (!qData) return;
+
+      const isCorrect = (choice === qData.ans);
+      userAnswers[qId] = { choice: choice, isCorrect: isCorrect };
+
+      // Reset all buttons in this question group
+      ['A', 'B', 'C', 'D'].forEach(c => {
+        const btn = document.getElementById(`btn-${qId}-${c}`);
+        if (btn) {
+          btn.style.borderColor = 'var(--border-color)';
+          btn.style.backgroundColor = 'var(--bg-card)';
+          btn.style.color = 'var(--text-main)';
         }
-      } else if (qNum === 2) {
-        if (choice === 'B') {
-          fb.className = 'callout callout-success';
-          fb.innerHTML = '<strong>&check; ถูกต้องแม่นยำ!</strong> ข้อมูลที่มีมิติของเวลา (Time-to-Event) และมีคน Loss to follow-up (Censored data) ต้องใช้ <strong>Cox Proportional Hazards Regression</strong> เสมอ';
-        } else {
-          fb.className = 'callout callout-danger';
-          fb.innerHTML = '<strong>&cross; ยังไม่ถูกต้อง!</strong> Logistic Regression ไม่สามารถจัดการกับมิติเวลาและผู้ป่วยที่ Loss to follow-up ได้ ต้องใช้ Cox Regression ครับ';
+      });
+
+      // Highlight selected and correct buttons
+      const chosenBtn = document.getElementById(`btn-${qId}-${choice}`);
+      const correctBtn = document.getElementById(`btn-${qId}-${qData.ans}`);
+
+      if (isCorrect) {
+        if (chosenBtn) {
+          chosenBtn.style.backgroundColor = 'var(--success-bg)';
+          chosenBtn.style.borderColor = 'var(--success-border)';
+          chosenBtn.style.color = 'var(--success-text)';
         }
-      } else if (qNum === 3) {
-        if (choice === 'B') {
-          fb.className = 'callout callout-success';
-          fb.innerHTML = '<strong>&check; ถูกต้องเป๊ะ!</strong> การตรวจคัดกรอง (Screening) ต้องการ <strong>Sensitivity สูง (SnNOut)</strong> เพื่อไม่ให้ผู้ป่วยจริงหลุดรอดไป';
-        } else {
-          fb.className = 'callout callout-danger';
-          fb.innerHTML = '<strong>&cross; ยังไม่ถูกต้อง!</strong> Screening ต้องเน้น Sensitivity สูง (SNOUT) ครับ ส่วน Specificity สูงจะใช้ตอนตรวจยืนยัน (SPIN)';
+      } else {
+        if (chosenBtn) {
+          chosenBtn.style.backgroundColor = 'var(--danger-bg)';
+          chosenBtn.style.borderColor = 'var(--danger-border)';
+          chosenBtn.style.color = 'var(--danger-text)';
         }
-      } else if (qNum === 4) {
-        if (choice === 'A') {
-          fb.className = 'callout callout-success';
-          fb.innerHTML = '<strong>&check; ถูกต้อง!</strong> การปฏิเสธ H0 ทั้งๆ ที่ H0 เป็นจริง เรียกว่า <strong>Type I Error (&alpha; error / False Positive)</strong>';
-        } else {
-          fb.className = 'callout callout-danger';
-          fb.innerHTML = '<strong>&cross; ยังไม่ถูกต้อง!</strong> การปฏิเสธ H0 ทั้งที่ไม่มีผลจริงคือ Type I Error ครับ';
+        if (correctBtn) {
+          correctBtn.style.backgroundColor = 'var(--success-bg)';
+          correctBtn.style.borderColor = 'var(--success-border)';
+          correctBtn.style.color = 'var(--success-text)';
         }
-      } else if (qNum === 5) {
-        if (choice === 'B') {
-          fb.className = 'callout callout-success';
-          fb.innerHTML = '<strong>&check; ถูกต้องตรงประเด็น!</strong> GCS เป็นมาตรวัดอันดับ (Ordinal Scale) ที่ช่วงห่างไม่เท่ากัน จึงห้ามรายงาน Mean +- SD และต้องรายงานด้วย <strong>Median (IQR)</strong>';
+      }
+
+      // Update question status pill
+      const statusPill = document.getElementById(`q-status-${qId}`);
+      if (statusPill) {
+        if (isCorrect) {
+          statusPill.innerHTML = '<span style="color: #059669;">&check; ถูกต้อง</span>';
         } else {
-          fb.className = 'callout callout-danger';
-          fb.innerHTML = '<strong>&cross; ยังไม่ถูกต้อง!</strong> GCS เป็น Ordinal Scale ครับ จึงต้องใช้ Median (IQR)';
+          statusPill.innerHTML = '<span style="color: #e11d48;">&cross; ตอบผิด</span>';
         }
-      } else if (qNum === 6) {
-        if (choice === 'B') {
-          fb.className = 'callout callout-success';
-          fb.innerHTML = '<strong>&check; ถูกต้อง!</strong> การประเมิน Diagnostic Accuracy ต้องเปรียบเทียบผลกับ <strong>Reference Standard / Gold Standard</strong> ที่เป็นมาตรฐานยอมรับเสมอ';
+      }
+
+      // Render comprehensive feedback
+      const fb = document.getElementById(`feedback-${qId}`);
+      if (fb) {
+        fb.style.display = 'block';
+        fb.className = isCorrect ? 'callout callout-success' : 'callout callout-danger';
+
+        const titleText = isCorrect 
+          ? '<strong>&check; ยอดเยี่ยมมาก! คุณตอบถูกต้อง</strong>' 
+          : `<strong>&cross; ยังไม่ถูกต้อง! คำตอบที่ถูกต้องคือข้อ ${qData.ans}</strong>`;
+
+        fb.innerHTML = `
+          <div style="font-size: 0.95rem; margin-bottom: 0.5rem;">${titleText}</div>
+          <div style="margin-bottom: 0.5rem; line-height: 1.55;">
+            <strong>💡 คำอธิบายเชิงคลินิก (Clinical Rationale):</strong> ${qData.rationale}
+          </div>
+          <div style="padding: 0.5rem 0.75rem; border-radius: 0.5rem; background: rgba(0,0,0,0.04); margin-bottom: 0.4rem; font-weight: 600;">
+            ${qData.emphasis}
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">
+            📘 <em>${qData.remediation}</em>
+          </div>
+        `;
+      }
+
+      // Update live score and diagnostic dashboard
+      updateExamDashboard();
+    }
+
+    function updateExamDashboard() {
+      const totalQuestions = mockQuestionsData.length;
+      const answeredKeys = Object.keys(userAnswers);
+      const answeredCount = answeredKeys.length;
+      let correctCount = 0;
+      let mistakesByModule = {};
+
+      mockQuestionsData.forEach(q => {
+        mistakesByModule[q.m_name] = { total: 0, wrong: 0, remediation: q.remediation };
+      });
+
+      answeredKeys.forEach(k => {
+        const qId = parseInt(k);
+        const ansObj = userAnswers[qId];
+        const qData = mockQuestionsData.find(q => q.id === qId);
+        if (ansObj.isCorrect) {
+          correctCount++;
         } else {
-          fb.className = 'callout callout-danger';
-          fb.innerHTML = '<strong>&cross; ยังไม่ถูกต้อง!</strong> การทดสอบเครื่องมือวินิจฉัยต้องเทียบกับ Gold Standard เสมอครับ';
+          if (qData) {
+            mistakesByModule[qData.m_name].wrong++;
+          }
         }
-      } else if (qNum === 7) {
-        if (choice === 'B') {
-          fb.className = 'callout callout-success';
-          fb.innerHTML = '<strong>&check; ถูกต้องยอดเยี่ยม!</strong> IOC = (1 + 1 + 0) / 3 = <strong>0.67</strong> ซึ่งมีค่า &ge; 0.50 จึงถือว่า <strong>ผ่านเกณฑ์ความสอดคล้อง</strong>';
+      });
+
+      // Update score badge & text
+      const scoreNum = document.getElementById('score-number');
+      if (scoreNum) scoreNum.innerText = correctCount;
+
+      const scoreStatus = document.getElementById('score-status');
+      if (scoreStatus) {
+        const pct = answeredCount > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
+        if (answeredCount === 0) {
+          scoreStatus.innerText = 'ยังไม่ได้เริ่มทำแบบทดสอบ';
+        } else if (pct >= 80) {
+          scoreStatus.innerHTML = `<span style="color: #059669;">ดีเยี่ยม! ตอบถูก ${correctCount}/${totalQuestions} ข้อ (${pct}%) - พร้อมสอบ</span>`;
+        } else if (pct >= 60) {
+          scoreStatus.innerHTML = `<span style="color: #d97706;">ปานกลาง ตอบถูก ${correctCount}/${totalQuestions} ข้อ (${pct}%) - ควรทบทวนจุดอ่อน</span>`;
         } else {
-          fb.className = 'callout callout-danger';
-          fb.innerHTML = '<strong>&cross; ยังไม่ถูกต้อง!</strong> คำนวณ IOC ได้ (1+1+0)/3 = 0.67 ซึ่งผ่านเกณฑ์ครับ (เกณฑ์คือ &ge; 0.50)';
+          scoreStatus.innerHTML = `<span style="color: #e11d48;">ต้องเร่งฟิต ตอบถูก ${correctCount}/${totalQuestions} ข้อ (${pct}%) - ต้องอ่านเสริมด่วน</span>`;
         }
-      } else if (qNum === 8) {
-        if (choice === 'B') {
-          fb.className = 'callout callout-success';
-          fb.innerHTML = '<strong>&check; ถูกต้องแม่นยำ!</strong> <strong>DALY = YLL + YLD</strong> (ปีสุขภาวะที่สูญเสียจากการตายก่อนวัยอันควร + การอยู่ด้วยความพิการ)';
+      }
+
+      // Update progress bar
+      const pBar = document.getElementById('exam-progress-bar');
+      if (pBar) {
+        const progressPct = Math.round((answeredCount / totalQuestions) * 100);
+        pBar.style.width = `${progressPct}%`;
+      }
+
+      // Update Weakness Alert Box
+      const weaknessBox = document.getElementById('weakness-alert-box');
+      const weaknessList = document.getElementById('weakness-list');
+      if (weaknessBox && weaknessList) {
+        const weakModules = Object.keys(mistakesByModule).filter(m => mistakesByModule[m].wrong > 0);
+        if (weakModules.length > 0) {
+          weaknessBox.style.display = 'block';
+          weaknessList.innerHTML = weakModules.map(m => `
+            <li>
+              <strong>${m}:</strong> ตอบผิด ${mistakesByModule[m].wrong} ข้อ $\rightarrow$ <span style="text-decoration: underline;">${mistakesByModule[m].remediation}</span>
+            </li>
+          `).join('');
         } else {
-          fb.className = 'callout callout-danger';
-          fb.innerHTML = '<strong>&cross; ยังไม่ถูกต้อง!</strong> DALY คือดัชนีชี้วัดที่รวมทั้ง YLL และ YLD เข้าด้วยกันครับ';
-        }
-      } else if (qNum === 9) {
-        if (choice === 'B') {
-          fb.className = 'callout callout-success';
-          fb.innerHTML = '<strong>&check; ถูกต้องเป๊ะ!</strong> เกณฑ์มาตรฐาน Vancouver กำหนดว่าหากมีผู้แต่ง 7 คนขึ้นไป ให้ระบุ <strong>ชื่อ 6 คนแรก แล้วตามด้วย et al.</strong>';
-        } else {
-          fb.className = 'callout callout-danger';
-          fb.innerHTML = '<strong>&cross; ยังไม่ถูกต้อง!</strong> เกณฑ์ Vancouver ให้ระบุ 6 คนแรกแล้วตามด้วย et al. ครับ';
-        }
-      } else if (qNum === 10) {
-        if (choice === 'B') {
-          fb.className = 'callout callout-success';
-          fb.innerHTML = '<strong>&check; ถูกต้องที่สุด!</strong> การนำกลุ่มเปราะบางมาทดลองโดยไม่มีการปกป้อง ขัดต่อ <strong>Respect for Persons</strong> (ขาดการปกป้องกลุ่มลดอำนาจตัดสินใจ) และ <strong>Justice</strong> (ภาระการทดลองไม่ควรตกแก่กลุ่มด้อยโอกาส)';
-        } else {
-          fb.className = 'callout callout-danger';
-          fb.innerHTML = '<strong>&cross; ยังไม่ถูกต้อง!</strong> การทดลองในกลุ่มเปราะบางขัดต่อหลัก Respect for Persons และ Justice ของ Belmont Report ครับ';
+          weaknessBox.style.display = 'none';
         }
       }
     }
+
+    function filterExamQuestions(mode) {
+      // Update filter pills active state
+      ['all', 'wrong', 'm1-3', 'm4-6', 'm7-9'].forEach(m => {
+        const btn = document.getElementById(`filter-${m}`);
+        if (btn) {
+          if (m === mode) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        }
+      });
+
+      const cards = document.querySelectorAll('.mock-question-card');
+      cards.forEach(card => {
+        const qId = parseInt(card.getAttribute('data-id'));
+        const mNum = parseInt(card.getAttribute('data-module'));
+        const ansObj = userAnswers[qId];
+
+        if (mode === 'all') {
+          card.style.display = 'block';
+        } else if (mode === 'wrong') {
+          if (ansObj && !ansObj.isCorrect) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        } else if (mode === 'm1-3') {
+          card.style.display = (mNum >= 1 && mNum <= 3) ? 'block' : 'none';
+        } else if (mode === 'm4-6') {
+          card.style.display = (mNum >= 4 && mNum <= 6) ? 'block' : 'none';
+        } else if (mode === 'm7-9') {
+          card.style.display = (mNum >= 7 && mNum <= 9) ? 'block' : 'none';
+        }
+      });
+    }
+
+    function resetMockExam() {
+      if (!confirm('ต้องการเริ่มทำแบบฝึกหัดใหม่ทั้งหมดใช่หรือไม่? คะแนนที่บันทึกไว้จะถูกรีเซ็ต')) {
+        return;
+      }
+      userAnswers = {};
+      
+      // Reset all buttons & feedbacks
+      mockQuestionsData.forEach(q => {
+        ['A', 'B', 'C', 'D'].forEach(c => {
+          const btn = document.getElementById(`btn-${q.id}-${c}`);
+          if (btn) {
+            btn.style.borderColor = 'var(--border-color)';
+            btn.style.backgroundColor = 'var(--bg-card)';
+            btn.style.color = 'var(--text-main)';
+          }
+        });
+        const fb = document.getElementById(`feedback-${q.id}`);
+        if (fb) {
+          fb.style.display = 'none';
+          fb.innerHTML = '';
+        }
+        const statusPill = document.getElementById(`q-status-${q.id}`);
+        if (statusPill) {
+          statusPill.innerHTML = 'ยังไม่ได้ตอบ';
+        }
+      });
+
+      filterExamQuestions('all');
+      updateExamDashboard();
+    }
+    
   </script>
 </body>
 </html>
