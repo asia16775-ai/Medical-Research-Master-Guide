@@ -3822,6 +3822,7 @@
           <button onclick="switchStoryTab('tab-traps-all')" id="btn-tab-traps-all" class="story-tab-btn" style="padding: 0.6rem 1.1rem; font-size: 0.83rem; font-weight: 700; border-radius: 10px; cursor: pointer; transition: all 0.2s ease; border: 1px solid var(--border-color); background: var(--bg-card-alt); color: var(--text-sub); display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;">
             <span>💡</span> <span>12 จุดดักข้อสอบรวม</span>
           </button>
+          <button onclick="switchStoryTab('tab-10groups-summary')" id="btn-tab-10groups-summary" class="story-tab-btn" style="padding: 0.6rem 1.1rem; font-size: 0.83rem; font-weight: 700; border-radius: 10px; cursor: pointer; transition: all 0.2s ease; border: 1px solid var(--border-color); background: var(--bg-card-alt); color: var(--text-sub); display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;"><span>📋</span> <span>สรุป 10 กลุ่ม (แบบฟอร์มละเอียด)</span></button>
         </div>
       </div>
 
@@ -4287,6 +4288,514 @@
           </div>
         </div>
       </div>
+
+
+      <!-- ============================================================== -->
+      <!-- Tab 6: 10 Groups Structured Summary Content (NEW!) -->
+      <!-- ============================================================== -->
+      <div id="tab-10groups-summary" class="story-tab-pane" style="display: none; padding: 1.5rem;">
+        
+        <!-- Tab Banner -->
+        <div style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(16, 185, 129, 0.15)); border: 2px solid #6366f1; border-radius: 14px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 8px 24px rgba(79, 70, 229, 0.2);">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
+            <span style="font-size: 1.5rem;">📋</span>
+            <h4 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin: 0; font-family: 'Prompt', sans-serif;">
+              สรุปข้อมูลสังเคราะห์งานวิจัยครบทั้ง 10 กลุ่ม (ตามโครงสร้างมาตรฐาน 4 มิติ)
+            </h4>
+          </div>
+          <p style="font-size: 0.88rem; color: #cbd5e1; margin: 0; line-height: 1.6;">
+            รวบรวมและเรียบเรียงข้อมูลงานวิจัยของนิสิตแพทย์ทั้ง 10 กลุ่ม จากเวทีนำเสนอโครงร่างงานวิจัยทั้งรอบที่ 1 และรอบที่ 2 
+            โดยจำแนกตามโครงสร้าง: <strong>ชื่อกลุ่ม</strong> | <strong>วัตถุประสงค์</strong> | <strong>ทำอะไร (วิธีเก็บข้อมูล วิเคราะห์ข้อมูล)</strong> | <strong>คอมเมนต์จากอาจารย์</strong> 
+            เพื่อความสะดวกในการทบทวนและทำความเข้าใจภาพรวมระเบียบวิธีวิจัยอย่างเป็นระบบ
+          </p>
+        </div>
+
+        <!-- 10 Groups Cards Container -->
+        <div style="display: flex; flex-direction: column;">
+          
+        <!-- Group 1 Card -->
+        <div class="group-summary-card" style="background: rgba(56, 189, 248, 0.08); border: 1.5px solid rgba(56, 189, 248, 0.3); border-radius: 14px; padding: 1.35rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.12); transition: all 0.2s ease;">
+          
+          <!-- Header: Group Name -->
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; border-bottom: 1px dashed rgba(56, 189, 248, 0.3); padding-bottom: 0.75rem;">
+            <div>
+              <span style="background: #38bdf8; color: #0f172a; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px; display: inline-block; margin-bottom: 0.35rem;">
+                กลุ่มที่ 1
+              </span>
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.45; font-family: 'Prompt', sans-serif;">
+                🏷️ ชื่อกลุ่ม: <span style="color: #38bdf8;">กลุ่ม 1 — ปัจจัยที่มีความสัมพันธ์กับทักษะการคิดเชิงวิพากษ์ (Critical Thinking Skills) ในการใช้งาน Generative AI ของนิสิตนักศึกษาแพทย์ในประเทศไทย</span>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Section: Objectives -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #38bdf8;">🎯</span> วัตถุประสงค์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #cbd5e1; line-height: 1.6;">
+              <li style='margin-bottom: 0.35rem;'>ศึกษาและประเมินระดับทักษะการคิดเชิงวิพากษ์ (Critical Thinking) ในการใช้งาน Generative AI (เช่น ChatGPT, Gemini) ของนิสิตนักศึกษาแพทย์</li><li style='margin-bottom: 0.35rem;'>วิเคราะห์ปัจจัยส่วนบุคคล ความรู้เท่าทันเทคโนโลยี AI (AI Literacy) และระดับความไว้วางใจในระบบ AI (Trust in AI) ที่มีความสัมพันธ์กับทักษะการคิดเชิงวิพากษ์</li><li style='margin-bottom: 0.35rem;'>เปรียบเทียบความแตกต่างของพฤติกรรมการใช้งานและทักษะการคิดเชิงวิพากษ์ระหว่างนิสิตแพทย์ชั้นปรีคลินิกและชั้นคลินิก</li>
+            </ul>
+          </div>
+
+          <!-- Section: Methodology -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #a855f7;">⚙️</span> ทำอะไร (วิธีเก็บข้อมูล วิเคราะห์ข้อมูล):
+            </div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.65; margin: 0;">
+              <strong>วิธีเก็บข้อมูล:</strong> การวิจัยแบบภาคตัดขวางผ่านระบบออนไลน์ (Cross-Sectional Web-Based Survey) ส่งแบบสอบถาม Google Forms ผ่านเครือข่ายสื่อสังคมออนไลน์ไปยังนิสิตแพทย์ชั้นปีที่ 2 ถึง 6 ใช้แบบวัดมาตรฐานด้าน Critical Thinking disposition, AI Literacy Scale, และ AI Trust Inventory<br><br><strong>วิธีวิเคราะห์ข้อมูล:</strong> สถิติพรรณนา (Mean, SD, ร้อยละ), Independent Samples t-test และ One-Way ANOVA เพื่อเปรียบเทียบคะแนนระหว่างชั้นปี, Pearson's Correlation Matrix เพื่อดูทิศทางความสัมพันธ์เบื้องต้น, และ Multiple Linear Regression เพื่อวิเคราะห์ปัจจัยทำนายทักษะการคิดเชิงวิพากษ์ พร้อมตรวจสอบ Multicollinearity ด้วยค่า VIF และ Tolerance
+            </div>
+          </div>
+
+          <!-- Section: Faculty Critique -->
+          <div style="background: rgba(15, 23, 42, 0.55); border-left: 4px solid #38bdf8; border-radius: 4px 10px 10px 4px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #fde047; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span>💬</span> คอมเมนต์จากอาจารย์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #e2e8f0; line-height: 1.65;">
+              <li style='margin-bottom: 0.5rem;'><strong>Volunteer Bias & Selection Bias:</strong> การส่งลิงก์แบบสอบถามทางออนไลน์ ทำให้กลุ่มตัวอย่างที่เข้ามาตอบมักเป็นผู้ที่ใช้งาน AI เป็นประจำอยู่แล้ว (Healthy Volunteer Effect) ขาดตัวแทนของนิสิตที่ไม่ใช้ AI ส่งผลให้ผลการวิจัยขาดความสามารถในการสรุปอ้างอิงสู่ประชากรทั่วไป (Poor Generalizability)</li><li style='margin-bottom: 0.5rem;'><strong>การตรวจสอบ Multicollinearity ในโมเดล Regression:</strong> ตัวแปรความไว้วางใจใน AI (Trust) และความรู้เท่าทัน AI (Literacy) มีแนวโน้มสัมพันธ์กันเองสูงมาก หากใส่เข้าไปในสมการพร้อมกันโดยไม่ตรวจค่า VIF อาจทำให้ค่า Standard Error โป่งพองเกินจริงและแปลผลทิศทางสัมประสิทธิ์ผิดพลาด</li><li style='margin-bottom: 0.5rem;'><strong>ความแตกต่างเชิงบริบทระหว่างชั้นปี:</strong> นิสิตปรีคลินิกใช้ AI ช่วยสรุปเนื้อหาอ่านสอบ แต่นิสิตชั้นคลินิกใช้ช่วยค้นหาแนวทางเวชปฏิบัติข้างเตียง บริบทและผลกระทบต่างกันอย่างสิ้นเชิง ควรทำ Stratified Analysis หรือใส่ Interaction term</li>
+            </ul>
+          </div>
+
+        </div>
+        
+
+        <!-- Group 2 Card -->
+        <div class="group-summary-card" style="background: rgba(16, 185, 129, 0.08); border: 1.5px solid rgba(16, 185, 129, 0.3); border-radius: 14px; padding: 1.35rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.12); transition: all 0.2s ease;">
+          
+          <!-- Header: Group Name -->
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; border-bottom: 1px dashed rgba(16, 185, 129, 0.3); padding-bottom: 0.75rem;">
+            <div>
+              <span style="background: #10b981; color: #0f172a; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px; display: inline-block; margin-bottom: 0.35rem;">
+                กลุ่มที่ 2
+              </span>
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.45; font-family: 'Prompt', sans-serif;">
+                🏷️ ชื่อกลุ่ม: <span style="color: #10b981;">กลุ่ม 2 — การเรียนรู้เชิงรุก (Active Learning) และการรับรู้ในความสามารถทางวิชาการ (Academic Self-Efficacy) ความสัมพันธ์กับผลสัมฤทธิ์ทางการศึกษาของนักศึกษาแพทย์ชั้นปรีคลินิก</span>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Section: Objectives -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #38bdf8;">🎯</span> วัตถุประสงค์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #cbd5e1; line-height: 1.6;">
+              <li style='margin-bottom: 0.35rem;'>ศึกษาความสัมพันธ์ระหว่างระดับการมีส่วนร่วมในกิจกรรมการเรียนรู้เชิงรุก (เช่น TBL, Flipped Classroom) กับการรับรู้ความสามารถแห่งตนทางวิชาการ (Academic Self-Efficacy)</li><li style='margin-bottom: 0.35rem;'>ทดสอบความสัมพันธ์ระหว่าง Academic Self-Efficacy กับผลสัมฤทธิ์ทางการศึกษา (คะแนนสอบรายวิชาและเกรดเฉลี่ยสะสม GPAX)</li><li style='margin-bottom: 0.35rem;'>สร้างแบบจำลองทำนายผลสัมฤทธิ์ทางการเรียนของนิสิตแพทย์ชั้นปรีคลินิกโดยใช้ปัจจัยทางการศึกษาและจิตวิทยา</li>
+            </ul>
+          </div>
+
+          <!-- Section: Methodology -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #a855f7;">⚙️</span> ทำอะไร (วิธีเก็บข้อมูล วิเคราะห์ข้อมูล):
+            </div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.65; margin: 0;">
+              <strong>วิธีเก็บข้อมูล:</strong> การวิจัยแบบภาคตัดขวางเชิงความสัมพันธ์ (Cross-Sectional Correlational Study) ในนิสิตแพทย์ชั้นปรีคลินิก (ชั้นปีที่ 1-3) ใช้แบบสอบถาม Motivated Strategies for Learning Questionnaire (MSLQ) ร่วมกับแบบประเมินพฤติกรรมการเรียนรู้เชิงรุก และดึงข้อมูลเกรดเฉลี่ยสะสมจากทะเบียนการศึกษา<br><br><strong>วิธีวิเคราะห์ข้อมูล:</strong> Pearson's Correlation Coefficient เพื่อดูความสัมพันธ์ระหว่างตัวแปร, Multiple Linear Regression เพื่อทำนายผลสัมฤทธิ์ทางการเรียน โดยใส่ปัจจัยพื้นฐาน (เพศ อายุ ผลการเรียนเดิม) เป็นตัวแปรควบคุม
+            </div>
+          </div>
+
+          <!-- Section: Faculty Critique -->
+          <div style="background: rgba(15, 23, 42, 0.55); border-left: 4px solid #10b981; border-radius: 4px 10px 10px 4px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #fde047; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span>💬</span> คอมเมนต์จากอาจารย์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #e2e8f0; line-height: 1.65;">
+              <li style='margin-bottom: 0.5rem;'><strong>ขาด Temporal Sequence & ปัญหา Reverse Causality:</strong> การศึกษาวิจัยแบบภาคตัดขวางเก็บข้อมูล Self-Efficacy และผลการเรียน ณ เวลาเดียวกัน ไม่สามารถสรุปความสัมพันธ์เชิงสาเหตุ (Causal Inference) ได้ เพราะอาจเกิดปัญหาไก่กับไข่ (ความมั่นใจทำให้เกรดดี หรือเกรดที่ดีเป็นตัวสร้างความมั่นใจ)</li><li style='margin-bottom: 0.5rem;'><strong>การคงสเกลการวัดต่อเนื่อง (Continuous Scale):</strong> คะแนน Self-Efficacy จากแบบสอบถาม Likert Scale ควรวิเคราะห์ด้วยคะแนนรวมแบบตัวแปรต่อเนื่อง ไม่ควรนำมาหั่นเป็นกลุ่มคะแนนสูง/ต่ำ เพราะจะสูญเสียความแปรปรวน (Dichotomization Trap)</li><li style='margin-bottom: 0.5rem;'><strong>การควบคุมผลการเรียนเดิม (Baseline Confounder):</strong> เกรดเฉลี่ยเดิมก่อนเข้าเรียนหรือคะแนนสอบเข้าเป็นตัวแปรกวนสำคัญมาก หากไม่ใส่เป็นตัวแปรควบคุมร่วมในโมเดล ผลการทำนายของ Active Learning จะสูงเกินจริง</li>
+            </ul>
+          </div>
+
+        </div>
+        
+
+        <!-- Group 3 Card -->
+        <div class="group-summary-card" style="background: rgba(245, 158, 11, 0.08); border: 1.5px solid rgba(245, 158, 11, 0.3); border-radius: 14px; padding: 1.35rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.12); transition: all 0.2s ease;">
+          
+          <!-- Header: Group Name -->
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; border-bottom: 1px dashed rgba(245, 158, 11, 0.3); padding-bottom: 0.75rem;">
+            <div>
+              <span style="background: #f59e0b; color: #0f172a; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px; display: inline-block; margin-bottom: 0.35rem;">
+                กลุ่มที่ 3
+              </span>
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.45; font-family: 'Prompt', sans-serif;">
+                🏷️ ชื่อกลุ่ม: <span style="color: #f59e0b;">กลุ่ม 3 — บทบาทของการมีส่วนร่วมในกิจกรรมนอกหลักสูตร (Extracurricular Activities) ต่อสุขภาวะทางจิตและการปรับตัวของนักศึกษาแพทย์</span>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Section: Objectives -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #38bdf8;">🎯</span> วัตถุประสงค์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #cbd5e1; line-height: 1.6;">
+              <li style='margin-bottom: 0.35rem;'>เปรียบเทียบระดับความเครียด ความวิตกกังวล และสุขภาวะทางจิต (Mental Well-being) ระหว่างนิสิตแพทย์ที่เข้าร่วมกิจกรรมนอกหลักสูตรกับกลุ่มที่ไม่เข้าร่วม</li><li style='margin-bottom: 0.35rem;'>ศึกษาจำนวนชั่วโมงและความถี่ในการทำกิจกรรมนอกหลักสูตรที่เหมาะสม ซึ่งส่งผลดีต่อสุขภาวะทางจิตโดยไม่กระทบผลการเรียน</li><li style='margin-bottom: 0.35rem;'>หาปัจจัยร่วมที่ช่วยส่งเสริมการปรับตัวและสร้างความเข้มแข็งทางจิตใจในการใช้ชีวิตในโรงเรียนแพทย์</li>
+            </ul>
+          </div>
+
+          <!-- Section: Methodology -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #a855f7;">⚙️</span> ทำอะไร (วิธีเก็บข้อมูล วิเคราะห์ข้อมูล):
+            </div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.65; margin: 0;">
+              <strong>วิธีเก็บข้อมูล:</strong> การวิจัยเชิงสังเกตแบบเปรียบเทียบภาคตัดขวาง (Cross-Sectional Comparative Study) ใช้แบบวัด DASS-21 (Depression, Anxiety, Stress Scale) และแบบวัดสุขภาวะทางจิต Warwick-Edinburgh Mental Well-being Scale บันทึกประวัติและชั่วโมงการทำกิจกรรมนอกหลักสูตร<br><br><strong>วิธีวิเคราะห์ข้อมูล:</strong> Independent Samples t-test หรือ Mann-Whitney U Test ในการเปรียบเทียบคะแนนสุขภาวะระหว่าง 2 กลุ่ม, One-Way ANOVA ตามระดับชั่วโมงกิจกรรม, และ Multiple Logistic Regression เพื่อหาโอกาสการเกิดภาวะความเครียดสูงโดยปรับอิทธิพลของตัวแปรกวน
+            </div>
+          </div>
+
+          <!-- Section: Faculty Critique -->
+          <div style="background: rgba(15, 23, 42, 0.55); border-left: 4px solid #f59e0b; border-radius: 4px 10px 10px 4px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #fde047; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span>💬</span> คอมเมนต์จากอาจารย์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #e2e8f0; line-height: 1.65;">
+              <li style='margin-bottom: 0.5rem;'><strong>Confounder Control ในงานวิจัยเชิงสังเกต:</strong> นิสิตที่ทำกิจกรรมนอกหลักสูตรอาจมีฐานะทางบ้านพร้อมกว่า หรือมีทักษะการเรียนที่ดีอยู่แล้ว จึงมีเวลาทำกิจกรรม ต้องวางแผนควบคุม Confounder ตั้งแต่ขั้นตอน Design (เช่น Matching, Restriction) และขั้นตอน Analysis (เช่น Multivariable Regression, ANCOVA)</li><li style='margin-bottom: 0.5rem;'><strong>Healthy Worker / Activity Selection Bias:</strong> คนที่มีปัญหาสุขภาพจิตหรือเรียนไม่ทันจะถอนตัวออกจากกิจกรรมนอกหลักสูตรไปก่อนแล้ว ทำให้กลุ่มที่เหลืออยู่ในกิจกรรมดูมีสุขภาพจิตดีกว่าโดยธรรมชาติ</li><li style='margin-bottom: 0.5rem;'><strong>ความสัมพันธ์อาจไม่ใช่เส้นตรง (Non-linear Relationship):</strong> ผลกระทบของชั่วโมงกิจกรรมต่อสุขภาพจิตอาจเป็นรูปตัว U คว่ำ (ทำน้อยไปอาจโดดเดี่ยว ทำมากไปอาจล้าและกระทบเวลาอ่านหนังสือ) ต้องตรวจสอบความสัมพันธ์แบบเส้นโค้ง</li>
+            </ul>
+          </div>
+
+        </div>
+        
+
+        <!-- Group 4 Card -->
+        <div class="group-summary-card" style="background: rgba(239, 68, 68, 0.08); border: 1.5px solid rgba(239, 68, 68, 0.3); border-radius: 14px; padding: 1.35rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.12); transition: all 0.2s ease;">
+          
+          <!-- Header: Group Name -->
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; border-bottom: 1px dashed rgba(239, 68, 68, 0.3); padding-bottom: 0.75rem;">
+            <div>
+              <span style="background: #ef4444; color: #0f172a; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px; display: inline-block; margin-bottom: 0.35rem;">
+                กลุ่มที่ 4
+              </span>
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.45; font-family: 'Prompt', sans-serif;">
+                🏷️ ชื่อกลุ่ม: <span style="color: #ef4444;">กลุ่ม 4 — ปัจจัยเสี่ยงและปัจจัยป้องกันต่อการเกิดภาวะหมดไฟ (Burnout) ในนิสิตแพทย์โดยใช้แบบสอบถาม Copenhagen Burnout Inventory (CBI)</span>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Section: Objectives -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #38bdf8;">🎯</span> วัตถุประสงค์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #cbd5e1; line-height: 1.6;">
+              <li style='margin-bottom: 0.35rem;'>สำรวจความชุกของภาวะหมดไฟ (Burnout) ทั้ง 3 มิติ (Personal, Work-related, Client/Student-related) ในนิสิตแพทย์</li><li style='margin-bottom: 0.35rem;'>วิเคราะห์ปัจจัยเสี่ยง (เช่น ชั่วโมงการนอน ภาระงาน การขึ้นเวร) และปัจจัยป้องกัน (เช่น การสนับสนุนทางสังคม ความสุขในการเรียน) ต่อการเกิดภาวะหมดไฟ</li><li style='margin-bottom: 0.35rem;'>สร้างแบบจำลองสมการถดถอยเพื่อทำนายโอกาสและปัจจัยที่สัมพันธ์กับภาวะหมดไฟอย่างมีนัยสำคัญ</li>
+            </ul>
+          </div>
+
+          <!-- Section: Methodology -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #a855f7;">⚙️</span> ทำอะไร (วิธีเก็บข้อมูล วิเคราะห์ข้อมูล):
+            </div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.65; margin: 0;">
+              <strong>วิธีเก็บข้อมูล:</strong> การวิจัยแบบภาคตัดขวาง (Cross-Sectional Survey) ในนิสิตแพทย์ ใช้แบบสอบถาม Copenhagen Burnout Inventory (CBI) ฉบับภาษาไทย (Likert Scale 5 ระดับ) ร่วมกับแบบบันทึกพฤติกรรมการนอนหลับและภาระงาน<br><br><strong>วิธีวิเคราะห์ข้อมูล:</strong> วิเคราะห์ความถี่ ร้อยละ, ผู้วิจัยได้ทำการแปลงคะแนน CBI จาก 5 ระดับให้กลายเป็นตัวแปรกลุ่ม 2 ค่า (0 = ไม่มีหมดไฟ, 1 = มีหมดไฟ) เพื่อนำไปวิเคราะห์ด้วย Binary Logistic Regression และคำนวณค่า Adjusted Odds Ratio (aOR) พร้อม 95% Confidence Interval
+            </div>
+          </div>
+
+          <!-- Section: Faculty Critique -->
+          <div style="background: rgba(15, 23, 42, 0.55); border-left: 4px solid #ef4444; border-radius: 4px 10px 10px 4px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #fde047; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span>💬</span> คอมเมนต์จากอาจารย์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #e2e8f0; line-height: 1.65;">
+              <li style='margin-bottom: 0.5rem;'><strong>The Dichotomization Trap (อาจารย์วิพากษ์เข้มงวดที่สุด!):</strong> การนำคะแนน Likert Scale มาแปลงเป็น 0 กับ 1 เป็นข้อผิดพลาดร้ายแรงทางชีวสถิติ เพราะทำให้สูญเสียความแปรปรวน (Loss of Information/Variance) และลด Statistical Power ลงมหาศาล เสี่ยงต่อการตั้ง Cut-off ตามใจชอบเพื่อหาผลนัยสำคัญ ควรใช้ Multiple Linear Regression กับคะแนนเต็มตามมาตรฐาน</li><li style='margin-bottom: 0.5rem;'><strong>กฎเหล็กการแปลผล Odds Ratio ที่ 95% CI คร่อม 1.00:</strong> ตัวแปรนอนน้อยกว่า 6 ชั่วโมง แม้ได้ค่า aOR = 2.45 แต่ช่วงความเชื่อมั่น 95% CI คือ 0.85 ถึง 7.10 ซึ่งครอบคลุมค่า 1.00 (และค่า p > 0.05) จึงห้ามสรุปว่ามีความสัมพันธ์อย่างมีนัยสำคัญทางสถิติเด็ดขาด</li><li style='margin-bottom: 0.5rem;'><strong>Range Restriction จากการเลือกกลุ่มตัวอย่าง:</strong> การเลือกเก็บข้อมูลเฉพาะนิสิตในวอร์ดที่เครียดจัด (เช่น Extern ในหอผู้ป่วยหนัก ICU) ทำให้คะแนนกระจุกตัวสูงเหมือนกันหมด ความแปรปรวนลดลงจนตรวจไม่พบความสัมพันธ์ที่แท้จริง</li>
+            </ul>
+          </div>
+
+        </div>
+        
+
+        <!-- Group 5 Card -->
+        <div class="group-summary-card" style="background: rgba(168, 85, 247, 0.08); border: 1.5px solid rgba(168, 85, 247, 0.3); border-radius: 14px; padding: 1.35rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.12); transition: all 0.2s ease;">
+          
+          <!-- Header: Group Name -->
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; border-bottom: 1px dashed rgba(168, 85, 247, 0.3); padding-bottom: 0.75rem;">
+            <div>
+              <span style="background: #a855f7; color: #0f172a; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px; display: inline-block; margin-bottom: 0.35rem;">
+                กลุ่มที่ 5
+              </span>
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.45; font-family: 'Prompt', sans-serif;">
+                🏷️ ชื่อกลุ่ม: <span style="color: #a855f7;">กลุ่ม 5 — การเปรียบเทียบประสิทธิผลของการทบทวนคำศัพท์ทางการแพทย์ด้วยรูปแบบการจดจำจากการรู้จำ (Recognition) และการระลึกจำ (Cued Recall) ที่สร้างโดย AI Gemini ภายใต้ระบบ Spaced Repetition ต่อความสามารถในการจำคำศัพท์ระยะยาวของนิสิตแพทย์ชั้นปีที่ 3</span>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Section: Objectives -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #38bdf8;">🎯</span> วัตถุประสงค์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #cbd5e1; line-height: 1.6;">
+              <li style='margin-bottom: 0.35rem;'>เปรียบเทียบประสิทธิผลในการจำคำศัพท์แพทย์ระหว่างเทคนิค Recognition และ Cued Recall ที่สร้างด้วย Gemini AI ภายใต้ระบบ Spaced Repetition</li><li style='margin-bottom: 0.35rem;'>วัดความสามารถในการคงอยู่ของความจำระยะยาว (Long-term Retention) ของคำศัพท์ทางการแพทย์</li><li style='margin-bottom: 0.35rem;'>ประเมินความพึงพอใจและความสะดวกในการใช้งานระบบช่วยทบทวนคำศัพท์อัจฉริยะ</li>
+            </ul>
+          </div>
+
+          <!-- Section: Methodology -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #a855f7;">⚙️</span> ทำอะไร (วิธีเก็บข้อมูล วิเคราะห์ข้อมูล):
+            </div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.65; margin: 0;">
+              <strong>วิธีเก็บข้อมูล:</strong> การวิจัยเชิงทดลอง (Experimental Pre-test Post-test Study with Two Intervention Arms) สุ่มแบ่งนิสิตแพทย์ชั้นปีที่ 3 ออกเป็น 2 กลุ่ม ทบทวนคำศัพท์ชุดเดียวกันด้วยเทคนิคต่างกันผ่าน Gemini ในช่วงเวลา Spaced Intervals (1 วัน, 3 วัน, 7 วัน, 14 วัน) วัดผลการจำด้วยข้อสอบ Extended Matching Questions (EMQ) จำนวน 15 ตัวเลือก<br><br><strong>วิธีวิเคราะห์ข้อมูล:</strong> Paired Samples t-test เปรียบเทียบก่อน-หลังภายในกลุ่ม, Independent Samples t-test และ Analysis of Covariance (ANCOVA) โดยใช้คะแนน Pre-test เป็นตัวแปรร่วม (Covariate) เพื่อปรับค่าเฉลี่ย Post-test
+            </div>
+          </div>
+
+          <!-- Section: Faculty Critique -->
+          <div style="background: rgba(15, 23, 42, 0.55); border-left: 4px solid #a855f7; border-radius: 4px 10px 10px 4px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #fde047; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span>💬</span> คอมเมนต์จากอาจารย์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #e2e8f0; line-height: 1.65;">
+              <li style='margin-bottom: 0.5rem;'><strong>การควบคุม Baseline Imbalance ด้วย ANCOVA:</strong> อาจารย์ชื่นชมที่เลือกใช้ ANCOVA ควบคุมคะแนน Pre-test เริ่มต้นของสองกลุ่มที่ต่างกัน ทำให้เปรียบเทียบผล Post-test ได้อย่างเที่ยงตรงโดยไม่เกิดอคติจาก Regression to the mean</li><li style='margin-bottom: 0.5rem;'><strong>นิยามของ Long-term Retention:</strong> การวัดผลที่ห่างกันเพียง 1-2 สัปดาห์ ยังถือเป็นเพียง Intermediate Recall หากจะยืนยันว่าเป็น Long-term Retention อย่างแท้จริง ควรวางแผนวัดผลซ้ำที่ 4-8 สัปดาห์ขึ้นไป</li><li style='margin-bottom: 0.5rem;'><strong>ความเหมาะสมของเครื่องมือ EMQ:</strong> ได้รับคำชมเชยที่ใช้ข้อสอบ Extended Matching Questions ที่มีตัวเลือก 8-15 ข้อ เพราะช่วยลด Guessing Effect (การเดาสุ่มถูก) ได้ดีกว่าข้อสอบ MCQ 4 ตัวเลือกทั่วไปอย่างมาก</li>
+            </ul>
+          </div>
+
+        </div>
+        
+
+        <!-- Group 6 Card -->
+        <div class="group-summary-card" style="background: rgba(6, 182, 212, 0.08); border: 1.5px solid rgba(6, 182, 212, 0.3); border-radius: 14px; padding: 1.35rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.12); transition: all 0.2s ease;">
+          
+          <!-- Header: Group Name -->
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; border-bottom: 1px dashed rgba(6, 182, 212, 0.3); padding-bottom: 0.75rem;">
+            <div>
+              <span style="background: #06b6d4; color: #0f172a; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px; display: inline-block; margin-bottom: 0.35rem;">
+                กลุ่มที่ 6
+              </span>
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.45; font-family: 'Prompt', sans-serif;">
+                🏷️ ชื่อกลุ่ม: <span style="color: #06b6d4;">กลุ่ม 6 — การพัฒนาแบบจำลองการทำนายทางคลินิก (Clinical Prediction Model) เพื่อประเมินความเสี่ยงต่อภาวะสุขภาพในกลุ่มประชากร</span>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Section: Objectives -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #38bdf8;">🎯</span> วัตถุประสงค์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #cbd5e1; line-height: 1.6;">
+              <li style='margin-bottom: 0.35rem;'>ระบุตัวแปรพยากรณ์อิสระทางคลินิกและพฤติกรรมสุขภาพที่มีความสัมพันธ์กับผลลัพธ์ทางสุขภาพ</li><li style='margin-bottom: 0.35rem;'>พัฒนาสมการและคะแนนทำนายความเสี่ยงทางคลินิก (Clinical Risk Score / Nomogram) สำหรับนำไปใช้คัดกรองเบื้องต้น</li><li style='margin-bottom: 0.35rem;'>ทดสอบประสิทธิภาพของแบบจำลองทั้งในแง่การจำแนกโรค (Discrimination) และความแม่นตรงของการปรับเทียบ (Calibration)</li>
+            </ul>
+          </div>
+
+          <!-- Section: Methodology -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #a855f7;">⚙️</span> ทำอะไร (วิธีเก็บข้อมูล วิเคราะห์ข้อมูล):
+            </div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.65; margin: 0;">
+              <strong>วิธีเก็บข้อมูล:</strong> การวิจัยแบบ Retrospective Cohort หรือ Cross-Sectional โดยรวบรวมข้อมูลเวชระเบียนและผลการตรวจทางห้องปฏิบัติการ แบ่งชุดข้อมูลออกเป็น Derivation/Training Set และ Validation/Testing Set<br><br><strong>วิธีวิเคราะห์ข้อมูล:</strong> Multivariable Logistic Regression คัดเลือกตัวแปรเข้าแบบจำลอง, ประเมิน Discrimination ด้วย AUC-ROC (C-index), ประเมิน Calibration ด้วย Calibration Plot (Slope และ Intercept) ร่วมกับ Hosmer-Lemeshow Test, และทำ Internal Validation ด้วย Bootstrapping
+            </div>
+          </div>
+
+          <!-- Section: Faculty Critique -->
+          <div style="background: rgba(15, 23, 42, 0.55); border-left: 4px solid #06b6d4; border-radius: 4px 10px 10px 4px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #fde047; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span>💬</span> คอมเมนต์จากอาจารย์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #e2e8f0; line-height: 1.65;">
+              <li style='margin-bottom: 0.5rem;'><strong>Overfitting & กฎ Events Per Variable (EPV ≥ 10):</strong> หากโมเดลแม่นยำสูงมากใน Training set (AUC = 0.94) แต่เมื่อนำไปทดสอบใน Validation set ค่าลดเหลือ 0.61 แสดงว่าเกิด Overfitting จากการใส่ตัวแปรมากเกินไปเมื่อเทียบกับจำนวนเคสที่เป็นโรค ต้องคุมกฎ EPV อย่างน้อย 10 เคสต่อ 1 ตัวแปร</li><li style='margin-bottom: 0.5rem;'><strong>ต้องรายงานทั้ง Discrimination และ Calibration เสมอ:</strong> โมเดลที่ดีไม่ใช่แค่ดูค่า AUC สูงอย่างเดียว แต่ต้องแสดง Calibration Plot เพื่อพิสูจน์ว่าความเสี่ยงที่ทำนายตรงกับความเสี่ยงจริง หากทำนายว่าเสี่ยง 80% แต่คนไข้จริงเกิดโรคแค่ 20% จะทำให้เกิดอันตรายจากการรักษาเกินจำเป็น (Overtreatment)</li><li style='margin-bottom: 0.5rem;'><strong>การแปลผลค่า AUC:</strong> ค่า AUC = 0.52 หรือมีช่วงความเชื่อมั่น 95% CI คร่อมค่า 0.50 หมายถึงแบบจำลองไม่มีอำนาจในการจำแนกโรคเลยแม้แต่น้อย (ไม่ต่างจากการโยนเหรียญเดาสุ่ม) ห้ามสรุปว่าพอใช้ได้</li>
+            </ul>
+          </div>
+
+        </div>
+        
+
+        <!-- Group 7 Card -->
+        <div class="group-summary-card" style="background: rgba(99, 102, 241, 0.08); border: 1.5px solid rgba(99, 102, 241, 0.3); border-radius: 14px; padding: 1.35rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.12); transition: all 0.2s ease;">
+          
+          <!-- Header: Group Name -->
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; border-bottom: 1px dashed rgba(99, 102, 241, 0.3); padding-bottom: 0.75rem;">
+            <div>
+              <span style="background: #6366f1; color: #0f172a; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px; display: inline-block; margin-bottom: 0.35rem;">
+                กลุ่มที่ 7
+              </span>
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.45; font-family: 'Prompt', sans-serif;">
+                🏷️ ชื่อกลุ่ม: <span style="color: #6366f1;">กลุ่ม 7 — ความสัมพันธ์ระหว่างคะแนนคัดเลือกเข้าศึกษาต่อ (TCAS / กสพท / GPAX) กับผลการเรียนตลอดหลักสูตรแพทยศาสตรบัณฑิต และการหาจุดตัดคัดกรองด้วย ROC Curve</span>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Section: Objectives -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #38bdf8;">🎯</span> วัตถุประสงค์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #cbd5e1; line-height: 1.6;">
+              <li style='margin-bottom: 0.35rem;'>ศึกษาความสัมพันธ์ระหว่างคะแนนสอบคัดเลือก TCAS/กสพท กับผลการเรียนเฉลี่ยในชั้นปรีคลินิกและชั้นคลินิก</li><li style='margin-bottom: 0.35rem;'>วิเคราะห์ว่าเกณฑ์คะแนนวิชาใดใน กสพท สามารถทำนายความสำเร็จในการสอบใบอนุญาตประกอบวิชาชีพเวชกรรม (NL) ได้ดีที่สุด</li><li style='margin-bottom: 0.35rem;'>หาจุดตัดคะแนนที่เหมาะสมที่สุด (Optimal Cut-off Point) ในการคัดกรองนิสิตที่ต้องการการสนับสนุนทางวิชาการล่วงหน้า</li>
+            </ul>
+          </div>
+
+          <!-- Section: Methodology -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #a855f7;">⚙️</span> ทำอะไร (วิธีเก็บข้อมูล วิเคราะห์ข้อมูล):
+            </div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.65; margin: 0;">
+              <strong>วิธีเก็บข้อมูล:</strong> การวิจัยแบบติดตามย้อนหลัง (Retrospective Cohort Study) รวบรวมข้อมูลคะแนนสอบเข้า (กสพท ทุกรายวิชา, GPAX ม.ปลาย) และผลการเรียนแพทย์ (GPAX แต่ละชั้นปี, ผลสอบ NL1, NL2) ของบัณฑิตแพทย์ย้อนหลัง 5 ปีการศึกษา<br><br><strong>วิธีวิเคราะห์ข้อมูล:</strong> Pearson's Correlation Matrix, Multiple Linear Regression เพื่อดูค่าสัมประสิทธิ์ R-squared, และการวิเคราะห์ Receiver Operating Characteristic (ROC Curve) เพื่อหาจุดตัดที่มีค่า Youden's Index (J = Sensitivity + Specificity - 1) สูงที่สุด
+            </div>
+          </div>
+
+          <!-- Section: Faculty Critique -->
+          <div style="background: rgba(15, 23, 42, 0.55); border-left: 4px solid #6366f1; border-radius: 4px 10px 10px 4px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #fde047; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span>💬</span> คอมเมนต์จากอาจารย์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #e2e8f0; line-height: 1.65;">
+              <li style='margin-bottom: 0.5rem;'><strong>Range Restriction Phenomenon (หัวใจสำคัญของกลุ่มนี้!):</strong> ผู้วิจัยพบค่าสหสัมพันธ์ต่ำมาก (r = 0.15) อาจารย์อธิบายว่าเป็นเพราะติดปัญหา Range Restriction เนื่องจากกลุ่มตัวอย่างถูกคัดกรองมาแล้ว (ทุกคนที่สอบติดคะแนนสูงใกล้เคียงกันหมด) ความแปรปรวนจึงแคบ ทำให้ค่า r และ R² ต่ำกว่าความเป็นจริงในกลุ่มผู้สมัครทั้งหมด</li><li style='margin-bottom: 0.5rem;'><strong>การแปลผลช่วงความเชื่อมั่นของ AUC:</strong> การรายงานค่า AUC ต้องรายงานพร้อม 95% CI เสมอ และ 95% CI จะต้องไม่คร่อม 0.50 จึงจะถือว่ามีความสามารถในการคัดกรองอย่างมีนัยสำคัญ</li><li style='margin-bottom: 0.5rem;'><strong>การหา Optimal Cut-off Point:</strong> การเลือกจุดตัดห้ามใช้ความรู้สึก ต้องแสดงกราฟ ROC และรายงานค่า Youden's Index อย่างเป็นระบบ พร้อมแสดงค่า Sensitivity, Specificity, PPV, NPV ให้ครบถ้วน</li>
+            </ul>
+          </div>
+
+        </div>
+        
+
+        <!-- Group 8 Card -->
+        <div class="group-summary-card" style="background: rgba(236, 72, 153, 0.08); border: 1.5px solid rgba(236, 72, 153, 0.3); border-radius: 14px; padding: 1.35rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.12); transition: all 0.2s ease;">
+          
+          <!-- Header: Group Name -->
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; border-bottom: 1px dashed rgba(236, 72, 153, 0.3); padding-bottom: 0.75rem;">
+            <div>
+              <span style="background: #ec4899; color: #0f172a; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px; display: inline-block; margin-bottom: 0.35rem;">
+                กลุ่มที่ 8
+              </span>
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.45; font-family: 'Prompt', sans-serif;">
+                🏷️ ชื่อกลุ่ม: <span style="color: #ec4899;">กลุ่ม 8 — ความสัมพันธ์ระหว่างการรับรู้ความสามารถตนเอง (MSLQ), การสนับสนุนทางสังคม (MSPSS) กับภาวะคิดว่าตนเองด้อยความสามารถ (Impostor Phenomenon) ในบริบทการเรียนรู้แบบ PBL</span>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Section: Objectives -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #38bdf8;">🎯</span> วัตถุประสงค์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #cbd5e1; line-height: 1.6;">
+              <li style='margin-bottom: 0.35rem;'>สำรวจระดับภาวะ Impostor Phenomenon (ความรู้สึกว่าตนเองไม่เก่งจริง ฟลุ๊ค หรือเป็นตัวปลอม) ในนิสิตแพทย์</li><li style='margin-bottom: 0.35rem;'>ศึกษาความสัมพันธ์ระหว่างการรับรู้ความสามารถแห่งตน (Self-Efficacy), การสนับสนุนจากครอบครัวและเพื่อน (MSPSS) กับการลดลงของ Impostor Phenomenon</li><li style='margin-bottom: 0.35rem;'>ทดสอบว่าปัจจัยทางจิตวิทยาสามารถช่วยทำนายผลการเรียนและสุขภาวะได้เพิ่มขึ้นจริงหรือไม่หลังจากควบคุมปัจจัยพื้นฐานแล้ว</li>
+            </ul>
+          </div>
+
+          <!-- Section: Methodology -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #a855f7;">⚙️</span> ทำอะไร (วิธีเก็บข้อมูล วิเคราะห์ข้อมูล):
+            </div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.65; margin: 0;">
+              <strong>วิธีเก็บข้อมูล:</strong> การวิจัยแบบภาคตัดขวางเชิงความสัมพันธ์ (Cross-Sectional Correlational Study) ในนิสิตแพทย์ชั้นปีที่ 3 ถึง 6 นำแบบสอบถามมาตรฐานสากล (CIPS, MSLQ, MSPSS) มาแปลและปรับข้อความให้เข้ากับบริบท Problem-Based Learning (PBL) คำนวณขนาดตัวอย่างด้วยโปรแกรม G*Power<br><br><strong>วิธีวิเคราะห์ข้อมูล:</strong> การคำนวณ Sample Size ด้วย G*Power เผื่อ Dropout, Pearson's Correlation, และ Hierarchical Multiple Regression (ใส่ Demographic ใน Model 1 แล้วใส่ MSLQ และ MSPSS ใน Model 2 เพื่อดูค่า ΔR² และ F-change)
+            </div>
+          </div>
+
+          <!-- Section: Faculty Critique -->
+          <div style="background: rgba(15, 23, 42, 0.55); border-left: 4px solid #ec4899; border-radius: 4px 10px 10px 4px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #fde047; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span>💬</span> คอมเมนต์จากอาจารย์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #e2e8f0; line-height: 1.65;">
+              <li style='margin-bottom: 0.5rem;'><strong>The Re-validation Trap (ดัดแปลงเครื่องมือ):</strong> การนำแบบสอบถามมาตรฐานมาแปลและปรับบริบทเข้าสู่ PBL คุณสมบัติความเที่ยงและความตรงเดิมจะหมดไปทันที ต้องส่งผู้เชี่ยวชาญตรวจ Content Validity (IOC ≥ 0.50) และทำ Pilot Study หาความเชื่อมั่นภายใน (Cronbach's Alpha ≥ 0.70) ซ้ำเสมอ ห้ามแจกทันที</li><li style='margin-bottom: 0.5rem;'><strong>สูตรคำนวณชดเชย Dropout:</strong> กลุ่มนี้คำนวณตัวอย่างได้ 96 คนแล้วบวก 10% (= 106 คน) อาจารย์ชี้ว่าสูตรทางสถิติที่ถูกต้องคือ N / (1 - d) = 96 / (1 - 0.10) = 107 คน และต้องปัดเศษขึ้นเสมอ เพื่อคงค่า Statistical Power ไว้ที่ 80%</li><li style='margin-bottom: 0.5rem;'><strong>Hierarchical Regression:</strong> อาจารย์ชมเชยการเลือกใช้ Hierarchical Regression ซึ่งตอบโจทย์การพิสูจน์อิทธิพลส่วนเพิ่ม (ΔR²) ของตัวแปรจิตวิทยาได้อย่างมีหลักวิชาการ</li>
+            </ul>
+          </div>
+
+        </div>
+        
+
+        <!-- Group 9 Card -->
+        <div class="group-summary-card" style="background: rgba(139, 92, 246, 0.08); border: 1.5px solid rgba(139, 92, 246, 0.3); border-radius: 14px; padding: 1.35rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.12); transition: all 0.2s ease;">
+          
+          <!-- Header: Group Name -->
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; border-bottom: 1px dashed rgba(139, 92, 246, 0.3); padding-bottom: 0.75rem;">
+            <div>
+              <span style="background: #8b5cf6; color: #0f172a; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px; display: inline-block; margin-bottom: 0.35rem;">
+                กลุ่มที่ 9
+              </span>
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.45; font-family: 'Prompt', sans-serif;">
+                🏷️ ชื่อกลุ่ม: <span style="color: #8b5cf6;">กลุ่ม 9 (กลุ่มบุคลิกภาพเฉพาะทาง) — ความสัมพันธ์ระหว่างลักษณะบุคลิกภาพ Big Five กับการตัดสินใจเลือกสาขาความเชี่ยวชาญเฉพาะทาง (Specialty Preference) ของนิสิตแพทย์ด้วยวิธี Discrete Choice Experiment (DCE)</span>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Section: Objectives -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #38bdf8;">🎯</span> วัตถุประสงค์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #cbd5e1; line-height: 1.6;">
+              <li style='margin-bottom: 0.35rem;'>ศึกษาลักษณะบุคลิกภาพ 5 ด้าน (Big Five Personality: Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism) ของนิสิตแพทย์</li><li style='margin-bottom: 0.35rem;'>ประเมินคุณค่าและความพึงพอใจ (Utility) ต่อน้ำหนักปัจจัยต่างๆ ในการเลือกสาขาแพทย์เฉพาะทาง (เช่น รายได้, ชั่วโมงการทำงาน, โอกาสทำหัตถการ, Work-Life Balance)</li><li style='margin-bottom: 0.35rem;'>วิเคราะห์ว่าบุคลิกภาพด้านใดมีความสัมพันธ์กับความต้องการเลือกสาขาเฉพาะทางด้านหัตถการ (Surgical) เทียบกับด้านอายุรศาสตร์ (Non-surgical)</li>
+            </ul>
+          </div>
+
+          <!-- Section: Methodology -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #a855f7;">⚙️</span> ทำอะไร (วิธีเก็บข้อมูล วิเคราะห์ข้อมูล):
+            </div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.65; margin: 0;">
+              <strong>วิธีเก็บข้อมูล:</strong> ใช้แบบวัดบุคลิกภาพฉบับย่อ Mini-IPIP ร่วมกับการออกแบบแบบสอบถามการทดลองทางเลือกจำลอง (Discrete Choice Experiment: DCE / Conjoint Analysis) โดยสร้างสถานการณ์จำลอง (Choice Sets) ให้นิสิตตัดสินใจเลือกระหว่างสาขาที่มี Attributes และ Levels แตกต่างกัน<br><br><strong>วิธีวิเคราะห์ข้อมูล:</strong> Multinomial Logit Model หรือ Conditional Logistic Regression เพื่อประมาณค่าสัมประสิทธิ์ Utility Weights ของแต่ละ Attribute และการวิเคราะห์ปฏิสัมพันธ์ระหว่างลักษณะบุคลิกภาพกับความชอบในแต่ละปัจจัย
+            </div>
+          </div>
+
+          <!-- Section: Faculty Critique -->
+          <div style="background: rgba(15, 23, 42, 0.55); border-left: 4px solid #8b5cf6; border-radius: 4px 10px 10px 4px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #fde047; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span>💬</span> คอมเมนต์จากอาจารย์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #e2e8f0; line-height: 1.65;">
+              <li style='margin-bottom: 0.5rem;'><strong>การกำหนด Attributes ใน DCE:</strong> ห้ามผู้วิจัยกำหนด Attributes ขึ้นเองตามใจชอบ ต้องมีกระบวนการวิจัยเชิงคุณภาพ (Qualitative In-depth interview / Focus group) มารองรับอย่างโปร่งใส และจำกัดจำนวน Attributes ให้อยู่ที่ 4-8 ข้อ เพื่อป้องกัน Cognitive Overload</li><li style='margin-bottom: 0.5rem;'><strong>Orthogonal Design:</strong> การจับคู่ Choice Sets ต้องใช้ระเบียบวิธีวิจัยแบบสถิติที่ได้มาตรฐานเพื่อหลีกเลี่ยง Dominant Choice (ตัวเลือกที่ดีกว่าอีกตัวเลือกในทุกมิติ) ซึ่งจะทำให้ไม่สามารถประเมินการยอมแลกเปลี่ยนคุณค่า (Trade-offs) ของผู้ตอบได้</li><li style='margin-bottom: 0.5rem;'><strong>Clinical Generalizability:</strong> การตัดสินใจของนิสิตแพทย์ชั้นปีที่ 6 (Extern) อาจมีความสมจริงและคงที่มากกว่านิสิตชั้นปรีคลินิก ควรวิเคราะห์แยกกลุ่มหรือกำหนดประชากรเป้าหมายให้ชัดเจน</li>
+            </ul>
+          </div>
+
+        </div>
+        
+
+        <!-- Group 10 Card -->
+        <div class="group-summary-card" style="background: rgba(20, 184, 166, 0.08); border: 1.5px solid rgba(20, 184, 166, 0.3); border-radius: 14px; padding: 1.35rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.12); transition: all 0.2s ease;">
+          
+          <!-- Header: Group Name -->
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; border-bottom: 1px dashed rgba(20, 184, 166, 0.3); padding-bottom: 0.75rem;">
+            <div>
+              <span style="background: #14b8a6; color: #0f172a; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 6px; display: inline-block; margin-bottom: 0.35rem;">
+                กลุ่มที่ 10
+              </span>
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.45; font-family: 'Prompt', sans-serif;">
+                🏷️ ชื่อกลุ่ม: <span style="color: #14b8a6;">กลุ่ม 10 — การเปรียบเทียบผลของรูปแบบการพักระหว่างเรียน (Active Break vs Passive Break vs No Break) ต่อความล้าและการทำงานของสมองด้านการรู้คิด (Cognitive Performance) ของนิสิตแพทย์</span>
+              </h4>
+            </div>
+          </div>
+
+          <!-- Section: Objectives -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #38bdf8;">🎯</span> วัตถุประสงค์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #cbd5e1; line-height: 1.6;">
+              <li style='margin-bottom: 0.35rem;'>เปรียบเทียบผลของการพักสายตาแบบ Passive Break (นั่งพักนิ่งๆ), Active Break (การยืดเหยียดขยับร่างกาย), และการไม่พัก (No Break) ต่อระดับสมาธิและความล้า</li><li style='margin-bottom: 0.35rem;'>วัดความเร็วในการตอบสนองและความแม่นยำของการทำงานของสมอง (Reaction Time & Accuracy จาก Stroop Test)</li><li style='margin-bottom: 0.35rem;'>หารูปแบบการจัดตารางเวลาเรียนที่ช่วยเพิ่มประสิทธิภาพการเรียนรู้สูงสุดในห้องบรรยาย</li>
+            </ul>
+          </div>
+
+          <!-- Section: Methodology -->
+          <div style="margin-bottom: 1rem; background: rgba(15, 23, 42, 0.4); border-radius: 10px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span style="color: #a855f7;">⚙️</span> ทำอะไร (วิธีเก็บข้อมูล วิเคราะห์ข้อมูล):
+            </div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.65; margin: 0;">
+              <strong>วิธีเก็บข้อมูล:</strong> การวิจัยเชิงทดลองแบบสลับเงื่อนไขในคนเดิม (Experimental Crossover Trial) ให้นิสิตแพทย์กลุ่มเดียวกันทุกคนเข้าสู่การทดลองครบทั้ง 3 เงื่อนไขในแต่ละสัปดาห์ โดยวัดค่าความล้าและทำแบบทดสอบ Stroop Test ทั้งหมด 4 ช่วงเวลาในแต่ละวัน<br><br><strong>วิธีวิเคราะห์ข้อมูล:</strong> ทดสอบการแจกแจงแบบปกติด้วย Shapiro-Wilk Test, ตรวจสอบข้อตกลงเบื้องต้นเรื่อง Sphericity ด้วย Mauchly's Test, และวิเคราะห์ด้วย Two-Way Repeated Measures ANOVA (3 รูปแบบการพัก x 4 ช่วงเวลา)
+            </div>
+          </div>
+
+          <!-- Section: Faculty Critique -->
+          <div style="background: rgba(15, 23, 42, 0.55); border-left: 4px solid #14b8a6; border-radius: 4px 10px 10px 4px; padding: 0.85rem 1rem;">
+            <div style="font-size: 0.88rem; font-weight: 800; color: #fde047; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+              <span>💬</span> คอมเมนต์จากอาจารย์:
+            </div>
+            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; color: #e2e8f0; line-height: 1.65;">
+              <li style='margin-bottom: 0.5rem;'><strong>Order Effect & Counterbalancing:</strong> การให้นิสิตทุกคนเข้าเงื่อนไขเรียงตามลำดับเดิม (เช่น No break → Active → Passive) จะทำให้ผลลัพธ์ปนเปื้อนด้วย Fatigue effect และ Learning effect อย่างรุนแรง ต้องใช้ Counterbalancing (Latin Square Design: สุ่มกลุ่มเป็น ABC, BCA, CAB) เสมอ</li><li style='margin-bottom: 0.5rem;'><strong>Mauchly's Test of Sphericity:</strong> หากทดสอบ Mauchly's test แล้วพบว่า p < 0.05 แสดงว่าละเมิดข้อตกลง Sphericity ห้ามอ่านค่าแถว Sphericity Assumed เด็ดขาด ต้องปรับลด Degree of Freedom และอ่านค่าแถว Greenhouse-Geisser เท่านั้น</li><li style='margin-bottom: 0.5rem;'><strong>Extraneous Confounder จากตารางสอบ:</strong> ในการเก็บข้อมูลรอบหนึ่งพบว่าคะแนน Reaction Time สูงผิดปกติตั้งแต่ก่อนเริ่มเรียน เพราะเป็นวันหลังสอบบล็อกใหญ่ อาจารย์ชี้ว่าเหตุการณ์ภายนอก (History / Maturation Effect) เป็น Confounder ร้ายแรง ต้องควบคุมด้วยระยะ Washout Period และการจัดตารางทดลองที่รัดกุม</li>
+            </ul>
+          </div>
+
+        </div>
+        
+        </div>
+
+      </div>
+    
 
     </div>
 
