@@ -3783,8 +3783,9 @@
 
         
     
+    
     <!-- ============================================================== -->
-    <!-- COMPREHENSIVE 4-TAB INTERACTIVE STORYTELLER (ROUND 1 & ROUND 2) -->
+    <!-- COMPLETE 4-ROOM 2-ROUND INTERACTIVE TABBED SYSTEM -->
     <!-- ============================================================== -->
     <div id="defense-narrative-tabs" style="margin-top: 2rem; border: 2px solid #6366f1; border-radius: 16px; background: var(--bg-card); overflow: hidden; box-shadow: 0 12px 36px rgba(79, 70, 229, 0.25);">
       
@@ -3793,30 +3794,30 @@
         <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
           <div>
             <span style="background: #4f46e5; color: #ffffff; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-bottom: 0.35rem;">
-              🎙️ Complete 2-Round Defense Chronicles
+              🎙️ Complete 2-Round 4-Room Research Defense Chronicles
             </span>
             <h3 style="font-size: 1.35rem; font-weight: 800; color: #ffffff; margin: 0; font-family: 'Prompt', sans-serif;">
-              บันทึกเรื่องเล่าเวทีวิพากษ์วิจัยจริง ครบทั้ง 2 รอบ (4 ห้องบรรยาย)
+              บันทึกเรื่องเล่าเวทีวิพากษ์วิจัยจริง แยกเป็น 2 รอบ (รอบละ 2 ห้อง ครบทั้ง 4 เซสชัน)
             </h3>
             <p style="font-size: 0.85rem; color: #cbd5e1; margin: 0.25rem 0 0 0;">
-              คลิกสลับแท็บเพื่ออ่านเรื่องเล่า ถอดรหัสการนำเสนอ สิ่งที่นิสิตพูด ข้อซักค้านของอาจารย์ และการเฉลยแนวข้อสอบ MEQ
+              แบ่งชัดเจนระหว่าง <strong>รอบที่ 1 (Proposal & สถิติ)</strong> และ <strong>รอบที่ 2 (ผลลัพธ์บทที่ 4, อภิปรายผลบทที่ 5 & เฉลยข้อสอบ MEQ)</strong>
             </p>
           </div>
         </div>
 
-        <!-- 4 Tab Buttons Bar -->
+        <!-- 5 Tab Buttons Bar -->
         <div style="display: flex; gap: 0.5rem; margin-top: 1rem; overflow-x: auto; padding-bottom: 0.25rem;" class="hide-scrollbar">
           <button onclick="switchStoryTab('tab-round1-516')" id="btn-tab-round1-516" class="story-tab-btn" style="padding: 0.6rem 1.1rem; font-size: 0.83rem; font-weight: 700; border-radius: 10px; cursor: pointer; transition: all 0.2s ease; border: 1px solid var(--border-color); background: var(--bg-card-alt); color: var(--text-sub); display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;">
-            <span>🎙️</span> <span>รอบ 1: ห้อง 516 (Proposal & สถิติ)</span>
+            <span>🎙️</span> <span>รอบ 1: ห้อง 516 (กลุ่ม 1-5)</span>
           </button>
           <button onclick="switchStoryTab('tab-round1-601')" id="btn-tab-round1-601" class="story-tab-btn" style="padding: 0.6rem 1.1rem; font-size: 0.83rem; font-weight: 700; border-radius: 10px; cursor: pointer; transition: all 0.2s ease; border: 1px solid var(--border-color); background: var(--bg-card-alt); color: var(--text-sub); display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;">
-            <span>🔬</span> <span>รอบ 1: ห้อง 601 (โมเดลทำนาย & DCE)</span>
+            <span>🔬</span> <span>รอบ 1: ห้อง 601 (กลุ่ม 6-10)</span>
           </button>
           <button onclick="switchStoryTab('tab-round2-515')" id="btn-tab-round2-515" class="story-tab-btn active-tab-btn" style="padding: 0.6rem 1.1rem; font-size: 0.83rem; font-weight: 700; border-radius: 10px; cursor: pointer; transition: all 0.2s ease; border: 1px solid #6366f1; background: #4f46e5; color: white; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;">
-            <span>🔥</span> <span>รอบ 2: ห้อง MD515 (บทที่ 4-5 & เฉลยข้อสอบ!)</span>
+            <span>🔥</span> <span>รอบ 2: ห้อง MD515 (กลุ่ม 1-5 & เฉลยข้อสอบ!)</span>
           </button>
           <button onclick="switchStoryTab('tab-round2-f4')" id="btn-tab-round2-f4" class="story-tab-btn" style="padding: 0.6rem 1.1rem; font-size: 0.83rem; font-weight: 700; border-radius: 10px; cursor: pointer; transition: all 0.2s ease; border: 1px solid var(--border-color); background: var(--bg-card-alt); color: var(--text-sub); display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;">
-            <span>🎯</span> <span>รอบ 2: ห้องชั้น 4 (อภิปรายผล & ข้อสอบ MEQ)</span>
+            <span>🎯</span> <span>รอบ 2: ห้องชั้น 4 (กลุ่ม 6-10 & ข้อสอบ MEQ)</span>
           </button>
           <button onclick="switchStoryTab('tab-traps-all')" id="btn-tab-traps-all" class="story-tab-btn" style="padding: 0.6rem 1.1rem; font-size: 0.83rem; font-weight: 700; border-radius: 10px; cursor: pointer; transition: all 0.2s ease; border: 1px solid var(--border-color); background: var(--bg-card-alt); color: var(--text-sub); display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;">
             <span>💡</span> <span>12 จุดดักข้อสอบรวม</span>
@@ -3824,30 +3825,229 @@
         </div>
       </div>
 
-      <!-- Tab 1: Round 1 Room 516 Content -->
-      <div id="tab-round1-516" class="story-tab-pane" style="padding: 1.5rem 1.75rem; display: none;">
+      <!-- Tab 1: Round 1 Room 516 Full Content -->
+      <!-- Tab 1: Room 516 Content -->
+      <div id="tab-round1-516" class="story-tab-pane" style="padding: 1.5rem 1.75rem; display: block;">
+        
+        <!-- Room 516 Banner -->
         <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
           <h4 style="font-size: 1.05rem; font-weight: 800; color: #38bdf8; margin: 0 0 0.3rem 0; font-family: 'Prompt', sans-serif;">
-            🏛️ บรรยากาศเวทีรอบที่ 1: ห้อง 516 (อาจารย์นิค, อาจารย์ทักษ์/วรรณลภ, อาจารย์เนาว์, และอาจารย์สมชาย)
+            🏛️ บรรยากาศเวทีห้อง 516: อาจารย์นิค, อาจารย์ทักษ์/วรรณลภ, อาจารย์เนาว์, และอาจารย์สมชาย
           </h4>
           <p style="font-size: 0.85rem; color: var(--text-sub); margin: 0; line-height: 1.6;">
-            เน้นการตรวจโครงร่างระเบียบวิธีวิจัย การคัดเลือกกลุ่มตัวอย่าง และสถิติเบื้องต้น: กลุ่ม 5 (Spaced Repetition AI Gemini, ANCOVA ปรับ Baseline), กลุ่ม 1 (Critical Thinking AI, Volunteer bias, VIF), กลุ่ม 2 (Active Learning, Reverse Causality, Transition period นิสิตปี 1), กลุ่ม 4 (CBI Burnout กับ The Dichotomization Trap ที่อาจารย์ติงหนักเรื่องหั่นคะแนนเป็น 0 กับ 1), และบทสรุป GIGO ของอาจารย์สมชาย
+            เวทีวิพากษ์ห้อง 516 เต็มไปด้วยความเข้มข้นทางระเบียบวิธีวิจัย ตั้งแต่การประยุกต์ใช้ AI ในการเรียนรู้คำศัพท์แพทย์ ไปจนถึงประเด็นร้อนเรื่องการวัดภาวะหมดไฟ (Burnout) และบทสรุปภาพรวมเรื่อง GIGO และการเตรียมตัวขึ้นเวทีระดับชาติ TMEC
           </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+          <!-- Scene 1: Group 5 -->
+          <div style="background: var(--bg-card-alt); border: 1px solid var(--border-color); border-left: 5px solid #6366f1; border-radius: 12px; padding: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+              <span style="font-size: 0.75rem; font-weight: 800; color: #6366f1; background: rgba(99, 102, 241, 0.15); padding: 0.2rem 0.6rem; border-radius: 6px;">ฉากที่ 1: กลุ่ม 5</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">AI Gemini + Spaced Repetition ในการจำคำศัพท์แพทย์</span>
+            </div>
+            <h5 style="font-size: 1rem; font-weight: 800; color: var(--text-main); margin: 0 0 0.5rem 0; font-family: 'Prompt', sans-serif;">
+              การเปรียบเทียบ Recognition vs Recall ด้วยข้อสอบ EMQ ภายใต้ระบบ Spaced Repetition
+            </h5>
+            <div style="font-size: 0.85rem; color: var(--text-sub); line-height: 1.6; space-y: 0.5rem;">
+              <p><strong>สิ่งที่เพื่อนนิสิตเล่า:</strong> กลุ่ม 5 ศึกษาในนิสิตแพทย์ชั้นปีที่ 3 แบ่งกลุ่มแบบสลับฟันปลา (Split-half) เป็นกลุ่ม A และ B ทำข้อสอบแบบ Extended Matching Questions (EMQ) ที่สร้างโดย AI Gemini มีผู้เข้าร่วมสมบูรณ์ 58 คน ผลปรากฏว่าคะแนน Post-test สูงกว่า Pre-test อย่างมีนัยสำคัญ ($p < 0.01$)</p>
+              <p><strong>จุดที่อาจารย์ซักค้าน:</strong> อาจารย์ทักทันทีว่า <em>"แต่คะแนน Pre-test เริ่มต้นของทั้ง 2 กลุ่มไม่เท่ากันนะ!"</em> นิสิตแก้ปัญหาด้วยการใช้ <strong>ANCOVA (Analysis of Covariance)</strong> ซึ่งอาจารย์ชมเชยว่าเลือกสถิติได้ถูกต้องในการปรับ Baseline แต่อาจารย์ตั้งคำถามเชิงวิชาการว่า <em>"การวัดผลห่างกันเพียงไม่กี่วัน เรียกว่า Long-term retention ได้จริงหรือ?"</em> ควรติดตามผลระยะยาวที่ 4–8 สัปดาห์</p>
+              <div style="background: rgba(99, 102, 241, 0.1); padding: 0.6rem 0.8rem; border-radius: 8px; margin-top: 0.5rem; font-size: 0.8rem; color: #818cf8;">
+                ⭐ <strong>ประเด็นออกข้อสอบ:</strong> ทำไมต้องใช้ ANCOVA ในการวิจัย Pre-Post? $\rightarrow$ เพื่อควบคุมความแตกต่างของคะแนนเริ่มต้น (Baseline Imbalance)
+              </div>
+            </div>
+          </div>
+
+          <!-- Scene 2: Group 1 -->
+          <div style="background: var(--bg-card-alt); border: 1px solid var(--border-color); border-left: 5px solid #38bdf8; border-radius: 12px; padding: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+              <span style="font-size: 0.75rem; font-weight: 800; color: #38bdf8; background: rgba(56, 189, 248, 0.15); padding: 0.2rem 0.6rem; border-radius: 6px;">ฉากที่ 2: กลุ่ม 1</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Critical Thinking ในการใช้งาน Generative AI</span>
+            </div>
+            <h5 style="font-size: 1rem; font-weight: 800; color: var(--text-main); margin: 0 0 0.5rem 0; font-family: 'Prompt', sans-serif;">
+              ทักษะการคิดเชิงวิพากษ์กับ Generative AI Literacy ของนิสิตแพทย์ไทย
+            </h5>
+            <div style="font-size: 0.85rem; color: var(--text-sub); line-height: 1.6;">
+              <p><strong>สิ่งที่เพื่อนนิสิตเล่า:</strong> ทำ Cross-Sectional Online Survey ในนิสิตแพทย์ปี 2–6 เพื่อศึกษาความสัมพันธ์ระหว่าง Literacy, ความถี่การใช้, และความเชื่อมั่น (Trust) ต่อทักษะ Critical Thinking ผ่านแบบจำลอง Multiple Linear Regression</p>
+              <p><strong>จุดที่อาจารย์ซักค้าน:</strong> อาจารย์ชี้ประเด็นสำคัญเรื่อง <strong>Volunteer Bias (Selection Bias)</strong> เนื่องจากการเก็บแบบสอบถามออนไลน์ คนที่เข้ามาตอบมักเป็นคนที่ชอบและใช้ AI อยู่แล้ว ทำให้คะแนนทักษะเฉลี่ยสูงกว่านิสิตแพทย์ทั่วไป นอกจากนี้อาจารย์เตือนเรื่อง <strong>Multicollinearity</strong> ระหว่าง Trust กับ Literacy ซึ่งสัมพันธ์กันเองสูง ($r > 0.80$) ต้องตรวจสอบค่า VIF &lt; 5-10 เสมอ</p>
+              <div style="background: rgba(56, 189, 248, 0.1); padding: 0.6rem 0.8rem; border-radius: 8px; margin-top: 0.5rem; font-size: 0.8rem; color: #38bdf8;">
+                ⭐ <strong>ประเด็นออกข้อสอบ:</strong> ผลกระทบของ Multicollinearity ในโมเดล Regression $\rightarrow$ ทำให้ค่า SE ของสัมประสิทธิ์สูงเกินจริง และ p-value สูงจนสรุปผลผิดว่าไม่มีนัยสำคัญ
+              </div>
+            </div>
+          </div>
+
+          <!-- Scene 3: Group 2 -->
+          <div style="background: var(--bg-card-alt); border: 1px solid var(--border-color); border-left: 5px solid #f59e0b; border-radius: 12px; padding: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+              <span style="font-size: 0.75rem; font-weight: 800; color: #f59e0b; background: rgba(245, 158, 11, 0.15); padding: 0.2rem 0.6rem; border-radius: 6px;">ฉากที่ 3: กลุ่ม 2</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Active Learning & Academic Self-Efficacy vs GPAX</span>
+            </div>
+            <h5 style="font-size: 1rem; font-weight: 800; color: var(--text-main); margin: 0 0 0.5rem 0; font-family: 'Prompt', sans-serif;">
+              การเรียนเชิงรุกและความมั่นใจในความสามารถทางวิชาการกับผลสัมฤทธิ์ทางการศึกษา
+            </h5>
+            <div style="font-size: 0.85rem; color: var(--text-sub); line-height: 1.6;">
+              <p><strong>สิ่งที่เพื่อนนิสิตเล่า:</strong> ศึกษาในชั้นปรีคลินิก ดูความสัมพันธ์ระหว่างรูปแบบการเรียนกับเกรดเฉลี่ย (GPAX) และการสอบตก/ผ่าน</p>
+              <p><strong>จุดที่อาจารย์ซักค้าน:</strong> อาจารย์ชี้ปัญหาคลาสสิกของ Cross-Sectional Study เรื่อง <strong>Reverse Causality (ไก่กับไข่)</strong> ว่าสรุปไม่ได้ว่าความมั่นใจทำให้เรียนเก่ง หรือการสอบได้เกรดดีในอดีตทำให้เกิดความมั่นใจ และอาจารย์อธิบายผลที่พบนิสิตปี 1 ได้คะแนน Self-Efficacy ต่ำสุด ว่าเกิดจาก <strong>Transition Period (รอยต่อการปรับตัวจากมัธยมสู่แพทย์)</strong> ไม่ใช่เพราะเด็กปี 1 ขาดความสามารถ</p>
+              <div style="background: rgba(245, 158, 11, 0.1); padding: 0.6rem 0.8rem; border-radius: 8px; margin-top: 0.5rem; font-size: 0.8rem; color: #f59e0b;">
+                ⭐ <strong>ประเด็นออกข้อสอบ:</strong> ข้อจำกัดของ Cross-Sectional Study $\rightarrow$ ขาด Temporal Sequence ไม่สามารถพิสูจน์ความเป็นเหตุและผลได้ เกิดปัญหา Reverse Causality
+              </div>
+            </div>
+          </div>
+
+          <!-- Scene 4: Group 4 (THE CLIMAX!) -->
+          <div style="background: var(--bg-card-alt); border: 1px solid var(--border-color); border-left: 5px solid #ef4444; border-radius: 12px; padding: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+              <span style="font-size: 0.75rem; font-weight: 800; color: #ef4444; background: rgba(239, 68, 68, 0.15); padding: 0.2rem 0.6rem; border-radius: 6px;">ฉากที่ 4: กลุ่ม 4 (จุดพีคที่สุด!)</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Copenhagen Burnout Inventory & The Dichotomization Trap</span>
+            </div>
+            <h5 style="font-size: 1rem; font-weight: 800; color: var(--text-main); margin: 0 0 0.5rem 0; font-family: 'Prompt', sans-serif;">
+              ปัจจัยเสี่ยงและปัจจัยป้องกันต่อภาวะหมดไฟ (Burnout) ในนิสิตแพทย์
+            </h5>
+            <div style="font-size: 0.85rem; color: var(--text-sub); line-height: 1.6;">
+              <p><strong>สิ่งที่เพื่อนนิสิตเล่า:</strong> ศึกษา Burnout ด้วยแบบสอบถาม CBI มาตรฐาน แต่เพื่อความสะดวกในการวิเคราะห์ นิสิตได้ **แปลงคะแนน Likert Scale 5 ระดับให้กลายเป็น 0 กับ 1 (Yes/No)** เพื่อนำไปรัน Binary Logistic Regression</p>
+              <p><strong>จุดที่อาจารย์ติงอย่างเข้มงวดที่สุด (High-Yield!):</strong> อาจารย์ท้วงทันทีว่า <em>"ทำไมถึงหั่นคะแนนต่อเนื่องเป็น 0 กับ 1? การทำ Dichotomization แบบนี้ทำให้สูญเสีย Variance มหาศาล และลดทอน Statistical Power เทียบเท่ากับการทิ้งกลุ่มตัวอย่างไปราว 1 ใน 3!"</em> นอกจากนี้ยังเสี่ยงถูก Reviewer มองว่าจงใจตั้งจุดตัดเพื่อให้มีนัยสำคัญ (P-hacking) วิธีที่ถูกต้องคือควรใช้ Multiple Linear Regression กับคะแนนเต็มตามมาตรฐาน</p>
+              <div style="background: rgba(239, 68, 68, 0.1); padding: 0.6rem 0.8rem; border-radius: 8px; margin-top: 0.5rem; font-size: 0.8rem; color: #ef4444;">
+                ⭐ <strong>ประเด็นออกข้อสอบยอดฮิต:</strong> โทษของการ Dichotomize ตัวแปรต่อเนื่อง $\rightarrow$ สูญเสีย Information, ลดทอน Statistical Power, เสี่ยงต่อ P-hacking
+              </div>
+            </div>
+          </div>
+
+          <!-- Scene 5: Grand Finale by Prof. Somchai -->
+          <div style="background: linear-gradient(135deg, rgba(30, 27, 75, 0.6), rgba(15, 23, 42, 0.8)); border: 2px solid #818cf8; border-radius: 12px; padding: 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.5rem;">
+              <span style="font-size: 1.25rem;">👑</span>
+              <h5 style="font-size: 1.1rem; font-weight: 800; color: #ffffff; margin: 0; font-family: 'Prompt', sans-serif;">
+                ฉากปิดท้าย: อาจารย์สมชาย สรุปบทเรียนชีวิตการวิจัย (Grand Take-Home Messages)
+              </h5>
+            </div>
+            <div style="font-size: 0.86rem; color: #e2e8f0; line-height: 1.7; space-y: 0.5rem;">
+              <p>หลังจากนิสิตพรีเซนต์ครบทุกกลุ่ม อาจารย์สมชายได้ขึ้นมาให้ข้อคิดที่สร้างแรงบันดาลใจและเป็นแก่นสำคัญของการเป็นแพทย์นักวิจัย:</p>
+              <ul style="padding-left: 1.2rem; margin: 0.4rem 0;">
+                <li><strong>1. ปรัชญา Garbage In, Garbage Out (GIGO):</strong> <em>"เอาขยะมารวมกัน ผลวิจัยออกมาก็เป็นขยะ! ถ้า Methodology วางไว้ไม่ดี การสุ่มตัวอย่างมีอคติ สถิติหรูหราแค่ไหนก็ช่วยไม่ได้"</em></li>
+                <li><strong>2. Subgroup Analysis vs. 'การจับแพะชนแกะ':</strong> การทำ Subgroup analysis ต้องมีสมมติฐานล่วงหน้ารองรับ ห้ามนำตัวแปรในฐานข้อมูลมาลองจับคู่ไปเรื่อยๆ จนเจอ $p < 0.05$ แล้วเอามาพรีเซนต์ เพราะนั่นคือ P-hacking ที่หลอกลวงวงการแพทย์</li>
+                <li><strong>3. การเตรียมตัวสู่เวทีงานประชุมวิชาการแพทย์ TMEC:</strong> ปีหน้าคณะแพทย์ ม.บูรพา เป็นเจ้าภาพ TMEC ขอให้นิสิตเตรียมความพร้อม: e-Poster ต้องกระชับ ตารางไม่เกิน 2–3 ตาราง และ Oral Presentation ต้องซ้อมพูด สบตากรรมการอย่างมั่นใจ ไม่ก้มอ่านสไลด์</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <!-- Tab 2: Round 1 Room 601 Content -->
+      
+
+      <!-- Tab 2: Round 1 Room 601 Full Content -->
+      <!-- Tab 2: Room 601 Content -->
       <div id="tab-round1-601" class="story-tab-pane" style="padding: 1.5rem 1.75rem; display: none;">
+        
+        <!-- Room 601 Banner -->
         <div style="background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
           <h4 style="font-size: 1.05rem; font-weight: 800; color: #c084fc; margin: 0 0 0.3rem 0; font-family: 'Prompt', sans-serif;">
-            🏛️ บรรยากาศเวทีรอบที่ 1: ห้อง 601 (อาจารย์สิริพันธ์ และคณาจารย์ผู้เชี่ยวชาญ)
+            🏛️ บรรยากาศเวทีห้อง 601: อาจารย์สิริพันธ์ และคณาจารย์ผู้เชี่ยวชาญ
           </h4>
           <p style="font-size: 0.85rem; color: var(--text-sub); margin: 0; line-height: 1.6;">
-            เน้นโมเดลขั้นสูง: กลุ่มบุคลิกภาพเฉพาะทาง (DCE Preferences), กลุ่ม 6 (Clinical Prediction Model กับ Overfitting และ Discrimination vs Calibration), กลุ่ม 10 (Active Break Reaction Time กับ Confounder สอบบล็อก Cardiovascular และ Mauchly's Sphericity), กลุ่ม 8 (PBL Impostor กับสูตรคำนวณ G*Power เผื่อ Dropout และ The Re-validation Trap), กลุ่ม 7 (Range Restriction และ Youden's Index บน ROC)
+            เวทีวิพากษ์ห้อง 601 โดดเด่นด้านโมเดลเศรษฐศาสตร์สาธารณสุข (DCE), แบบจำลองการทำนายทางคลินิก (Prediction Model), การทดลองซ้ำ (Repeated Measures ANOVA), และการวิเคราะห์คะแนนสอบเข้าแพทย์ด้วย ROC Curve
           </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+          <!-- Scene 1: Specialty Choice DCE -->
+          <div style="background: var(--bg-card-alt); border: 1px solid var(--border-color); border-left: 5px solid #a855f7; border-radius: 12px; padding: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+              <span style="font-size: 0.75rem; font-weight: 800; color: #a855f7; background: rgba(168, 85, 247, 0.15); padding: 0.2rem 0.6rem; border-radius: 6px;">ฉากที่ 1: กลุ่มบุคลิกภาพ</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Mini-IPIP Big Five & Discrete Choice Experiment (DCE)</span>
+            </div>
+            <h5 style="font-size: 1rem; font-weight: 800; color: var(--text-main); margin: 0 0 0.5rem 0; font-family: 'Prompt', sans-serif;">
+              บุคลิกภาพกับการตัดสินใจเลือกสาขาเฉพาะทางของแพทย์ไทย
+            </h5>
+            <div style="font-size: 0.85rem; color: var(--text-sub); line-height: 1.6;">
+              <p><strong>สิ่งที่เพื่อนนิสิตเล่า:</strong> ประเมินบุคลิกภาพ 5 ด้าน และใช้ระเบียบวิธี Discrete Choice Experiment (DCE) จำลองชุดสถานการณ์ให้แพทย์ชั่งน้ำหนักเลือกระหว่าง คุณลักษณะ (Attributes) เช่น ค่าตอบแทน ชั่วโมงการทำงาน ภาระเวร และความเสี่ยงถูกฟ้องร้อง</p>
+              <p><strong>จุดที่อาจารย์ซักค้าน:</strong> อาจารย์ชมเชยการนำวิธีวิทยาทางเศรษฐศาสตร์พฤติกรรมมาประยุกต์ใช้ แต่อาจารย์ทักเรื่องขนาดกลุ่มตัวอย่างแพทย์เฉพาะทางบางสาขาที่เล็กเกินไป และการกำหนด Attributes ต้องสะท้อนความเป็นจริงของการทำงานในโรงพยาบาลรัฐของไทย</p>
+              <div style="background: rgba(168, 85, 247, 0.1); padding: 0.6rem 0.8rem; border-radius: 8px; margin-top: 0.5rem; font-size: 0.8rem; color: #c084fc;">
+                ⭐ <strong>ประเด็นออกข้อสอบ:</strong> DCE มีหลักการอย่างไร $\rightarrow$ จำลอง Choice Sets เพื่อประเมิน Preference และค่าน้ำหนักการยอมแลกเปลี่ยน (Trade-off) ของแต่ละ Attribute
+              </div>
+            </div>
+          </div>
+
+          <!-- Scene 2: Group 6 Prediction Model -->
+          <div style="background: var(--bg-card-alt); border: 1px solid var(--border-color); border-left: 5px solid #14b8a6; border-radius: 12px; padding: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+              <span style="font-size: 0.75rem; font-weight: 800; color: #14b8a6; background: rgba(20, 184, 166, 0.15); padding: 0.2rem 0.6rem; border-radius: 6px;">ฉากที่ 2: กลุ่ม 6</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Clinical Prediction Model จากเวชระเบียนย้อนหลัง</span>
+            </div>
+            <h5 style="font-size: 1rem; font-weight: 800; color: var(--text-main); margin: 0 0 0.5rem 0; font-family: 'Prompt', sans-serif;">
+              การพัฒนาแบบจำลองการทำนายทางคลินิก (Prediction Model) และปัญหา Overfitting
+            </h5>
+            <div style="font-size: 0.85rem; color: var(--text-sub); line-height: 1.6;">
+              <p><strong>สิ่งที่เพื่อนนิสิตเล่า:</strong> รวบรวมข้อมูลเวชระเบียนย้อนหลัง (Retrospective Chart Review) สร้างโมเดลทำนายด้วย Multivariable Logistic Regression ได้ค่า AUC สูงถึง 0.90 ในชุดข้อมูลตั้งต้น</p>
+              <p><strong>จุดที่อาจารย์ซักค้าน:</strong> อาจารย์ชี้ปัญหา Missing data ของข้อมูลย้อนหลัง และเตือนว่าโมเดลกำลังเกิดสภาวะ **Overfitting** (จำ Noise ในชุดข้อมูลเดิมจนฟิตเกินไป แต่นำไปใช้จริงจะแม่นยำต่ำ) อาจารย์เน้นย้ำว่าต้องทำ Internal Validation (Bootstrap หรือ Cross-validation) และต้องรายงาน 2 มิติเสมอคือ **Discrimination (AUC-ROC)** และ **Calibration (Hosmer-Lemeshow)**</p>
+              <div style="background: rgba(20, 184, 166, 0.1); padding: 0.6rem 0.8rem; border-radius: 8px; margin-top: 0.5rem; font-size: 0.8rem; color: #14b8a6;">
+                ⭐ <strong>ประเด็นออกข้อสอบ:</strong> การประเมิน Prediction Model ต้องดู 2 ค่าคือ Discrimination (AUC) และ Calibration (Hosmer-Lemeshow / Calibration plot)
+              </div>
+            </div>
+          </div>
+
+          <!-- Scene 3: Group 10 Active Break & Cardiovascular Exam -->
+          <div style="background: var(--bg-card-alt); border: 1px solid var(--border-color); border-left: 5px solid #10b981; border-radius: 12px; padding: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+              <span style="font-size: 0.75rem; font-weight: 800; color: #10b981; background: rgba(16, 185, 129, 0.15); padding: 0.2rem 0.6rem; border-radius: 6px;">ฉากที่ 3: กลุ่ม 10</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Active Break vs Passive Break Reaction Time</span>
+            </div>
+            <h5 style="font-size: 1rem; font-weight: 800; color: var(--text-main); margin: 0 0 0.5rem 0; font-family: 'Prompt', sans-serif;">
+              Stroop Test Reaction Time, Mauchly's Sphericity, และ Confounder สอบบล็อกคาร์ดิโอ
+            </h5>
+            <div style="font-size: 0.85rem; color: var(--text-sub); line-height: 1.6;">
+              <p><strong>สิ่งที่เพื่อนนิสิตเล่า:</strong> เปรียบเทียบการพัก 3 รูปแบบ (Active Break, Passive Break, No Break) วัด Reaction Time ในคนเดิมซ้ำกัน 4 ช่วงเวลา ตรวจสอบ Normal distribution ด้วย Shapiro-Wilk ($p > 0.05$) จึงใช้ Two-Way Repeated Measures ANOVA</p>
+              <p><strong>จุดที่อาจารย์ซักค้าน:</strong> อาจารย์ตาไวมาก สังเกตเห็นว่ากราฟ Reaction Time เริ่มต้นของวันหนึ่งพุ่งสูงผิดปกติ นิสิตจึงเฉลยว่า *"วันนั้นเป็นวันหลังสอบบล็อก Cardiovascular เพื่อนอดนอนและล้าสะสม"* อาจารย์จึงชี้ว่าเป็น **History Effect / Extraneous Confounder** สำคัญ ต้องแก้ไขด้วยการสลับลำดับเงื่อนไขแบบ Counterbalancing (Latin Square Design) และกำหนด Washout period นอกจากนี้อาจารย์เตือนว่าอย่าลืมตรวจ **Mauchly's Test of Sphericity**</p>
+              <div style="background: rgba(16, 185, 129, 0.1); padding: 0.6rem 0.8rem; border-radius: 8px; margin-top: 0.5rem; font-size: 0.8rem; color: #10b981;">
+                ⭐ <strong>ประเด็นออกข้อสอบ:</strong> หากละเมิด Sphericity Assumption ($p < 0.05$) ใน Repeated ANOVA ต้องทำอย่างไร $\rightarrow$ ปรับลด Degrees of Freedom ด้วยค่าแก้ Greenhouse-Geisser
+              </div>
+            </div>
+          </div>
+
+          <!-- Scene 4: Group 8 G*Power & Re-validation -->
+          <div style="background: var(--bg-card-alt); border: 1px solid var(--border-color); border-left: 5px solid #ec4899; border-radius: 12px; padding: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+              <span style="font-size: 0.75rem; font-weight: 800; color: #ec4899; background: rgba(236, 72, 153, 0.15); padding: 0.2rem 0.6rem; border-radius: 6px;">ฉากที่ 4: กลุ่ม 8</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">G*Power Sample Size & Re-validation Trap</span>
+            </div>
+            <h5 style="font-size: 1rem; font-weight: 800; color: var(--text-main); margin: 0 0 0.5rem 0; font-family: 'Prompt', sans-serif;">
+              Academic Self-Efficacy, MSPSS, และ Impostor Phenomenon ในบริบท PBL
+            </h5>
+            <div style="font-size: 0.85rem; color: var(--text-sub); line-height: 1.6;">
+              <p><strong>สิ่งที่เพื่อนนิสิตเล่า:</strong> ศึกษาในบริบท PBL ใช้โปรแกรม G*Power คำนวณขนาดตัวอย่างได้ 96 คน แล้วบวกเพิ่ม 10% เพื่อป้องกัน Dropout</p>
+              <p><strong>จุดที่อาจารย์ซักค้าน:</strong> อาจารย์แนะนำสูตรการเผื่อ Dropout ที่ถูกต้อง คือ $N / (1 - d) = 96 / (1 - 0.10) = 107$ คน (ปัดเศษขึ้นเสมอ) และอาจารย์เตือนเรื่อง **The Re-validation Trap** ว่าเมื่อนำแบบสอบถามมาตรฐานมาปรับข้อความให้เข้ากับบริบท PBL ต้องตรวจ IOC และทำ Pilot study หา Cronbach's alpha ซ้ำเสมอ ห้ามอ้างอิงค่าเดิม</p>
+              <div style="background: rgba(236, 72, 153, 0.1); padding: 0.6rem 0.8rem; border-radius: 8px; margin-top: 0.5rem; font-size: 0.8rem; color: #ec4899;">
+                ⭐ <strong>ประเด็นออกข้อสอบ:</strong> การดัดแปลงแบบสอบถามมาตรฐานให้เข้ากับบริบทใหม่ ต้องทำอะไรก่อนใช้ $\rightarrow$ ทำ Content Validity (IOC) และ Pilot study (Cronbach's alpha) ซ้ำเสมอ
+              </div>
+            </div>
+          </div>
+
+          <!-- Scene 5: Group 7 Range Restriction & ROC -->
+          <div style="background: var(--bg-card-alt); border: 1px solid var(--border-color); border-left: 5px solid #6366f1; border-radius: 12px; padding: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+              <span style="font-size: 0.75rem; font-weight: 800; color: #6366f1; background: rgba(99, 102, 241, 0.15); padding: 0.2rem 0.6rem; border-radius: 6px;">ฉากที่ 5: กลุ่ม 7</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Range Restriction Phenomenon & ROC Curve Cut-off</span>
+            </div>
+            <h5 style="font-size: 1rem; font-weight: 800; color: var(--text-main); margin: 0 0 0.5rem 0; font-family: 'Prompt', sans-serif;">
+              คะแนนสอบคัดเลือก TCAS/กสพท กับผลการเรียนแพทย์ และการหา Cut-off ด้วย Youden's Index
+            </h5>
+            <div style="font-size: 0.85rem; color: var(--text-sub); line-height: 1.6;">
+              <p><strong>สิ่งที่เพื่อนนิสิตเล่า:</strong> นิสิตพบว่าคะแนน กสพท สัมพันธ์กับเกรดแพทย์น้อยมาก ($r = 0.15$) จนสงสัยว่าการสอบคัดเลือกมีประโยชน์หรือไม่</p>
+              <p><strong>จุดที่อาจารย์เฉลย:</strong> อาจารย์อธิบายปรากฏการณ์ **Range Restriction (คะแนนถูกบีบให้แคบ)** ว่าเพราะเราศึกษาเฉพาะคนที่สอบติดเข้ามาแล้ว ซึ่งทุกคนคะแนนสูงใกล้เคียงกัน ความแปรปรวนจึงแคบ ทำให้ค่า $r$ ต่ำกว่าความเป็นจริง และอาจารย์สอนการใช้ **ROC Curve ร่วมกับ Youden's Index ($J = \text{Sensitivity} + \text{Specificity} - 1$)** เพื่อหา Optimal Cut-off Point และเน้นย้ำว่า 95% CI ของ AUC ต้องไม่คร่อม 0.50</p>
+              <div style="background: rgba(99, 102, 241, 0.1); padding: 0.6rem 0.8rem; border-radius: 8px; margin-top: 0.5rem; font-size: 0.8rem; color: #818cf8;">
+                ⭐ <strong>ประเด็นออกข้อสอบ:</strong> สูตรการหา Optimal Cut-off บนเส้น ROC $\rightarrow$ Youden's Index ($J = \text{Sensitivity} + \text{Specificity} - 1$)
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
+      
+
+      <!-- Tab 3: Round 2 Room MD515 Full Content -->
       <!-- Tab 3: Round 2 Room MD515 Content (NEW & SHINING!) -->
       <div id="tab-round2-515" class="story-tab-pane" style="padding: 1.5rem 1.75rem; display: block;">
         
@@ -3887,7 +4087,7 @@
               <p>นิสิตตอบว่า: <em>"ต่าง... แต่ไม่มีนัยสำคัญทางสถิติครับ"</em></p>
               <p>อาจารย์ตบโต๊ะเน้นย้ำ: <strong>"ใช่! เธอต้องเขียนว่า 'ต่างกันอย่างไม่มีนัยสำคัญทางสถิติ' (Differ, but not statistically significant, p &gt; 0.05) อย่าเขียนว่า 'ไม่ต่างกัน' เด็ดขาด! เพราะตัวเลขในตารางมันต่างกันอยู่แล้ว (เช่น 6.28 กับ 7.20) นี่คือจุดเล็กๆ แต่ข้อสอบออกหลอกแน่นอน เขียนสมมติฐานให้ถูกต้องตามหลักสถิติศาสตร์!"</strong></p>
               <div style="background: rgba(239, 68, 68, 0.1); padding: 0.6rem 0.8rem; border-radius: 8px; margin-top: 0.5rem; font-size: 0.8rem; color: #ef4444;">
-                ⭐ <strong>ข้อสอบออกชัวร์:</strong> เมื่อผลวิเคราะห์ได้ $p > 0.05$ การสรุปผลที่ถูกต้องคือ $ightarrow$ "มีความแตกต่างกันอย่างไม่มีนัยสำคัญทางสถิติ" (ไม่ใช่ "ไม่มีความแตกต่างกัน")
+                ⭐ <strong>ข้อสอบออกชัวร์:</strong> เมื่อผลวิเคราะห์ได้ $p > 0.05$ การสรุปผลที่ถูกต้องคือ $\rightarrow$ "มีความแตกต่างกันอย่างไม่มีนัยสำคัญทางสถิติ" (ไม่ใช่ "ไม่มีความแตกต่างกัน")
               </div>
             </div>
           </div>
@@ -3939,6 +4139,9 @@
         </div>
       </div>
 
+      
+
+      <!-- Tab 4: Round 2 Floor 4 Full Content -->
       <!-- Tab 4: Round 2 Floor 4 Content (NEW & SHINING!) -->
       <div id="tab-round2-f4" class="story-tab-pane" style="padding: 1.5rem 1.75rem; display: none;">
         
@@ -4008,6 +4211,9 @@
         </div>
       </div>
 
+      
+
+      <!-- Tab 5: 12 Traps Full Content -->
       <!-- Tab 5: 12 High-Yield Traps All -->
       <div id="tab-traps-all" class="story-tab-pane" style="padding: 1.5rem 1.75rem; display: none;">
         <div style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
@@ -4031,7 +4237,7 @@
           </div>
 
           <div style="background: var(--bg-card-alt); border: 1px solid var(--border-color); border-left: 4px solid #38bdf8; padding: 1rem; border-radius: 10px;">
-            <strong style="color: #38bdf8; display: block; font-size: 0.92rem; margin-bottom: 0.25rem;">3. Baseline Imbalance $ightarrow$ ANCOVA</strong>
+            <strong style="color: #38bdf8; display: block; font-size: 0.92rem; margin-bottom: 0.25rem;">3. Baseline Imbalance $\rightarrow$ ANCOVA</strong>
             <p style="font-size: 0.82rem; color: var(--text-sub); margin: 0;">ถ้าคะแนน Pre-test 2 กลุ่มไม่เท่ากัน ต้องใช้ ANCOVA ปรับ Baseline Covariate</p>
           </div>
 
@@ -4052,7 +4258,7 @@
 
           <div style="background: var(--bg-card-alt); border: 1px solid var(--border-color); border-left: 4px solid #ec4899; padding: 1rem; border-radius: 10px;">
             <strong style="color: #ec4899; display: block; font-size: 0.92rem; margin-bottom: 0.25rem;">7. Youden's Index บน ROC Curve</strong>
-            <p style="font-size: 0.82rem; color: var(--text-sub); margin: 0;">สูตรหาจุดตัด Cut-off ที่ดีที่สุดคือ $J = 	ext{Sensitivity} + 	ext{Specificity} - 1$</p>
+            <p style="font-size: 0.82rem; color: var(--text-sub); margin: 0;">สูตรหาจุดตัด Cut-off ที่ดีที่สุดคือ $J = \text{Sensitivity} + \text{Specificity} - 1$</p>
           </div>
 
           <div style="background: var(--bg-card-alt); border: 1px solid var(--border-color); border-left: 4px solid #14b8a6; padding: 1rem; border-radius: 10px;">
@@ -4072,7 +4278,7 @@
 
           <div style="background: var(--bg-card-alt); border: 1px solid var(--border-color); border-left: 4px solid #84cc16; padding: 1rem; border-radius: 10px;">
             <strong style="color: #84cc16; display: block; font-size: 0.92rem; margin-bottom: 0.25rem;">11. สูตรเผื่อ Dropout ใน G*Power</strong>
-            <p style="font-size: 0.82rem; color: var(--text-sub); margin: 0;">สูตรที่ถูกต้องคือ $N_{	ext{final}} = N / (1 - d)$ และต้องปัดเศษขึ้นเสมอ</p>
+            <p style="font-size: 0.82rem; color: var(--text-sub); margin: 0;">สูตรที่ถูกต้องคือ $N_{\text{final}} = N / (1 - d)$ และต้องปัดเศษขึ้นเสมอ</p>
           </div>
 
           <div style="background: var(--bg-card-alt); border: 1px solid var(--border-color); border-left: 4px solid #8b5cf6; padding: 1rem; border-radius: 10px;">
@@ -4081,6 +4287,10 @@
           </div>
         </div>
       </div>
+
+    </div>
+
+    
 
     </div>
 
